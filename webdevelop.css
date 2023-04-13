@@ -1365,7 +1365,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 400px;
    } 
 }
-.item-21 .item-tex-ptypet{
+.item-21 .item-text-ptype{
     top: 0;
     left: 0;
     right: 0;
@@ -1404,7 +1404,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
- }
+}
 /* END PROTOTYPE SECTION item-20 item-21*/
 
 /* TEST SECTION ITEM-22*/
