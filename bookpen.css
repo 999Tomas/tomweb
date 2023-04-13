@@ -1,3 +1,5 @@
+
+
 @import url('http://fonts.cdnfonts.com/css/caligna-demo');
 *{
     margin: 0;
@@ -705,7 +707,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgba(0, 0, 0, 0.8); 
    position: relative;
    justify-content: center;
-
    align-items: center;
    border-radius: 50%; 
    overflow: hidden;
@@ -758,13 +759,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     justify-content: center;
     align-content: center;
     display: block;
-    border-bottom: 2px solid;
-    border-width: 10px;
-    border-image-slice: 1;
-    border-image-source: -moz-linear-gradient(left, #330508 0%, #000000, #000000 80%);
-    border-image-source: -webkit-linear-gradient(left, #330508 0%, #000000, #000000 80%);
-    border-image-source: linear-gradient(to right, #330508 1%, #000000, #000000 60%);
-    
+    background: linear-gradient(to right, #330508 2%, transparent 20%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
 }
 .item-4 .item-lbox p{
     font-size: 1.3rem;
@@ -810,13 +808,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     right: 0;
     bottom: 0;
     float: rigt;
-    border-bottom: 2px solid;
-    border-width: 10px;
-    border-image-slice: 1;
-    border-image-source: -moz-linear-gradient(left, #330508 0%, #000000, #000000 50%);
-    border-image-source: -webkit-linear-gradient(left, #330508 2%, #000000, #000000 50%);
-    border-image-source: linear-gradient(to right, #330508 10%, #000000, #000000 50%);
-    z-index: 99;
+   z-index: 99;
+   background: linear-gradient(to right, #330508 2%, transparent 40%);  
+   background-repeat: no-repeat;
+   background-size: 100% 7px;
+   background-position: bottom;
 }
 
 .item-rbox1 p {
@@ -848,7 +844,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 }
 @media screen and (max-width: 860px){
 .item-rbox2{
-    border-top: 2px solid #850d16;
     background: transparent;
      }
 }
@@ -865,12 +860,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     right: 0;
     bottom: 0;
     float: left;
-    border-bottom: 2px solid;
-    border-width: 10px;
-    border-image-slice: 1;
-    border-image-source: -moz-linear-gradient(left, #330508 0%, #000000, #000000 80%);
-    border-image-source: -webkit-linear-gradient(left, #330508 0%, #000000, #000000 80%);
-    border-image-source: linear-gradient(to right, #330508 1%, #000000, #000000 60%);
+    background: linear-gradient(to right, #330508 2%, transparent 40%);  
+                background-repeat: no-repeat;
+                background-size: 100% 7px;
+                background-position: bottom;
 } 
 .item-rbox2 ul {
     font-size: 1.3rem;
@@ -915,16 +908,15 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     column-gap: 100px;
     display: block;
     float: right;
-
-
 }
 .item-ac-box1 h1{
     font-size: 1.4rem;
     justify-content: center;
     align-content: center;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 70%);
-    border-image-slice: 1;
+    background: linear-gradient(to right, #850d16 2%, transparent 30%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
 .item-ac-box1 p{
     font-size: 1.2rem;
@@ -1003,11 +995,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 
 /* RESEARCH SECTION item-11A item-11B*/
 .item-11A .item-backgimg{
-     display: inline-block;
+    display: inline-block;
     background:  repeating-linear-gradient(
         120deg, transparent 30%, #263318 50%, hsl(45, 88%, 10%) 20%, hsl(45, 88%, 10%) 40%, #330508 0%, #774c3a 60%, #1c0000 70%, #263318 50%, #2a0000 10%,transparent 20%,
          transparent 30%);
-    /*background-color: #7c7c94;*/
     background-blend-mode: exclusion;
     width: 100%;
     margin: auto;
@@ -1015,7 +1006,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     object-fit: cover;
     position: relative;
     z-index: 100;
-
 }
  @media screen and (max-width: 1050px) {
    .item-11A .item-bgimg{
@@ -1023,18 +1013,15 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     } 
 }
 .item-11A .item-research{
-   
-    top: 0;
+   top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
     width: 100%;
     position: absolute;
     margin: auto;
     overflow: hidden;
 }
-
 .item-11A .item-research::after{
     content: '';
     position: relative;
@@ -1043,7 +1030,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: #a3ffc7;
     mix-blend-mode: screen;
 }
-
 .item-11A .item-research img{
     width: 100%;
     height: auto;
@@ -1051,7 +1037,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     justify-content: center;
     align-content: center;
     position: absolute;
-    /*border: 2px solid #850d16;*/
     top: 0;
     left: 0;
     right: 0;
@@ -1081,13 +1066,14 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
 }
 .item-11B .item-text11B h5{
     font-size: 1.7rem;
@@ -1097,7 +1083,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+    background: linear-gradient(to right, #850d16 2%, transparent 25%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
 .item-11B .item-text11B p{
     font-size: 1.4rem;
@@ -1113,12 +1102,9 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 35%);
-    border-image-slice: 1;
-   
 }
 /* END RESEARCH SECTION item-11A item-11B*/
+
 /* IDEA REFERENCES item-0 & item-01*/
 .item-0 .item-content-I{
   border: 1px solid black;
@@ -1192,7 +1178,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
   }
 }
 
-.item-01 .item-text-I{
+.item-01 .item-text-ref{
     top: 0;
     left: 0;
     right: 0;
@@ -1205,9 +1191,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: rgb(35, 0, 0);
     overflow: hidden;
 }
-
-
-.item-01 .item-text-I h5{
+.item-01 .item-text-ref h5{
     font-weight: 400;
     font-size: 1.7rem;
     text-align: left; 
@@ -1216,8 +1200,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(to right, #850d16 2%, transparent 25%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
-.item-01 .item-text-I p{
+.item-01 .item-text-ref p{
     font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1232,15 +1220,13 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 30%);
-    border-image-slice: 1;
+    
 }
 /* END IDEA SECTION item-0 & item-01*/
 
 /* RESEARCH2 SECTION item-11C item-11D*/
-.item-11C .item-backgimg{
-     display: inline-block;
+.item-11C .item-ref2{
+    display: inline-block;
     background:  repeating-linear-gradient(
         120deg, transparent 30%, #263318 50%, hsl(45, 88%, 10%) 20%, hsl(45, 88%, 10%) 40%, #330508 0%, #774c3a 60%, #1c0000 70%, #263318 50%, #2a0000 10%,transparent 20%,
          transparent 30%);
@@ -1253,39 +1239,18 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     object-fit: cover;
     position: relative;
     z-index: 100;
-
 }
  @media screen and (max-width: 1050px) {
-   .item-11C .item-bgimg{
+   .item-11C .item-ref2{
     background-size: 14em;
     } 
 }
-.item-11C .item-references{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    position: absolute;
-    margin: auto;
-    overflow: hidden;
-}
-
-.item-11C .item-references::after{
-    content: '';
-    position: relative;
-    inset: 0;
-    z-index: -1;
-    background: #a3ffc7;
-    mix-blend-mode: screen;
-}
-
-.item-11C .item-references img{
+.item-11C .item-ref2 img{
     width: 100%;
     background: transparent;
     justify-content: center;
     align-content: center;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -1293,12 +1258,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
-@media screen and (max-width: 768px) {
-   .item-11C .item-references img{
-    max-width: 400px;
-   } 
-}
-.item-11D .item-text11D{
+.item-11D .item-ref2-text{
     top: 0;
     left: 0;
     right: 0;
@@ -1310,20 +1270,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: rgb(35, 0, 0);
     overflow: hidden;
 }
-.item-11D .item-text11D h1{
-    font-weight: 400;
-    font-size: 2rem;
-    text-align: left; 
-    padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-.item-11D .item-text11D h5{
+.item-11D .item-ref2-text h5{
     font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1331,9 +1278,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+     background: linear-gradient(to right, #850d16 2%, transparent 20%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
-.item-11D .item-text11D p{
+.item-11D .item-ref2-text p{
     font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1347,15 +1297,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 35%);
-    border-image-slice: 1;
-   
 }
 /* END REFERENCE2 SECTION item-11C item-11D*/
 
 /* SKETCHING SECTION item-12 item-13*/
-.item-12 .item-references{
+.item-12 .item-sketching{
     top: 0;
     left: 0;
     right: 0;
@@ -1369,11 +1315,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     overflow: hidden;
 }
 @media screen and (max-width: 1050px) {
-   .item-12 .item-references{
+   .item-12 .item-sketching{
     background-size: 14em;
     } 
 }
-.item-12 .item-references img{
+.item-12 .item-sketching img{
     width: 100%;
     max-width: 700px;
     top: 0;
@@ -1384,11 +1330,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
 @media screen and (max-width: 768px) {
-   .item-12 .item-references img{
+   .item-12 .item-sketching img{
     max-width: 400px;
    } 
 }
-.item-13 .item-text{
+.item-13 .item-sketching-text{
     top: 0;
     left: 0;
     right: 0;
@@ -1400,7 +1346,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: rgb(35, 0, 0);
     overflow: hidden;
 }
-.item-13 .item-text h5{
+.item-13 .item-sketching-text h5{
     font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1408,9 +1354,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+    background: linear-gradient(to right, #850d16 2%, transparent 20%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
-.item-13 .item-text p{
+.item-13 .item-sketching-text p{
     font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1424,14 +1373,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 35%);
-    border-image-slice: 1;
-   
-}/* END SKETCHING SECTION item-12 item-13*/
+}
+/* END SKETCHING SECTION item-12 item-13*/
 
 /*MODEL DEVELOPMENT SECTION item-14*/ 
- .item-14 .md-img{
+ .item-14 .item-md-img{
     top: 0;
     left: 0;
     right: 0;
@@ -1442,7 +1388,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1100px;
     justify-content: center;
 }
-.item-15 .md-caption{
+.item-15 .item-md-caption{
    top: 0;
     left: 0;
     right: 0;
@@ -1451,23 +1397,22 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     width: 100%;
     max-width: 1400px;
-    
-    background: green;
+    background: rgb(35, 0, 0);
   }
-.item-15 .md-caption h1{
+.item-15 .item-md-caption h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 30%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(35, 0, 0);
+    background: linear-gradient(to right, #850d16 2%, transparent 30%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
     }
-.item-15 .md-caption P{
+.item-15 .item-md-caption P{
     font-size: 1.4rem;
     padding: 15px;
     background: rgb(35, 0, 0);;
@@ -1485,7 +1430,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 }
  
 /*seat*/
-.item-16 .content-BD {
+.item-16 .item-content-BD {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1497,34 +1442,27 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    font-weight: 400;
 
 }
-.item-16 .content-BD img{
+.item-16 .item-content-BD img{
     width: 100%;
     max-width: 800px;
     margin-left: 20px;
     margin-bottom: 10px;
     float: right;
-    /*background:  hsl(27,100%,3.9%);*/
-    
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
     
 }
-.item-16 .content-BD h5{
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 15%);
-    border-image-slice: 1; 
+.item-16 .item-content-BD h5{
     font-size: 1.7rem;
     padding: 15px;
     font-weight: 500;
 }
-.item-16 .content-BD h6{
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 15%);
-    border-image-slice: 1; 
+.item-16 .item-content-BD h6{
     font-size: 1.3rem;
     padding: 15px;
     font-weight: 400;
     /*background: hsl(43, 84%, 6%);*/
 }
-.item-16 .content-BD p{
+.item-16 .item-content-BD p{
     background: rgb(35, 0, 0);
     font-weight: 400;
     font-size: 1.4rem;
@@ -1534,7 +1472,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 /*end seat*/
 
 /*back*/
-.item-16 .content-BD2 {
+.item-16 .item-content-BD2 {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1544,26 +1482,20 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-16 .content-BD2 img{
+.item-16 .item-content-BD2 img{
     width: 100%;
     max-width: 300px;
     margin-left: 20px;
     margin-bottom: 10px;
     float: right;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
-   
 }
-
-.item-16 .content-BD2 h6{
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 15%);
-    border-image-slice: 1; 
+.item-16 .item-content-BD2 h6{
     font-size: 1.3rem;
     font-weight: 400;
     padding: 15px;
- /*background: hsl(43, 84%, 6%);*/
 }
-.item-16 .content-BD2 p{
+.item-16 .item-content-BD2 p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     font-weight: 400;
@@ -1573,17 +1505,17 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 /* end back*/
 
 /* arms*/
-.item-16 .content-BD3 {
+.item-16 .item-content-BD3 {
    position: relative;
    width: 100%;
    max-width: 1400px;
    justify-content: center;
    align-items: center;
- background: rgb(35, 0, 0);
+   background: rgb(35, 0, 0);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-16 .content-BD3 img{
+.item-16 .item-content-BD3 img{
     width: 100%;
     max-width: 400px;
     margin-left: 20px;
@@ -1591,16 +1523,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     float: right;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
-.item-16 .content-BD3 h6{
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 15%);
-    border-image-slice: 1; 
+.item-16 .item-content-BD3 h6{
     font-size: 1.3rem;
     font-weight: 400;
     padding: 15px;
- /*background: hsl(43, 84%, 6%);*/
 }
-.item-16 .content-BD3 p{
+.item-16 .item-content-BD3 p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     font-weight: 400;
@@ -1611,7 +1539,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 
 
 /* legs*/
-.item-16 .content-BD4 {
+.item-16 .item-content-BD4 {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1621,7 +1549,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-16 .content-BD4 img{
+.item-16 .item-content-BD4 img{
     width: 100%;
     max-width: 400px;
     margin-left: 20px;
@@ -1629,16 +1557,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     float: right;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
 }
-.item-16 .content-BD4 h6{
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 15%);
-    border-image-slice: 1; 
+.item-16 .item-content-BD4 h6{
     font-size: 1.3rem;
     font-weight: 400;
     padding: 15px;
- /*background: hsl(43, 84%, 6%);*/
 }
-.item-16 .content-BD4 p{
+.item-16 .item-content-BD4 p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     text-align: justify;
@@ -1649,8 +1573,8 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 /* END MODEL DEVELOPMENT SECTION item-16*/ 
 
 /*TEXTURING SECTION item-17 item-18*/
-.item-17 .background-image{
-  display: inline-block;
+.item-17 .item-texturing-image{
+   display: inline-block;
     background:  repeating-linear-gradient(
         135deg, transparent 40%, #263318 25%, hsl(45, 88%, 10%) 20%, hsl(45, 88%, 10%) 30%, #330508 0%, #774c3a 50%, #263318 60%, #1c0000 10%, #2a0000 10%,transparent 55%,
          transparent 100%);
@@ -1666,7 +1590,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     text-align: center;
     position: relative;
 }
-.item-17 .background-image::after{
+.item-17 .item-texturing-image::after{
     content: '';
     position: absolute;
     inset: 0;
@@ -1674,7 +1598,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: #a3ffc7;
     mix-blend-mode: multiply;
 }
-.item-17 .background-image img{
+.item-17 .item-texturing-image img{
     width: 100%;
     max-width: 1400px;
     margin: auto;
@@ -1686,7 +1610,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     display: flex;
     text-align: center;
  }
- .item-17 .background-text h2{
+ .item-17 .item-texturing-text h2{
     font-size: 9.5cqi;
     text-align: center;
     color: #473705;
@@ -1702,26 +1626,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     display: flex;
 }
-@media screen and (max-width: 1050px) {
-   .item-17 .background-text h2{
-   
-  }
-}
-
-/*.item-21 .background-text h2:before{
-    content: attr(REFL-TEXT);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateX(180deg);
-    line-height: 52px;
-    transform-origin: bottom;
-    background: linear-gradient(to top, #fff, transparent);
-    -webkit-background-clip: text;
-    color: transparent;
-    opacity: 0.4;
-}*/
-.item-18 .text-t{
+.item-18 .item-texturing-text2{
     top: 0;
     left: 0;
     right: 0;
@@ -1731,26 +1636,26 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     width: 100%;
     max-width: 1400px;
     height: 100%;
-    background: transparent;
     overflow: hidden;
+    background: rgb(35, 0, 0);
 }
-.item-18 .text-t h1{
+.item-18 .item-texturing-text2 h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgb(35, 0, 0);
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
     }
-.item-18 .text-t p{
+.item-18 .item-texturing-text2 p{
     font-size: 1.4rem;
     padding: 15px;
-    background: rgb(35, 0, 0);
     text-align: left; 
     justify-content: center;
     align-items: center;
@@ -1765,29 +1670,17 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 }
 
 /*settee*/
-.item-19 .content-settee {
+.item-19 .item-content-settee {
    position: relative;
    width: 100%;
    max-width: 1400px;
    justify-content: center;
    align-items: center;
-   background: rgba(0, 0, 0, 0.2);
+   background: rgb(35, 0, 0);
    overflow: hidden;
    margin: 20px auto 20px;
-
 }
-.item-19 .body-v {
-   position: relative;
-   width: 100%;
-   max-width: 1400px;
-   justify-content: center;
-   align-items: center;
-   background: rgb(35, 0, 0);
-   overflow: hidden;
-   
-
-}
-.item-19 .body-v2 {
+.item-19 .item-body-v {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1796,7 +1689,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .body-v3 {
+.item-19 .item-body-v2 {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1805,7 +1698,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .body-v4 {
+.item-19 .item-body-v3 {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1814,7 +1707,16 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .content-settee img{
+.item-19 .item-body-v4 {
+   position: relative;
+   width: 100%;
+   max-width: 1400px;
+   justify-content: center;
+   align-items: center;
+   background: rgb(35, 0, 0);
+   overflow: hidden;
+}
+.item-19 .item-content-settee img{
     width: 100%;
     max-width: 800px;
     margin-left: 20px;
@@ -1822,34 +1724,33 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     float: right;
     background: rgb(35, 0, 0);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
-   
 }
-.item-19 .content-settee h6{
+.item-19 .item-content-settee h6{
    font-size: 1.7rem;
     padding: 15px;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 35%);
-    border-image-slice: 1; 
-    background: rgb(35, 0, 0);
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom; 
 }
-.item-19 .content-settee p{
+.item-19 .item-content-settee p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     text-align: justify;
     padding: 15px;
 }
 /*piano*/
-.item-19 .content-piano {
+.item-19 .item-content-piano {
    position: relative;
    width: 100%;
    max-width: 1400px;
    justify-content: center;
    align-items: center;
-   background: rgba(0, 0, 0, 0.2);
+   background: rgb(35, 0, 0);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-19 .piano-b {
+.item-19 .item-piano-b {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1858,7 +1759,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .piano-k {
+.item-19 .item-piano-k {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1867,7 +1768,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .piano-h {
+.item-19 .item-piano-h {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1876,7 +1777,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    background: rgb(35, 0, 0);
    overflow: hidden;
 }
-.item-19 .content-piano img{
+.item-19 .item-content-piano img{
     width: 100%;
     max-width: 800px;
     margin-left: 20px;
@@ -1886,23 +1787,23 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
    
 }
-.item-19 .content-piano h6{
+.item-19 .item-content-piano h6{
     font-size: 1.7rem;
     padding: 15px;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
-     background: rgb(35, 0, 0);
+    background: rgb(35, 0, 0);
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom; 
 }
-.item-19 .content-piano p{
+.item-19 .item-content-piano p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     text-align: justify;
     padding: 15px;
 }
-
 /*earth globe*/
-.item-19 .content-eg {
+.item-19 .item-content-eg {
    position: relative;
    width: 100%;
    max-width: 1400px;
@@ -1912,7 +1813,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-19 .content-g img{
+.item-19 .item-content-g img{
      width: 100%;
     max-width: 800px;
     margin-left: 20px;
@@ -1920,51 +1821,13 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     float: right;
     background: rgb(35, 0, 0);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
-   
-
 }
-.item-19 .content-g h6{
+.item-19 .item-content-g h6{
     font-size: 1.7rem;
     padding: 15px;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
     background: rgb(35, 0, 0);
 }
-.item-19 .content-g p{
-    background: rgb(35, 0, 0);
-    font-size: 1.4rem;
-    text-align: justify;
-    padding: 15px;
-}
-/*hair & eyelashes*/
-.item-19 .content-he {
-   position: relative;
-   width: 100%;
-   max-width: 1400px;
-   justify-content: center;
-   align-items: center;
-   background: rgba(0, 0, 0, 0.2);
-   overflow: hidden;
-   margin: 20px auto 20px;
-}
-.item-19 .content-he img{
-    width: 100%;
-    max-width: 800px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    float: right;
-    background: rgb(35, 0, 0);
-    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
-}
-.item-19 .content-he h6{
-    font-size: 1.7rem;
-    padding: 15px;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
-}
-.item-19 .content-he {
+.item-19 .item-content-g p{
     background: rgb(35, 0, 0);
     font-size: 1.4rem;
     text-align: justify;
@@ -1973,7 +1836,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 /* END TEXTURING SECTION item-17 item-18 item-19*/
 
 /* FINAL RENDER SECTION ITEM-20*/
-.item-20 .content-FR{
+.item-20 .item-content-FR{
     top: 0;
     left: 0;
     right: 0;
@@ -1985,11 +1848,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: transparent;
     overflow: hidden;
 }
-.item-20 .content-FR img{
+.item-20 .item-content-FR img{
     width: 100%;
     object-fit: cover;
 }
-.item-20 .text-FR{
+.item-20 .item-text-FR{
+    background: rgb(35, 0, 0);
     top: 0;
     left: 0;
     right: 0;
@@ -1997,29 +1861,31 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     position: relative;
     margin: auto;
     width: 100%;
-    max-width: 1400px;
-    height: 0%; 
-    background: transparent;
-  }
-.item-20 .text-FR h1{
+    max-width: 1400px; 
+}
+.item-20 .item-text-FR h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(35, 0, 0);
-    display: inherit;
     position: relative;
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom; 
     }
+    .item-20 .item-text-FR p{
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 15px;
+}
 /* END FINAL RENDER SECTION ITEM-20*/
 
-/* FINAL RENDER SECTION2 ITEM-20*/
-.item-21 .content-FR2{
+/* FINAL RENDER SECTION2 ITEM-21*/
+.item-21 .item-content-FR2{
     top: 0;
     left: 0;
     right: 0;
@@ -2031,11 +1897,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: transparent;
     overflow: hidden;
 }
-.item-21 .content-FR2 img{
+.item-21 .item-content-FR2 img{
     width: 100%;
     object-fit: cover;
 }
-.item-21 .text-FR2{
+.item-21 .item-text-FR2{
     top: 0;
     left: 0;
     right: 0;
@@ -2044,16 +1910,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     width: 100%;
     max-width: 1400px;
-    background: transparent;
-    
+    background: rgb(35, 0, 0);
 }
-.item-21 .text-FR2 h1{
+.item-21 .item-text-FR2 h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
@@ -2061,17 +1923,20 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: rgb(35, 0, 0);
     display: inherit;
     position: relative;
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom; 
     }
-    .item-21 .text-FR2 p{
-    background: rgb(35, 0, 0);
-    font-size: 1.4rem;
+.item-21 .item-text-FR2 p{
+   font-size: 1.4rem;
     text-align: justify;
     padding: 15px;
 }
 /* END FINAL RENDER SECTION2 ITEM-20*/
 
 /*PUZZLES SECTION item-22 item-23*/
-.item-22 .background-image{
+.item-22 .item-background-image{
     display: inline-block;
     background:  repeating-linear-gradient(
         120deg, transparent 20%, #263318 50%, hsl(45, 88%, 10%) 20%, hsl(45, 88%, 10%) 40%, #330508 0%, #774c3a 60%, #1c0000 70%, #263318 50%, #2a0000 10%,transparent 20%,
@@ -2089,7 +1954,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     position: relative;
     overflow: hidden;
 }
-.item-22 .background-image::after{
+.item-22 .item-background-image::after{
     content: '';
     position: absolute;
     inset: 0;
@@ -2097,7 +1962,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: #a3ffc7;
     mix-blend-mode: multiply;
 }
-.item-22 .background-image video{
+.item-22 .item-background-image video{
     top: 0;
     left: 0;
     right: 0;
@@ -2109,7 +1974,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     position: absolute;
     overflow: hidden;
 }
- .item-22 .background-text h2{
+ .item-22 .item-background-text h2{
     font-size: 9.5cqi;
     text-align: center;
     margin: auto;
@@ -2123,8 +1988,8 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     right: 0;
     bottom: 0;
 }
-@media screen and (max-width: 768px) {
-   .item-22 .background-text h2{
+@media screen and (max-width: 1050px) {
+   .item-22 .item-background-text h2{
     font-size: 1em;
     background: transparent;
     margin: auto;
@@ -2133,7 +1998,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     z-index: -1;
   }
 }
-.item-23 .text-t{
+.item-23 .item-text-t{
     top: 0;
     left: 0;
     right: 0;
@@ -2142,27 +2007,25 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     width: 100%;
     max-width: 1400px;
-    height: 100%;
-    background: transparent;
+    background: rgb(35, 0, 0);
     overflow: hidden;
 }
-.item-23 .text-t h1{
+.item-23 .item-text-t h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850D16, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(35, 0, 0);
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom; 
     }
-.item-23 .text-t p{
+.item-23 .item-text-t p{
     font-size: 1.4rem;
     padding: 15px;
-    background: rgb(35, 0, 0);
     text-align: left; 
     justify-content: center;
     align-items: center;
@@ -2174,22 +2037,21 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-   
 }
 /* END PUZZLES SECTION ITEM-22 ITEM-23*/
 
 /* ANIMATION SECTION ITEM-24*/
-.item-24 .content-ANIM {
+.item-24 .item-content-ANIM {
    position: relative;
    width: 100%;
    max-width: 1400px;
    justify-content: center;
    align-items: center;
-   background: rgba(0, 0, 0, 0.2);
+  background: rgb(35, 0, 0);
    overflow: hidden;
    margin: 20px auto 20px;
 }
-.item-24 .content-ANIM video{
+.item-24 .item-content-ANIM video{
     width: 100%;
     max-width: 800px;
     margin-left: 20px;
@@ -2199,22 +2061,22 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
    
 }
-.item-24 .content-ANIM h1{
-    font-size: 1.7rem;
+.item-24 .item-content-ANIM h1{
+    font-size: 2rem;
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #850d16, transparent 20%);
-    border-image-slice: 1; 
-    /*background: hsl(43, 84%, 6%);*/
+    background: linear-gradient(to right, #850d16 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom; 
 }
-.item-24 .content-ANIM h6{
-    font-size: 1.7rem;
+.item-24 .item-content-ANIM h6{
+    font-size: 1.4rem;
     padding: 15px;
     position: relative;
     
 }
-.item-24 .content-ANIM p{
-    background: rgb(35, 0, 0);
+.item-24 .item-content-ANIM p{
+    
     font-size: 1.4rem;
     text-align: justify;
     padding: 15px;
