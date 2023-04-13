@@ -859,12 +859,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     right: 0;
     bottom: 0;
     float: left;
-    border-bottom: 2px solid;
-    border-width: 10px;
-    border-image-slice: 1;
-    border-image-source: -moz-linear-gradient(left, #404040 0%, #000000, #000000 80%);
-    border-image-source: -webkit-linear-gradient(left, #404040 0%, #000000, #000000 80%);
-    border-image-source: linear-gradient(to right, #404040 1%, #000000, #000000 60%);
+    text-decoration: none;
+    background: linear-gradient(to right, #404040 2%, transparent 40%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
 } 
 .item-rbox2 ul {
     font-size: 1.3rem;
@@ -923,9 +922,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     font-size: 1.4rem;
     justify-content: center;
     align-content: center;
-    border-bottom: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 70%);
-    border-image-slice: 1;
+    background: linear-gradient(to right, #404040 2%, transparent 40%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
 .item-ac-box1 p{
     font-size: 1.2rem;
@@ -1059,13 +1059,14 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 20%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(to right, #404040 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
 }
 .item-11B .item-text11B h5{
     font-size: 1.7rem;
@@ -1075,7 +1076,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+    background: linear-gradient(to right, #404040 2%, transparent 25%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
 .item-11B .item-text11B p{
     font-size: 1.4rem;
@@ -1091,11 +1095,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
-   
-}
+ }
 /* END INSPIRATIONS SECTION item-11A item-11B*/
 
 /* SKETCHING SECTION item-12 item-13*/
@@ -1152,7 +1152,10 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+    background: linear-gradient(to right, #404040 2%, transparent 35%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
 .item-13 .item-text p{
     font-size: 1.4rem;
@@ -1168,14 +1171,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
-   
-}/* END SKETCHES SECTION item-12 item-13*/
+}
+/* END SKETCHES SECTION item-12 item-13*/
 
 /*DIGITAL WIREFRAME SECTION item-14 item-15*/ 
- .item-14 .dw-img{
+ .item-14 .item-dw-img{
     top: 0;
     left: 0;
     right: 0;
@@ -1187,7 +1187,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1100px;
     justify-content: center;
 }
-.item-15 .dw-text{
+.item-15 .item-dw-text{
    top: 0;
     left: 0;
     right: 0;
@@ -1198,7 +1198,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1400px;
     background: #181818;
   }
-.item-15 .dw-text h5{
+.item-15 .item-dw-text h5{
      font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1206,9 +1206,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
-    }
-.item-15 .dw-text P{
+    background: linear-gradient(to right, #404040 2%, transparent 35%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
+   }
+.item-15 .item-dw-text P{
    font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1222,16 +1225,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
-   
-}
+  }
  /* END DIGITAL WIREFRAME SECTION item-14 item-15*/ 
 
 
 /*MOBILE VERSION WIREFRAME SECTION item-16 item-17*/ 
- .item-16 .mobW-img{
+ .item-16 .item-mobW-img{
     top: 0;
     left: 0;
     right: 0;
@@ -1242,7 +1241,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1100px;
     justify-content: center;
 }
-.item-17 .mobW-text{
+.item-17 .item-mobW-text{
    top: 0;
     left: 0;
     right: 0;
@@ -1253,7 +1252,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1400px;
     background: #181818;
   }
-.item-17 .mobW-text h5{
+.item-17 .item-mobW-text h5{
      font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1261,9 +1260,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
-    }
-.item-17 .mobW-text P{
+    background: linear-gradient(to right, #404040 2%, transparent 35%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
+  }
+.item-17 .item-mobW-text P{
    font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1277,14 +1279,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
 }
  /* END MOBILE VERSION WIREFRAME SECTION item-16 item-17*/ 
 
  /*MOCKUP SECTION item-18 item-19*/ 
- .item-18 .mockup-img{
+ .item-18 .item-mockup-img{
     top: 0;
     left: 0;
     right: 0;
@@ -1295,7 +1294,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 1100px;
     justify-content: center;
 }
-.item-19 .mockup-text{
+.item-19 .item-mockup-text{
    top: 0;
     left: 0;
     right: 0;
@@ -1305,8 +1304,8 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     width: 100%;
     max-width: 1400px;
     background: #181818;
-  }
-.item-19 .mockup-text h5{
+}
+.item-19 .item-mockup-text h5{
      font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1314,9 +1313,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
-    }
-.item-19 .mockup-text P{
+    background: linear-gradient(to right, #404040 2%, transparent 35%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
+}
+.item-19 .item-mockup-text P{
    font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1330,9 +1332,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
 }
  /* END MOCKUP SECTION item-18 item-19*/ 
 
@@ -1370,7 +1369,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     max-width: 400px;
    } 
 }
-.item-21 .item-text{
+.item-21 .item-tex-ptypet{
     top: 0;
     left: 0;
     right: 0;
@@ -1382,7 +1381,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: #181818;
     overflow: hidden;
 }
-.item-21 .item-text h5{
+.item-21 .item-text-ptype h5{
     font-size: 1.7rem;
     text-align: left; 
     padding: 15px;
@@ -1390,9 +1389,12 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     left: 0;
     right: 0;
-  
+    background: linear-gradient(to right, #404040 2%, transparent 35%);  
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: bottom;
 }
-.item-21 .item-text p{
+.item-21 .item-text-ptype p{
     font-size: 1.4rem;
     padding: 15px;
     text-align: left; 
@@ -1406,14 +1408,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     margin: auto;
     position: relative;
-    border-top: 3px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1;
-   
-}/* END PROTOTYPE SECTION item-20 item-21*/
+ }
+/* END PROTOTYPE SECTION item-20 item-21*/
 
 /* TEST SECTION ITEM-22*/
-.item-22 .execution-content{
+.item-22 .item-execution-content{
     top: 0;
     left: 0;
     right: 0;
@@ -1425,11 +1424,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: transparent;
     overflow: hidden;
 }
-.item-22 .execution-content img{
+.item-22 .item-execution-content img{
     width: 100%;
     object-fit: cover;
 }
-.item-22 .execution-text{
+.item-22 .item-execution-text{
     top: 0;
     left: 0;
     right: 0;
@@ -1438,34 +1437,42 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     width: 100%;
     max-width: 1400px;
-    height: 0%; 
-    background: transparent;
+    background: #181818;
+    overflow: hidden;
   }
-.item-22 .execution-text h1{
+.item-22 .item-execution-text h1{
+    font-weight: 400;
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #181818;
-    display: inherit;
-    position: relative;
+    background: linear-gradient(to right, #404040 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
     }
-     .item-22 .execution-text p{
-    background: #181818;
-    font-size: 1.4rem;
-    text-align: justify;
+.item-22 .item-execution-text p{
+   font-size: 1.4rem;
     padding: 15px;
+    text-align: left; 
+    justify-content: center;
+    align-items: center;
+    display: block;
+    color: #f0f8ff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: relative;
 }
 /* END TEST SECTION ITEM-22*/
 
 /* TEST SECTION ITEM-23*/
-.item-23 .test-content{
+.item-23 .item-test-content{
     top: 0;
     left: 0;
     right: 0;
@@ -1477,11 +1484,11 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     background: transparent;
     overflow: hidden;
 }
-.item-23 .test-content img{
+.item-23 .item-test-content img{
     width: 100%;
     object-fit: cover;
 }
-.item-23 .test-text{
+.item-23 .item-test-text{
     top: 0;
     left: 0;
     right: 0;
@@ -1490,26 +1497,24 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     margin: auto;
     width: 100%;
     max-width: 1400px;
-    height: 0%; 
-    background: transparent;
+    background: #181818;
+    overflow: hidden;
   }
-.item-23 .test-text h1{
+.item-23 .item-test-text h1{
     font-size: 2rem;
     text-align: left; 
     padding: 15px;
-    border-bottom: 10px solid;
-    border-image-source: radial-gradient(circle at top left, #404040, transparent 35%);
-    border-image-slice: 1; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #181818;
-    display: inherit;
     position: relative;
+    background: linear-gradient(to right, #404040 2%, transparent 15%);  
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-position: bottom;
     }
-     .item-23 .test-text p{
-    background: #181818;
+.item-23 .item-test-text p{
     font-size: 1.4rem;
     text-align: justify;
     padding: 15px;
