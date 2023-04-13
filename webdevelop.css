@@ -913,10 +913,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     font-weight: 800;
     font-size: 2rem;
     text-decoration: none;
-    background: linear-gradient(to right, #404040 2%, transparent 90%);  
-    background-repeat: no-repeat;
-    background-size: 100% 20px;
-    background-position: bottom;
 }
 .item-ac-box1 h1{
     font-size: 1.4rem;
