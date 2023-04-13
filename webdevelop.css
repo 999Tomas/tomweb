@@ -755,7 +755,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     align-content: center;
     display: block;
     text-decoration: none;
-    background: linear-gradient(to right, #404040 2%, transparent 20%);  
+    background: linear-gradient(to right, #404040 2%, transparent 12%);  
     background-repeat: no-repeat;
     background-size: 100% 7px;
     background-position: bottom;
@@ -807,7 +807,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     float: rigt;
     z-index: 99;
     text-decoration: none;
-    background: linear-gradient(to right, #404040 2%, transparent 70%);  
+    background: linear-gradient(to right, #404040 2%, transparent 30%);  
     background-repeat: no-repeat;
     background-size: 100% 7px;
     background-position: bottom;
@@ -842,7 +842,6 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
 }
 @media screen and (max-width: 1050px){
 .item-rbox2{
-    border-top: 2px solid #404040;
     background: transparent;
      }
 }
@@ -860,7 +859,7 @@ background: linear-gradient(45deg, #1D0D00 0%, #251100 39%, #431F00 100%);
     bottom: 0;
     float: left;
     text-decoration: none;
-    background: linear-gradient(to right, #404040 2%, transparent 40%);  
+    background: linear-gradient(to right, #404040 2%, transparent 20%);  
     background-repeat: no-repeat;
     background-size: 100% 7px;
     background-position: bottom;
