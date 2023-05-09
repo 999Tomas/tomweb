@@ -742,7 +742,6 @@ left:100%;
    background-position: center;
    justify-content: center;
    align-items: center;
-  
    display: flex;
    object-fit: cover;
 }
