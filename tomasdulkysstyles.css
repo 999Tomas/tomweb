@@ -706,19 +706,7 @@ left:100%;
 ::-webkit-scrollbar{
    width: 0;
 }
-#home .box-img9{
-    width: 100%;
-   height: 100%;
-   background: transparent;
-   background-image: url(img2/envr.png);
-   background-size: 400%;
-   background-repeat: no-repeat;
-   background-position: center;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   object-fit: cover;
-}
+
 #home .box-img8{
    width: 100%;
    height: 100%;
