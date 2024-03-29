@@ -966,15 +966,18 @@ p{
     background: transparent;
     overflow: hidden;
 }
-.item-11A .item-introduction-content video{
+.item-11A .item-introduction-content {
    margin: auto;
-   width: 100%;
+   width: 1000px;
+   height: 563px;
    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
-   .item-11A .item-introduction-content video{
-    max-width: 400px;
+   .item-11A .item-introduction-content {
+    max-width: 320px;
+    max-height: 240px;
+
    } 
 }
 .item-11B .item-introduction-text{
@@ -1936,17 +1939,20 @@ text-align: left;
     background: transparent;
     overflow: hidden;
 }
-.item-30 .item-animation-content video{
+.item-30 .item-animation-content {
    margin: auto;
-   width: 100%;
+   width: 1000px;
+   height: 563px;
    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
-   .item-30 .item-animation-content video{
-    max-width: 400px;
+   .item-30 .item-animation-content{
+     max-width: 320px;
+    max-height: 240px;
    } 
 }
+
 .item-30 .item-animation-text{
     top: 0;
     left: 0;
