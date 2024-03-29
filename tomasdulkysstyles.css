@@ -406,20 +406,6 @@ overflow: hidden;
         background-position: 0% 100%;
     }
 }
-/*#portfolio{
-}
-@media screen and (max-width: 1050px){
-    #portfolio {
-        height: 100vh;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1050px){
-#portfolio {
-   height:300px;
-   overflow-y: hidden;
-    }
-}*/
 #contact{
     height: 1100px;
     overflow: hidden;
@@ -787,19 +773,6 @@ left:100%;
    display: flex;
    object-fit: cover;
 }
-/*#home .box-img3{
-    width: 100%;
-   height: 100%;
-   background: transparent;
-   background-image: url(img/lucius2.png);
-   background-size: 400%;
-   background-repeat: no-repeat;
-   background-position: center;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   object-fit: cover;
-}*/
 #home .box-img4{
     width: 100%;
    height: 100%;
@@ -813,19 +786,7 @@ left:100%;
    display: flex;
    object-fit: cover;
 }
-#home .box-img5{
-    width: 100%;
-   height: 100%;
-   background: transparent;
-   background-image: url(img/web-cover.png);
-   background-size: 400%;
-   background-repeat: no-repeat;
-   background-position: center;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   object-fit: cover;
-}
+
 #home .box-img5{
     width: 100%;
    height: 100%;
@@ -839,35 +800,8 @@ left:100%;
    display: flex;
    object-fit: cover;
 }
-/*#home .box-img6{
-    width: 100%;
-   height: 100%;
-   background: transparent;
-   background-image: url(img/snap3.png);
-   background-size: 400%;
-   background-repeat: no-repeat;
-   background-position: center;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   object-fit: cover;
-}*/
-/*#home .box-img7{
-    width: 100%;
-   height: 100%;
-   background: transparent;
-   background-image: url(img/tt-gplay.png);
-   background-size: 400%;
-   background-repeat: no-repeat;
-   background-position: center;
-   justify-content: center;
-   align-items: center;
-   display: flex;
-   object-fit: cover;
-}*/
 #home .gallery .box-img img{
     width: 100%;
-
     transition: 1s;
 }
 
