@@ -427,31 +427,6 @@ p{
     background-color: black;
    margin-bottom: 1px;
 }
-/*.item-0{
-    grid-column: 3 / 7;
-    grid-row: 14 / 17;
-    background-color: black;
-    height: auto;
-    overflow: hidden;
-}
-.item-01{
-    grid-column: 3 / 7;
-    grid-row: 17 / 19;
-    background-color: black;
-    margin-top: 0px;
-}
-.item-11C{
-    grid-column: 3 / 7;
-    grid-row: 19 / 20;
-    background-color: black;
-    margin-top: 15px;
-}
-.item-11D{
-    grid-column: 3 / 7;
-    grid-row: 21 / 22;
-    background-color: black;
-   margin-bottom: 1px;
-}*/
  .item-12{
     grid-column: 3 / 7;
     grid-row: 22 / 23;
