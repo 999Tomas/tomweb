@@ -966,17 +966,6 @@ p{
     background: transparent;
     overflow: hidden;
 }
-.item-11A .item-introduction-content video{
-   margin: auto;
-   width: 100%;
-   justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-   .item-11A .item-introduction-content video{
-    max-width: 400px;
-   } 
-}
 .item-11B .item-introduction-text{
     top: 0;
     left: 0;
