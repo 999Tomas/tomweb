@@ -1774,6 +1774,11 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
     }
+.item-27 .item-envo-text .scroll-object{
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+} 
 .item-27 .item-envo-text p{
     font-size: 1.4rem;
     text-align: justify;
