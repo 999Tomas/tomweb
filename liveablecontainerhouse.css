@@ -941,19 +941,10 @@ p{
     background: transparent;
     overflow: hidden;
 }
-.item-11A .item-introduction-content {
-   margin: auto;
-   width: 1000px;
-   height: 563px;
+.item-11A .item-introduction-content .player {
+   aspect-ratio: 16/9;
+   width: 100%;
    justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-   .item-11A .item-introduction-content {
-    max-width: 320px;
-    max-height: 240px;
-
-   } 
 }
 .item-11B .item-introduction-text{
     top: 0;
@@ -995,6 +986,11 @@ p{
     background-repeat: no-repeat;
     background-size: 100% 3px;
     background-position: bottom;
+}
+.item-11B .item-introduction-text .scroll-object{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
 }
 .item-11B .item-introduction-text p{
     font-size: 1.4rem;
@@ -1129,6 +1125,11 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
 }
+.item-15 .item-research-text .scroll-object2{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+}
 .item-15 .item-research-text P{
    font-size: 1.4rem;
     padding: 15px;
@@ -1202,6 +1203,7 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
     }
+
 .item-17 .item-containers-text P{
    font-size: 1.4rem;
     padding: 15px;
@@ -1257,6 +1259,13 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
 }
+
+.item-19 .item-ideate-text .scroll-object3{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+}
+
 .item-19 .item-ideate-text p{
    font-size: 1.4rem;
     padding: 15px;
@@ -1428,6 +1437,11 @@ p{
     background-repeat: no-repeat;
     background-size: 100% 3px;
     background-position: bottom;
+}
+.item-21 .item-sketching-text .scroll-object4{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
 }
 .item-21 .item-sketching-text p{
     font-size: 1.4rem;
@@ -1658,7 +1672,7 @@ p{
     text-align: left; 
     padding: 15px;
     top: 0;
- bottom: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     position: relative;
@@ -1667,6 +1681,11 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
     }
+    .item-25 .item-fporch-text .scroll-object5{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+}
 .item-25 .item-fporch-text p{
     font-size: 1.4rem;
     text-align: justify;
