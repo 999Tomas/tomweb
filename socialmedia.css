@@ -630,7 +630,7 @@ p{
     align-content: center;
     display:flex;
     text-align: center;
-    height: 50px;
+    height: auto;
 
 }
 .item-1{
