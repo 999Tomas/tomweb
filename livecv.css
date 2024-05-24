@@ -18,6 +18,19 @@ body
     text-rendering:optimizeLegibility;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #082d43;;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7cb9e8;
+}
+
 .skill-set li:hover
 {
     background:#3498db;
