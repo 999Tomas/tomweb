@@ -1462,6 +1462,11 @@ p{
     background-size: 100% 3px;
     background-position: bottom;
 }
+.item-19 .item-content-text .scroll-object{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+}
 .item-19 .item-content-text p{
     font-size: 1.4rem;
     padding: 15px;
