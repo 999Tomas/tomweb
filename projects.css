@@ -46,6 +46,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-background-image: url('img4/3dstuff.png');
   background-image: url('img4/3dstuff.png');
   background-position: center;
   background-size: cover;
@@ -60,9 +61,8 @@ body{
   #pg-projects::after {
     background-attachment: scroll; 
     opacity: 0.5; 
-     background-image: url('img4/3dstuff.png');
-
-  }
+    -webkit-background-size: cover; 
+}
 
   #pg-projects h1 {
     font-size: 1.5rem; 
