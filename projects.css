@@ -55,6 +55,22 @@ body{
   z-index: -1;
 }
 
+/* Responsive adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+  #pg-projects::after {
+    background-attachment: scroll; 
+    opacity: 0.5; 
+  }
+
+  #pg-projects h1 {
+    font-size: 1.5rem; 
+  }
+
+  #pg-projects .wrapper {
+    margin: 0 10px; 
+  }
+}
+
 #pg-projects .wrapper {
   margin: 0 15px;
   max-width: 960px;
