@@ -60,6 +60,7 @@ body{
   #pg-projects::after {
     background-attachment: scroll; 
     opacity: 0.5; 
+    background-size: contain;
   }
 
   #pg-projects h1 {
