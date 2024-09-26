@@ -954,6 +954,27 @@ function loadScrollbarStyles() {
 window.onload = loadScrollbarStyles;
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.querySelector("video");
+    // Check if the video is visible
+    if (window.innerWidth < 768 && !video) {
+        // If it's mobile and the video is not found
+        console.error("Video element not found on mobile version.");
+    } else {
+        video.style.display = "block"; // Ensuring it's visible
+    }
+
+    // Optional: Handle resizing
+    window.addEventListener("resize", () => {
+        if (window.innerWidth < 768) {
+            video.style.display = "block"; // Show video on resize to mobile
+        } else {
+            video.style.display = "block"; // Show video for larger devices
+        }
+    });
+});
+
+
 // sidebar open close js code
 let navLinks = document.querySelector(".nav-links");
 let menuOpenBtn = document.querySelector(".navbar .bx-menu");
