@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #f5f7f6;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #14151A;
+
+}
+ul {
+    list-style-type: disc;
+}
+h6{
+    font-weight: 400;
+}
+h5{
+    font-weight: 500;
+}
+h1{
+    font-weight: 500;
+}
+p{
+    font-weight: 400;
+}
+
+/* Main Container */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  
+}
+
+/* Headings */
+h2 {
+  text-transform: uppercase;
+}
+
+/* Parallax Effect */
+.parallax {
+  background-image: url("img4/about.png");
+   animation: scaleUp 1s ease-in-out forwards; /* Scale animation */
+  border-image: linear-gradient(hsl(0 100% 2% / .6),
+      rgba(20, 21, 30, .9))
+    fill 1;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   animation: moveBackground 25s linear infinite; /* Adds animation to background */
+}
+@media screen and (max-width: 768px) {
+   .parallax{
+   min-height: 50vh;
+ }
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: center 25%; /* Moves the background down */
+  }
+  100% {
+    background-position: center; /* Returns to the original position */
+  }
+}
+
+/* Parallax Content */
+.parallax-content {
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 200%;
+  background-color: rgba(20, 21, 26, 1); /* Semi-transparent background */
+  transform: skewY(-50deg);
+  transform-origin: top left;
+  animation: slideIn 1s forwards; /* Add animation for content sliding effect */
+}
+
+@media screen and (max-width: 768px) {
+   .parallax-content{
+    width: 100%;
+    height: 60vh;
+    transform: skewY(40deg);
+    left: 0;
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) { /* Medium devices like tablets and 13" laptops */
+  .parallax-content {
+    width: 100%; /* Adjust width for a more centered look */
+    height: 100%; /* Slightly adjusted height */
+    transform: skewY(-30deg); /* Adjust skew for medium devices */
+  }
+}
+
+@media screen and (min-width: 1281px) { /* Larger devices like desktops */
+  .parallax-content {
+    width: 200%; /* Retain the original width for larger views */
+    height: 200%; /* Maintain original height */
+    transform: skewY(-50deg); /* Retain original skew */
+  }
+}
+
+.headline {
+    width: 100%; 
+    max-width: 60%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    display: flex;
+    justify-content: center; 
+    padding-top: 20px; 
+}
+
+video {
+    max-width: 100%; /* Responsive size */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Optional border styling */
+}
+
+@media screen and (max-width: 768px) {
+
+    .headline {
+        justify-content: center; /* Center video */
+    top: 30%; /* Adjusting position lower for better centering on smaller screens */
+    left: 50%; /* Center align horizontally */
+    transform: translateX(-50%); /* Adjust for true center */
+    max-width: 90%; /* Adjust width for mobile */
+    }
+
+    video {
+        max-width: 100%; /* Make video larger and responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Content Styling */
+.content-about {
+  height: 50%;
+  width: 50%;
+  margin-left: 10%;
+  background: transparent;
+  overflow-x: hidden; /* Hide horizontal scrolling */
+  z-index: 100;
+  position: relative;
+  animation: textFadeIn 1s forwards; /* Text fade-in effect */
+  top: 10%;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  scrollbar-width: none;
+}
+
+.content-about::-webkit-scrollbar {
+  display: none;
+}
+
+.text {
+    width: 80%;
+    margin-top: 0px;
+    background: transparent;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: auto;
+    padding: 20px;
+}
+
+.text p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 2em;
+}
+
+/* Animation Keyframes */
+/* Animation Keyframes */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-skills {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    list-style-type: none;
+    height: auto; /* Adjusted height */
+    width: 50%;
+    padding: 20px; /* Added padding for aesthetics */
+    margin: 200px auto; /* Centered horizontally */
+    left: 0;
+    text-align: center; /* Centered text */
+    z-index: 100;
+}
+
+.content-skills span img {
+    width: 100%;
+    max-width: 25px;
+    text-align: center;
+    padding-top: 5px;
+    background: transparent;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.content-skills h1 {
+    font-size: 1.5rem; 
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.content-skills ul {
+    padding: 0; 
+    margin: 0;
+}
+
+.content-skills li {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px; 
+    margin-top: 15px; 
+    opacity: 0; 
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth appearance */
+}
+
+.content-skills li p{
+    text-align: center;
+    display: inline-block;
+   
+    margin: auto;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 20px;
+} 
+
+.content-skills li.show {
+    opacity: 1; /* Make visible */
+    transform: translateX(0); 
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll; /* Change for mobile to improve load time */
+    border-image: linear-gradient(hsl(0 100% 2% / .6),
+        hsl(0 100% 2% / .9))
+    fill 1;
+  }
+
+  .content-about {
+    width: 90%; /* Adjust for better fit */
+    margin: 0; /* Center on mobile */
+    height: 60%;
+    margin-left: 5%;
+    position: relative;
+
+  }
+
+  .text {
+    padding: 0; /* Less padding on mobile */
+    text-align: left;
+    margin: 0;
+  }
+
+  .content-skills {
+    margin: 150px auto; /* Adjust the vertical position */
+    text-align: justify;
+    padding-left: 50px;
+  }
+}
+  .footer-container{
+    height: auto;
+    padding-bottom: 20px;
+  }

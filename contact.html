@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <title>Tomas Dulkys | Contact</title>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <link href="http://fonts.cdnfonts.com/css/caligna-demo" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+       <link rel="stylesheet" href="contact.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="preload" as="style" href="contact.css">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+       <script type="module" src="tomasdulkys.js"></script> 
+
+
+   <script> 
+$(document).ready(function(){
+$("dropdown").click(function(){
+    $("#panel").slideToggle("slow");
+});
+});
+</script>
+</head>
+<body>
+    <my-header></my-header>
+<!-- Page Transition -->
+<div class="transition">
+  <div class="cover cover1"></div>
+</div>
+<section id="pg-contact">
+   <div class="wrapper">
+      <h1>Let's Bring Your Vision to Life</h1>
+      <p class="content">
+      </p>
+      <div class="btn"><a href="#pg-contact2"><p>Contact Me</p></a></div>
+    </div>
+</section>
+<section id="pg-contact2">
+  <div class="content"></div>
+<div class="phone-container">
+    <div class="phone">
+        <div class="screen">
+            <img src="img4/b12_w.png" alt="Phone Screen">
+            <div class="app instagram pulse">
+                <a href="https://www.instagram.com/tomasdulkys/" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagram Icon">
+                </a>
+
+            </div>
+            <div class="app linkedin pulse">
+                <a href="https://www.linkedin.com/in/tomasdulkys/" target="_blank">
+                    <img src="icons/linkedin.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+
+            <div class="app email pulse" onclick="window.location.href='mailto:tomasdulkys@gmail.com'">
+                <img src="icons/email.png" alt="Email Icon">
+            </div>
+
+             <div class="connect-text">
+                <p>Connect with Me</p>
+            </div>
+            <div class="email-text">
+                <p>Email Me</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+ <!--FOOTER-->
+<div id="footer-container"></div>
+
+
+    <script src="tomasdulkys.js"></script> 
+</body>
+</html>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <title>Tomas Dulkys</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+       <link rel="stylesheet" href="medievalenvironment.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script> 
+$(document).ready(function(){
+$("dropdown").click(function(){
+    $("#panel").slideToggle("slow");
+});
+});
+</script>
+<!-- Low Poly Art -->
+<script src="jquery.js" charset="UTF-8"></script>
+</head>
+<body>
+ <my-header></my-header>
+<!-- END MAIN Navigation Menu -->
+
+    <div class="container-p2">
+        <!-- Back to top button -->
+        <a id="button"></a>
+
+  <!--FACE SECTION item-1 till item-11-->
+<div class="item item-1">
+    <div class="item item-title">
+        <h1>Medieval Environment</h1>
+    </div>
+</div>
+ 
+  <div class="item item-2">
+    <img src="img2/envr.png" style="width:100%">
+  </div>
+  
+  <div class="item item-3">
+    <div class="item item-brief">
+        <h1>Brief</h1>
+        <p>Creating 3D environment for the co-op VR gameplay "Split Senses"</p>
+    </div>        
+      <div class="item item-role">
+            <h1>Role in Project</h1>
+            <p>3D Environment Artist</p>
+      </div>
+      <div class="item item-software">
+        <h1>Software</h1>
+        <ul class="list-inline">
+            <li class="list-inline-item">&bull;Blender 3.1</li> 
+            <li class="list-inline-item">&bull;Photoshop</li> 
+            <li class="list-inline-item">&bull;Adobe Illustrator</li> 
+        </ul>
+      </div> 
+  </div>
+  <div class="item item-4">
+    <div class="item item-tablecontents">
+        <h1>Table of Contents</h1>
+    </div>
+    <div class="item item-tablecontents2">
+        <a href="#content-intro-p6"><h1>Planning</h1></a>
+        <a href="#content-intro-p6"><p>1.1 Introduction</p></a>
+        <a href="#content-theme-p6"><p>1.2 Theme</p></a>
+        <a href="#content-research-p6"><p>1.3 Research</p></a>
+        <a href="#content-references-p6"><p>1.4 References</p></a>
+        <a href="#content-sketching-p6"><p>1.5 Sketching</p></a>
+        <a href="#content-development-p6"><h1>Modelling Phase</h1></a>
+        <a href="#content-dualapproach-p6"><h1>Dual Rendering Approach</h1></a>
+        <a href="#content-assets-p6"><h1>Assets</h1></a>
+        <a href="#content-texturing-p6"><h1>Texturing Phase</h1></a>
+        <a href="#content-basebeams-p6"><p>2.1 Base & Beams</p></a>
+        <a href="#content-windowdoor-p6"><p>2.2 Arched Window Recess &<br> Door Model</p></a>
+        <a href="#content-chandeliersconce-p6"><p>2.3 Candle Chandelier & Sconce</p></a>
+        <a href="#content-lighting-p6"><h1>Scene Illumination</h1></a>
+        <a href="#content-arealight-p6"><p>3.1 Area Light Implementation</p></a>
+        <a href="#content-pointlight-p6"><p>3.2 Point Light Implementation</p></a>
+        <a href="#content-plprocess-p6"><p>3.3 Point Light Creation Process</p></a>
+        <a href="#content-volumelight-p6"><p>3.4 Ray Volume Light Creation</p></a>
+        <a href="#content-finalrender-p6"><h1>Final Render</h1></a>
+        <a href="#content-adjustment-p6"><p>4.1 Refinements and<br> Adjustments</p></a>
+        <a href="#content-animation-p6"><h1>Animation</h1></a>
+        <a href="#content-sconceanim-p6"><p>5.1 Sconce Animation</p></a>
+        <a href="#content-chadelieranim-p6"><p>5.2 Candle Chandelier Animation</p></a>
+        <a href="#content-flamemotion-p6"><p>5.3 Flame Motion</p></a>
+        <a href="#content-flickering-p6"><p>5.4 Flickering Effects</p></a>
+        
+    </div>
+</div>
+
+<!--INTRO SECTION item-5-->
+<div class="item item-5">
+    <section id="content-intro-p6">
+        <div class="slideshow-container" id="slideshow1">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img2/gplay-loop15.png" style="width:100%">
+                <div class="image-title">Navigational Path to the Exit<br><p>1.1.1</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/gplay-loop19.png" style="width:100%">
+                <div class="image-title">Top-Down View of Game Room<br><p>1.1.2</p></div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/gplay-loop15.png" onclick="currentSlide(1, 'slideshow1')">
+            <img class="thumbnail2" src="img2/gplay-loop19.png" onclick="currentSlide(2, 'slideshow1')">
+        </div>
+        <div class="item item-text">
+            <h1>Planning</h1>
+            <h5>1.1 Introduction</h5>
+            <p>
+                This project aims to create an interactive 3D co-op platform game using virtual reality (VR) technology. The unique gameplay mechanics involve one player using virtual reality (VR) to experience the environment without direct control over their movements, while a second player uses a game pad to navigate the player through the game world—an experience that requires communication and teamwork. The duo's shared objective is to successfully reach the exit door on the opposite side of the game environment (Figure 1.1.1), all while avoiding potential pitfalls along the way.
+                <br>
+                As part of the initial concept development, I have utilised the Workbench engine to render the game room layout. This includes views from the starting point to the exit, and a top-down perspective for a comprehensive understanding of the environment (refer to Figure 1.1.2).
+                <br>
+                As the 3D artist for this project, my primary responsibility lies in creating a game environment that authentically captures the rich aesthetics and thematic elements of the medieval era, while also enhancing the gameplay experience.
+            </p>
+        </div>
+   </section>
+</div>
+<!--END INTRO SECTION item-5--> 
+
+<!--THEME SECTION item-6-->
+<div class="item item-6">
+    <section id="content-theme-p6">
+        <div class="item item-img">
+            <img src="img2/ss-theme.png" style="width:100%">
+        </div>
+        <div class="item item-text">
+            <h5>1.2 Theme</h5>
+            <p>
+                We have chosen the medieval period as the central theme for our project due to its unique artistic style and enduring recognition across cultures. This era is characterised by a rich tapestry of cultural references, providing a wealth of design elements that can enhance the gameplay experience. 
+                <br>
+                My research draws on sources showcasing medieval room environments, highlighting both the rustic and ornate qualities that define this fascinating historical period. By carefully integrating these elements into our environment planning, I aim to transport players into a vibrant and authentic medieval world, thereby contributing to an engaging gameplay experience.
+            </p>
+        </div>
+    </section>
+</div>
+<!-- END THEME item-6--> 
+
+<!--  RESEARCH item-7--> 
+<div class="item item-7">
+    <section id="content-research-p6">
+         <div class="item item-img">
+            <img src="img2/splitS-research2.png" style="width:100%">
+        </div>
+        <div class="item item-text">
+            <h5>1.3 Research</h5>
+            <p>
+              As part of my responsibilities within the project, I have focused on creating a detailed game environment. This involved extensive research into medieval architectural styles and materials. My findings revealed that this period featured various architectural trends, including Romanesque, Gothic, and French styles, characterised by dramatic stone structures and rich wood elements. Key features of medieval buildings included spacious rooms made from timber or stone, often plastered, with exposed wooden ceiling beams, pointed or round arches, and small windows outfitted with wooden shutters.
+              <br>
+              <br>
+              To enhance the game’s atmosphere, I plan to incorporate vaulted wooden beams, creating a sense of grandeur and spaciousness in the virtual environment. Additionally, the later medieval period saw the introduction of brick, which can be used to add depth and character to our design. The combination of brick and wood will provide a visually striking and immersive experience for the players.
+           </p>
+        </div>
+   </section>
+</div>
+<!-- END RESEARCH item-7-->
+
+<!--  REFERENCES item-8--> 
+<div class="item item-8">
+    <section id="content-references-p6">
+         <div class="item item-img">
+             <img src="img2/medieval-refs.png" style="width:100%">
+        </div>
+        <div class="item item-text">
+            <h5>1.4 References</h5>
+            <p>
+              In the process of creating our medieval game environment, I gathered various reference materials that capture the essence of the Middle Ages. These references include details such as interior window shutters, diamond-patterned window grilles, and arched recesses commonly found in medieval architecture. Additionally, I focused on the use of wooden beams, which are characteristic of that era's structural designs. To further enhance the authenticity of our environment, I incorporated references depicting medieval rooms adorned with atmospheric lighting, brick walls, and stone flooring textures. These elements collectively contribute to a rich setting that reflects the historical context of the game.
+            </p>
+        </div>
+   </section>
+</div>
+<!-- END REFERENCES item-8-->
+
+<!--  SKETCHING item-9--> 
+<div class="item item-9">
+    <section id="content-sketching-p6">
+         <div class="item item-img">
+             <img src="img2/medieval-sketches.png" style="width:100%">
+        </div>
+        <div class="item item-text">
+            <h5>1.5 Sketching</h5>
+            <p>
+              As part of my research, I produced a sketch outlining the design of our game room, emphasising the distinctive hammer beam construction. This initial illustration captures the architectural elements and layout envisioned for the space, laying a foundational blueprint for the game's environment. The sketch will guide the development process, ensuring that all elements harmonise with the medieval theme.
+            </p>
+        </div>
+   </section>
+</div>
+<!-- END SKETCHING item-9-->
+
+<!--MODEL DEVELOPMENT SECTION ITEM-10-->  
+<div class="item item-10">
+    <section id="content-development-p6">
+        <div class="item item-video">
+           <video src="videos2/d.enviro.mp4" muted controls =""></video>
+        </div>
+        <div class="item item-text">
+            <h1>Modelling Phase</h1>
+            <p>
+                For the modelling phase, I produced a video that showcases a compilation of viewport screenshots and renders generated with the Workbench Engine, all edited using Blender's video editing capabilities. This video provides a step-by-step demonstration of how I developed our 3D game room. Each view is accompanied by annotations that detail the specific actions taken during the modelling process, providing clarity on my techniques and choices.
+            </p>
+        </div>
+    </section>
+</div>
+<!--END MODEL DEVELOPMENT SECTION item-10--> 
+
+<!--DUAL RENDERING APPROACH SECTION item-11--> 
+<div class="item item-11">
+    <section id="content-dualapproach-p6">
+        <div class="slideshow-container" id="slideshow2">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img2/enviro-c.view.png" style="width:100%"> 
+                <div class="image-title">Angle View: Timeless Perspective</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/enviro-f.view.png" style="width:100%">
+                <div class="image-title">Entrance to Adventure</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/arch.png" style="width:100%">
+                <div class="image-title">Arched Window Recess: Gateway to the Past</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/door-m2.png" style="width:100%">
+                <div class="image-title">Timber Fortress: The Doorway of Time</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/beams.png" style="width:100%">
+                <div class="image-title">Exposed Beams: The Framework of History</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow2')"style="color: #919295;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow2')"style="color: #919295;">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/enviro-c.view.png" onclick="currentSlide(1, 'slideshow2')">
+            <img class="thumbnail2" src="img2/enviro-f.view.png" onclick="currentSlide(2, 'slideshow2')">
+            <img class="thumbnail2" src="img2/arch.png" onclick="currentSlide(3, 'slideshow2')">
+            <img class="thumbnail2" src="img2/door-m2.png" onclick="currentSlide(4, 'slideshow2')">
+            <img class="thumbnail2" src="img2/beams.png" onclick="currentSlide(5, 'slideshow2')">
+        </div>
+
+        <div class="item item-text">
+            <h1>Dual Rendering Approach</h1>
+            <p>
+              For the modelling preview, I relied on the Workbench engine due to its impressive rendering speed. Additionally, I employed clay renders for the final views of the room, including the arched window recess, door model, and beams. By combining these renders in Photoshop, I created a comparative showcase where one side of each object featured a Workbench render, while the other displayed the clay render. The clay rendering, illuminated to reveal nuanced details, serves as a practical means of identifying and correcting any modelling inaccuracies.
+           </p>
+        </div>
+    </section>
+</div>
+<!--END DUAL RENDERING APPROACH SECTION item-11-->
+
+<!--ASSETS SECTION item-12--> 
+<div class="item item-12">
+    <section id="content-assets-p6">
+        <div class="slideshow-container" id="slideshow3">
+
+            <!-- Full-width images with number and caption text -->
+             <div class="mySlides fade">
+                <img src="img2/mc-lamp.png" style="width:100%">
+                <div class="image-title" >Candle Chandelier Concept</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/walllamp.png" style="width:100%">
+                <div class="image-title">Sconce Design Overview</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow3')"style="color: #919295;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow3')"style="color: #919295;">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/mc-lamp.png" onclick="currentSlide(1, 'slideshow3')">
+            <img class="thumbnail2" src="img2/walllamp.png" onclick="currentSlide(2, 'slideshow3')">
+        </div>
+        <div class="item item-text">
+            <h1>Assets</h1>
+            <p>
+                My colleague primarily assigned the responsibility for environmental assets in this project. Nevertheless, I took the initiative to create a few unique assets inspired by the Middle Ages: a candle chandelier and a sconce. Although the primary role was exclusively on environmental design, my desire to cultivate a personal library of medieval assets motivated me to delve into this additional work.
+                <br>
+                Additionally, I aimed for an appealing final render that included the chandelier asset and candle flame textures, which I plan to animate.
+            </p>
+        </div>
+</section>
+</div>
+<!--END ASSETS SECTION item-12--> 
+
+<!--TEXTURING SECTION item-13 item-16--> 
+<div class="item item-13">
+    <section id="content-texturing-p6">
+        <div class="item item-img">
+            <img src="img2/enviro-t.maps.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h1>Texturing Phase</h1>
+                <p>
+                    In this section, I explore the texturing techniques that enhance the visual richness of our game environment. Each texture is designed to reflect the medieval theme to ensure both aesthetic coherence and realism.
+                </p>
+            </div>
+    </section>
+</div> 
+
+<!--Base & Beams item-14--> 
+<div class="item item-14">
+    <section id="content-basebeams-p6">
+        <div class="slideshow-container" id="slideshow4">
+
+            <!-- Full-width images with number and caption text -->
+             <div class="mySlides fade">
+                <img src="img2/base.png" style="width:100%">
+                <div class="image-title" >Initial Room Texturing Overview<br><p>2.1.1</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/base-textures.png" style="width:100%">
+                <div class="image-title">Texture Maps Used for Enhancing Surface Detail<br><p>2.1.2</p></div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow4')"style="color: #919295;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow4')"style="color: #919295;">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/base.png" onclick="currentSlide(1, 'slideshow4')">
+            <img class="thumbnail2" src="img2/base-textures.png" onclick="currentSlide(2, 'slideshow4')">
+        </div>
+        <div class="item item-text">
+            <h5>2.1 Base & Beams</h5>
+            <p>
+                In this section, I explored texturing techniques to enhance the visual appeal of our game’s virtual space. As showcased in Figure 2.1.1: Initial Room Texturing Overview, I utilised high-quality textures sourced from Adobe Stock (see Figure 2.1.2) to create a rich medieval experience. The walls are adorned with a lifelike brick texture, seamlessly complemented by a stone texture for the floor. To accentuate the structural elements, I employed a dark wood texture for the beams, adding depth and character to the design.
+                <br>
+                <br>
+                To avoid a flat appearance and add depth to the textures, I implemented a combination of bump and displacement mapping techniques using Adobe Photoshop. The bump map was specifically designed to create a sense of surface irregularities, while the displacement map allowed greater height detail, resulting in a more dynamic visual experience.
+                <br>
+                <br>
+                For the shadows, I employed an Ambient Occlusion node that effectively accentuates the depth and dimension of the wall and floor textures, enhancing the overall realism of the scene.
+            </p>
+        </div>
+</section>
+</div>
+
+<!--Window Arched Recess & Door item-15--> 
+<div class="item item-15">
+    <section id="content-windowdoor-p6">
+        <div class="slideshow-container" id="slideshow5">
+
+            <!-- Full-width images with number and caption text -->
+             <div class="mySlides fade">
+                <img src="img2/arch-textr2.png" style="width:100%">
+                <div class="image-title">Medieval Arched Window Recess<br><p>2.1.1</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/door2.png" style="width:100%">
+                <div class="image-title">Medieval Door Model<br><p>2.1.2</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/ad-pbsdf.png" style="width:100%">
+                <div class="image-title">Procedural BSDF Node Textures Development<br><p>2.1.3</p></div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow5')"style="color: #919295;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow5')"style="color: #919295;">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/arch-textr2.png" onclick="currentSlide(1, 'slideshow5')">
+            <img class="thumbnail2" src="img2/door2.png" onclick="currentSlide(2, 'slideshow5')">
+            <img class="thumbnail2" src="img2/ad-pbsdf.png" onclick="currentSlide(3, 'slideshow5')">
+        </div>
+        <div class="item item-text">
+            <h5>2.2 Arched Window Recess & Door Model</h5>
+            <p>
+                In the design of the medieval arched window recess and door, I utilised the same stone texture adopted for the flooring to ensure a cohesive aesthetic throughout the structure. By scaling down the UV-unwrapped sections of the arch meshes, I was able to create a seamless appearance, allowing the stone texture to resemble a singular, unified tile across each element.
+                <br>
+                <br>
+                To enhance the window frame and shutters, I selected a lighter wood texture that contributes to the overall charm of the architecture. Additionally, I developed bump and displacement maps using Photoshop, which provided depth and realism to the surfaces, enriching the visual complexity of the design.
+                <br>
+                <br>
+                For the details, such as the window diamond grille, door handle, and various decorative elements, I opted for a metal texture. This included a diffuse map for the primary metal colour, a metallic map to impart a realistic metallic sheen, and a roughness map to create a polished surface. To add intricate details like bumps and cracks, I applied a bump map, further enhancing the authenticity of the materials.
+                <br>
+                <br>
+                Regarding the hinges, I chose to use an image texture applied as a plane. This approach is particularly efficient in optimising geometry, especially for curved or rounded models. In the context of low-poly game design, as I had aimed for this project, this technique allowed for a reduction in polygon count while maintaining visual fidelity.
+            </p>
+</div>
+</section>
+</div>
+
+<!--Candle Chandelier & Sconce item-16--> 
+<div class="item item-16">
+    <section id="content-chandeliersconce-p6">
+        <div class="slideshow-container" id="slideshow6">
+
+            <!-- Full-width images with number and caption text -->
+             <div class="mySlides fade">
+                <img src="img2/chandelier2.png" style="width:100%">
+                <div class="image-title">Final Candle Chandelier<br><p>2.3.1</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/sconce3.png" style="width:100%">
+                <div class="image-title">Final Wall Sconce<br><p>2.3.2</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img2/lights-pbsdf.png" style="width:100%">
+                <div class="image-title">Texture Maps Overview<br><p>2.3.3</p></div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow6')"style="color: #919295;">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow6')"style="color: #919295;">&#10095;</a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <img class="thumbnail2" src="img2/chandelier2.png" onclick="currentSlide(1, 'slideshow6')">
+            <img class="thumbnail2" src="img2/sconce3.png" onclick="currentSlide(2, 'slideshow6')">
+            <img class="thumbnail2" src="img2/lights-pbsdf.png" onclick="currentSlide(3, 'slideshow6')">
+        </div>
+        <div class="item item-text">
+            <h5>2.3 Candle Chandelier & Sconce</h5>
+            <p>
+                The finalised texturing of the candle chandelier (Figure 2.3.1) and wall sconce (Figure 2.3.2) showcases a meticulous application of materials and textures to enhance visual appeal. For both pieces, I employed an old metal texture, as depicted in Figure 2.3.3 (left). This texture is composed of four essential maps: diffuse, specular, normal, and displacement texture maps, which were correctly connected to their respective inputs in the shader setup to achieve a rich and authentic metallic finish.
+                <br>
+                <br>
+                The flame effect was achieved by creating a transparent plane using an image texture. The RGB colour information from the image was plugged into the base colour socket of the Principled BSDF shader, while the image's alpha channel was directed to the alpha input of the same shader, rendering the background transparent, as illustrated in Figure 2.3.3 (right). Additionally, to manipulate the intensity of the flame's glow, I connected the colour vector of the image texture to the emission input of the Principled BSDF. This approach allowed precise control over the luminosity of the flame, adding to the overall ambiance and realism of the chandelier and sconce design.
+            </p>
+</div>
+</section>
+</div>
+<!--END TEXTURING SECTION item-13 item-16-->
+
+<!--LIGHTING SECTION item-17 item-20--> 
+<div class="item item-17">
+    <section id="content-lighting-p6">
+        <div class="item item-img">
+            <img src="img2/enviro-onl2.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h1>Scene Illumination</h1>
+                <p>
+                    Effective lighting is paramount in achieving impactful final renders in 3D work. In this section, I explore various lighting techniques utilised to enhance the overall ambiance and realism of the scene.
+                    <br>
+                    A large rectangular area of light was positioned as the primary light source, casting a soft, diffused illumination that enveloped the entire environment. To focus on the chandelier models, square area lights were strategically placed, ensuring that these key features received the attention and detail they deserve.
+                    <br>
+                    <br>
+                    For the candle chandeliers and sconces, I implemented point lights carefully positioned to simulate the warm glow of real candle flames, amplifying the scene's authenticity.
+                    <br>
+                    <br>
+                    Additionally, I created a ray light using an emission node connected to a volume socket. This was further complemented by an area light to add depth and texture to the lighting scheme. To capture the essence of natural light for the exterior environment, I incorporated a sunlight with a sky texture, resulting in a balanced and cohesive lighting setup.
+                    <br>
+                    <br>
+                    This systematic approach to lighting not only enhances the visual narrative of the scene, but also contributes to the quality and impact of the render.
+                </p>
+            </div>
+    </section>
+</div>
+
+<!--Area Light item-18--> 
+<div class="item item-18">
+    <section id="content-arealight-p6">
+        <div class="item item-img">
+            <img src="img2/arealight-p6.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h5>3.1 Area Light Implementation</h5>
+                <p>
+                    To establish primary illumination, I began by adding a rectangular area light on the ceiling. I increased its size along the x and y axes to effectively light the entire vaulted roof of the room. To ensure an even distribution of light, I rotated the area light by 35 degrees to accommodate the architectural features. During my initial render, I noticed that the texture of the ceiling lamp model was not adequately visible. To rectify this, I implemented square area lights for each chandelier using a three-point lighting technique, thereby enhancing the visibility and detail of these central features.
+                </p>
+            </div>
+    </section>
+</div>
+
+<!--Point Light item-19--> 
+<div class="item item-19">
+    <section id="content-pointlight-p6">
+        <div class="item item-img">
+            <img src="img2/pointlight-p6.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h5>3.2 Point Light Implementation</h5>
+                <p>
+                    The creation of a stylised character involves several key components that contribute to its unique and appealing design. Each element, from hair and clothing to accessories, is crafted with creativity, allowing for a cohesive look that enhances the character's personality.
+                    <br>
+                    This section delves into the methodologies and artistic choices made throughout the modelling process, focusing on the hair, jacket, and goggles.
+                </p>
+            </div>
+    </section>
+</div>
+
+<!--Point Light Process item-20--> 
+<div class="item item-20">
+     <section id="content-plprocess-p6">
+        <div class="item item-video">
+            <video src="videos2/f.plight.webm" muted controls =""></video>
+        </div>
+            <div class="item item-text">
+                <h5>3.3 Point Light Creation Process</h5>
+                <p>
+                    For the design of my chandeliers, which feature six candles each across three fixtures, I required 18 point lights. To streamline the process and enhance control over the lights during the design phase, I adopted the following method:
+                </p>
+                    <br>
+                    <ul>
+                        <li>
+                            Creating the Base: I began by adding a plane mesh and pairing it with a point light, representing the candle flame.
+                        </li>
+                        <li>
+                            Setting Up the Array: I then created an empty object, which would serve as the circular array offset for the lights. By applying an array modifier to the plane mesh, I specified the count as six to match the number of candles on each chandelier.
+                        </li>
+                        <li>
+                           Positioning the Lights: In the object properties, I selected instancing and opted for 'faces' to position the point lights on each plane. Subsequently, I entered edit mode and adjusted the plane mesh’s position away from the world cursor.
+                        </li>
+                        <li>
+                            Applying Modifiers: I returned to the array modifier, activated the object offset, and linked it to the empty object. This setup allowed the empty to control the plane mesh that housed the point lights. After creating the desired arrangement, I rotated and applied the array modifier to facilitate further modifications.
+                        </li>
+                        <li>
+                            Final Adjustments: I added another array modifier with an increased count to finalise the setup.
+                        </li>
+                    </ul>
+                    <br>
+                <p>
+                    This method simplifies the management of the lighting sources. All point lights can be controlled from the original point light, allowing for adjustments to power, colour, and radius with ease. When changes are made to the colour of the root source, for instance, all connected point lights will update accordingly, ensuring a cohesive lighting scheme throughout the space.
+                </p>
+            </div>
+    </section>
+</div>
+
+<!--Ray Volume Light item-21--> 
+<div class="item item-21">
+    <section id="content-volumelight-p6">
+        <div class="item item-img">
+            <img src="img2/rayl.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h5>3.4 Ray Volume Light Creation</h5>
+                <p>
+                    To introduce natural lighting into the environment, I opted to simulate sunlight streaming through windows. This involved using a sky texture complemented by sunlight to accurately represent daylight. I utilised a sun position add-on to carefully set the time of day, as well as the north offset and latitude for precise control. To create the visual effect of rays, I duplicated the window glass mesh, extruded it, and adjusted its position and rotation accordingly.
+                    <br>
+                    <br>
+                    In shaded mode, I removed the previous texture and added an emission node, connecting it to the volume socket. I then refined the emission value to achieve the desired brightness. This technique not only enriched the lighting design, but also imbued the space with a sense of realism, as it effectively simulated the interplay of light and shadow typical of a sunlit atmosphere.
+                    <br>
+                    <br>
+                    By integrating these diverse lighting techniques, I was able to evoke a complex narrative and mood, elevating the quality and impact of my 3D renders.
+                </p>
+            </div>
+    </section>
+</div>
+<!--END LIGHTING SECTION item-17 item-21-->
+
+<!--FINAL RENDER SECTION item-22 item-23--> 
+<div class="item item-22">
+    <section id="content-finalrender-p6">
+        <div class="item item-img">
+            <img src="img2/finalrender-p6.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h1>Final Render</h1>
+                <p>
+                    The final render showcases the game environment designed around the medieval theme, highlighting the unique artistic elements and rustic charm characteristic of this period. With the integration of various textures and details, the scene effectively captures the essence of the medieval period, providing players with an engaging backdrop as they navigate challenges together in virtual reality.
+                </p>
+            </div>
+    </section>
+</div>
+
+<!--Adjustment item-23--> 
+<div class="item item-23">
+    <section id="content-adjustment-p6">
+        <div class="item item-img">
+            <img src="img2/envr.png" style="width:100%">
+        </div>
+            <div class="item item-text">
+                <h5>4.1 Refinements and Adjustments</h5>
+                <p>
+                    In response to team feedback, I made important adjustments to the game environment. The path generation script has been corrected to a 12x12 square format, replacing the previous rectangular design. Additionally, I integrated assets created by my colleagues, which I textured to match the aesthetic.
+                    <br>
+                    <br>
+                    For a polished presentation, I applied various compositing techniques using RGB curves, hue saturation adjustments, and colour balance nodes. These enhancements allow for a more vibrant and appealing colour scheme, improving the visual experience.
+                </p>
+            </div>
+    </section>
+</div>
+<!--END FINAL RENDER SECTION item-22 item-23-->
+
+<!--ANIMATION SECTION item-24 item-25-->  
+<div class="item item-24">
+    <section id="content-animation-p6">
+        <div class="item item-img1">
+            <div class="video-container">
+                <video width="400" height="650" controls>
+                    <source src="videos2/sconce.mp4" type="video/mp4">
+                </video>
+                <p class="video-description">Sconce Animation<br>5.1.1</p>
+            </div>
+
+            <div class="video-container">
+                <video width="400" height="650" controls>
+                    <source src="videos2/chandelier.mp4" type="video/mp4">
+                </video>
+                <p class="video-description">Candle Chandelier Animation<br>5.1.2</p>
+            </div>
+        </div>
+
+            <div class="item item-text">
+                <h1>Animation</h1>
+                <p>
+                    In this section, I explore the process of creating animated candle models, with a focus on a beautifully designed sconce featuring flame animation and an elegant turntable animation for a candle chandelier. The goal is to enhance visual storytelling and bring these models to life through movement and light. The process of animation not only breathes life into these static models, but also enhances their aesthetic appeal, drawing viewers into a more immersive experience.
+                </p>
+                <br>
+                <br>
+                <h5 id="content-sconceanim-p6">5.1 Sconce Animation</h5>
+                <p>
+                    On the left side (Animation 5.1.1), I present the animated sconce, featuring a flame animation that mimics the nuanced movement of real fire. This animation starts with a curve for the camera movement, using a "Track To" constraint to ensure that the camera remains focused on the centre of the sconce throughout its motion. This technique highlights the sconce's design and allows observation from multiple perspectives.
+                </p>
+                <br>
+                <br>
+                <h5 id="content-chadelieranim-p6">5.2 Candle Chandelier Animation</h5>
+                <p>
+                    On the right side (Animation 5.1.2), I created a turntable animation for the candle chandelier, allowing viewers to appreciate its elegance from various angles. The turntable animation enhances the chandelier's features by providing a seamless 360-degree view that reveals the design elements. To achieve smooth camera movements for the turntable, I utilised a Bezier curve, ensuring a steady orbit around the chandelier. Following this, I linked the camera to the path using Ctrl + P to maintain a cohesive motion throughout the animation sequence.
+                </p>
+                <br>
+                <br>
+                <p>
+                    Below, I describe and illustrate the methods used to create the flame motion and the flickering effect of the flame.
+                </p>
+            </div>
+    </section>
+</div>                     
+
+<div class="item item-25">
+    <!-- Flaming Part-->
+    <div class="item item-texturing" id="content-flamemotion-p6">
+        <h5>5.3 Flame Motion</h5>
+        <img src="img2/flame.png" style="width:100%; max-width:600px">
+        <p>
+            To distort flame texture, I used noise texture. Firstly, I added a mix node and plugged it to the image texture vector socket.
+        </p>
+        <img src="img2/flame1.png" style="width:100%; max-width:600px">
+        <p>
+            I needed to coordinate the image texture as UV. So I added a texture coordinate node, and I plugged into the mix node to socket colour1.
+        </p>
+        <img src="img2/flame2.png" style="width:100%; max-width:600px">
+        <p>
+            Afterwards, I added a noise texture and plugged in to the mix node socket a colour2. Then I got an inappropriate distortion. I fixed that by reducing the mix node factor value and reduced scale amount.
+        </p>
+        <img src="img2/flame4.png" style="width:100%; max-width:600px">
+        <p>
+            Lastly, I added a driver into the noise texture scale bar.
+        </p>
+        <video src="videos2/flame.webm" autoplay muted></video>
+        <p>Finally, my flame animated.</p>
+    </div>
+
+    <!--Flickering Part-->
+    <div class="item item-texturing" id="content-flickering-p6">
+        <h5>5.4 Flickering Effects</h5>
+        <img src="img2/flicker.png" style="width:100%; max-width:600px"> 
+        <p>
+            However, I wanted my flame to flick. So to do this, I added a key on emission strength.
+        </p>
+        <img src="img2/flicker1.png" style="width:100%; max-width:600px">
+        <p>
+            Then I went to the graph editor and added a Built-In Function modifier.
+        </p>
+        <video src="videos2/flicker.webm" autoplay muted></video>
+        <p>
+            So now my flame turns off and turns on. It is because shrink going until zero. It is not what I want.
+        </p>
+        <video src="videos2/flicker1.webm" autoplay muted></video>
+        <p>
+            Thus, I added a value offset. My texture strength now looks like flickering. Then I increased amplitude, which added flickering strength. Lastly, I restricted frame range by adding in and out range frames. I did it, because I wanted the flicker to appear slowly and fade out slowly.
+        </p>
+        <p>
+            I used a Bezier and circle curve for the camera movements. Then I set a camera to follow this path by pressing Ctrl P. Afterwards, I added empty and then set the camera focus element to this empty by adding a constraint Track To. By moving this empty, I controlled the camera focus to my models.
+        </p>
+    </div>
+</div>
+<!--END ANIMATION SECTION item-23 item-24--> 
+
+<!--FOOTER-->
+<div class="item item-28">
+    <footer>
+    <div class="copy">
+      <p>&copy; 2024 Tomas Dulkys, All Rights Reserved. Let's create something amazing together.</p>
+      <p>Winchester</p>
+      <p>tomasdulkys@gmail.com</p>
+    </div>
+  </footer>
+</div>
+
+
+
+</div>
+
+<script>
+ function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+   
+<script>
+    $('.video').parent().click(function () {
+  if($(this).children(".video").get(0).paused){        $(this).children(".video").get(0).play();   $(this).children(".playpause").fadeOut();
+    }else{       $(this).children(".video").get(0).pause();
+  $(this).children(".playpause").fadeIn();
+    }
+});
+</script>
+
+<script>
+let slideIndex1 = 1;
+let slideIndex2 = 1;
+let slideIndex3 = 1; // New slide index for slideshow3
+let slideIndex4 = 1; // New slide index for slideshow4
+let slideIndex5 = 1; // New slide index for slideshow5
+let slideIndex6 = 1; // New slide index for slideshow6
+
+function showSlides(n, slideshow) {
+    let i;
+    const slides = document.querySelectorAll(`#${slideshow} .mySlides`);
+    
+    if (n > slides.length) { 
+        if (slideshow === 'slideshow1') { slideIndex1 = 1; }
+        else if (slideshow === 'slideshow2') { slideIndex2 = 1; }
+        else if (slideshow === 'slideshow3') { slideIndex3 = 1; } // Reset for slideshow3
+        else if (slideshow === 'slideshow4') { slideIndex4 = 1; } // Reset for slideshow4
+        else if (slideshow === 'slideshow5') { slideIndex5 = 1; } // Reset for slideshow5
+        else if (slideshow === 'slideshow6') { slideIndex6 = 1; } // Reset for slideshow6
+    }
+    
+    if (n < 1) { 
+        if (slideshow === 'slideshow1') { slideIndex1 = slides.length; }
+        else if (slideshow === 'slideshow2') { slideIndex2 = slides.length; }
+        else if (slideshow === 'slideshow3') { slideIndex3 = slides.length; } // Reset for slideshow3
+        else if (slideshow === 'slideshow4') { slideIndex4 = slides.length; } // Reset for slideshow4
+        else if (slideshow === 'slideshow5') { slideIndex5 = slides.length; } // Reset for slideshow5
+        else if (slideshow === 'slideshow6') { slideIndex6 = slides.length; } // Reset for slideshow6
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    if (slideshow === 'slideshow1') {
+        slides[slideIndex1 - 1].style.display = "block"; 
+    } else if (slideshow === 'slideshow2') {
+        slides[slideIndex2 - 1].style.display = "block"; 
+    } else if (slideshow === 'slideshow3') {
+        slides[slideIndex3 - 1].style.display = "block"; // Show the active slide for slideshow3
+    } else if (slideshow === 'slideshow4') {
+        slides[slideIndex4 - 1].style.display = "block"; // Show the active slide for slideshow4
+    } else if (slideshow === 'slideshow5') {
+        slides[slideIndex5 - 1].style.display = "block"; // Show the active slide for slideshow5
+    } else if (slideshow === 'slideshow6') {
+        slides[slideIndex6 - 1].style.display = "block"; // Show the active slide for slideshow6
+    }
+}
+
+function plusSlides(n, slideshow) {
+    if (slideshow === 'slideshow1') {
+        slideIndex1 += n;
+        if (slideIndex1 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex1 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex1, 'slideshow1');
+    } else if (slideshow === 'slideshow2') {
+        slideIndex2 += n;
+        if (slideIndex2 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex2 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex2, 'slideshow2');
+    } else if (slideshow === 'slideshow3') {
+        slideIndex3 += n;
+        if (slideIndex3 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex3 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex3, 'slideshow3');
+    } else if (slideshow === 'slideshow4') {
+        slideIndex4 += n;
+        if (slideIndex4 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex4 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex4, 'slideshow4');
+    } else if (slideshow === 'slideshow5') {
+        slideIndex5 += n;
+        if (slideIndex5 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex5 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex5, 'slideshow5');
+
+    } else if (slideshow === 'slideshow6') {
+        slideIndex6 += n;
+        if (slideIndex6 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex6 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex6, 'slideshow6');
+    }
+}
+
+function currentSlide(n, slideshow) {
+    if (slideshow === 'slideshow1') {
+        slideIndex1 = n;
+        showSlides(slideIndex1, 'slideshow1');
+    } else if (slideshow === 'slideshow2') {
+        slideIndex2 = n;
+        showSlides(slideIndex2, 'slideshow2');
+    } else if (slideshow === 'slideshow3') {
+        slideIndex3 = n;
+        showSlides(slideIndex3, 'slideshow3');
+    } else if (slideshow === 'slideshow4') {
+        slideIndex4 = n;
+        showSlides(slideIndex4, 'slideshow4');
+    } else if (slideshow === 'slideshow5') {
+        slideIndex5 = n;
+        showSlides(slideIndex5, 'slideshow5');
+    } else if (slideshow === 'slideshow6') {
+        slideIndex6 = n;
+        showSlides(slideIndex6, 'slideshow6');
+    }
+}
+
+// Initialize the slides for all three slideshows
+showSlides(slideIndex1, 'slideshow1');
+showSlides(slideIndex2, 'slideshow2');
+showSlides(slideIndex3, 'slideshow3');
+showSlides(slideIndex4, 'slideshow4');
+showSlides(slideIndex5, 'slideshow5');
+showSlides(slideIndex6, 'slideshow6');
+</script>
+
+<script src="tomasdulkys.js"></script>  
+</body>   
+ </html>
+
+
+
+
+
+
+
+

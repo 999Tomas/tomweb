@@ -1,0 +1,253 @@
+body{
+  background: #14151A;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-y: visible;
+}
+h1{
+   font-family: 'Caligna DEMO', sans-serif;
+}
+
+/* Page Transition */
+.cover {
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  z-index: 1000;
+}
+
+.transition.slide .cover2 {
+  background: #A28681; 
+
+  -webkit-animation: slide 0.3s ease-in-out forwards;
+          animation: slide 0.6s ease-in-out forwards;
+}
+
+@keyframes slide {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+#pg-contact{
+  background-color: #A28681;
+  width: 100%;
+  z-index: 5000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+#pg-contact2{
+  background-color:  #14151A;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+#pg-contact .wrapper {
+  margin: 0 15px;
+  max-width: 960px;
+}
+
+#pg-contact h1 {
+  position: relative;
+  top: 0px;
+  animation: title 2s ease-in forwards;
+  color: rgba(20,21,26, 0.8);
+  font-size: 3rem;
+
+}
+
+@keyframes title {
+  0% {top: -100vh;}
+  100% {top: 0;}
+}
+
+#pg-contact .content {
+  margin: 25px 0 50px 0;
+  position: relative;
+  bottom: 0;
+  color: #85818E;
+  font-size: 1.2rem;
+  animation: content 2s ease-in forwards;
+}
+
+@keyframes content {
+  0% {bottom: -100vh;}
+  100% {bottom: 0;}
+}
+
+#pg-contact .btn{
+    height: 60px;
+    width: 300px;
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #14151E;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: .8rem;
+  
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s linear;
+    animation: btn 1.5s ease-in 1.5s forwards;
+}
+
+#pg-contact .btn p{
+    color: rgba(20,21,26, 0.8);
+    font-family: 'Caligna DEMO', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+@keyframes btn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#pg-contact .btn:hover {
+  background-color: #A28681;
+  box-shadow:0px 1px 7px 0px #f5f7f6;
+  text-decoration: none;
+
+}
+
+#pg-contact .btn:hover p{
+  color: #f5f7f6;
+  text-decoration: none;
+}
+
+ .phone-container {
+    perspective: 500px;
+}
+
+.phone {
+    width: 400px; 
+    height: 800px; 
+    background: linear-gradient(135deg, #2f2f2f, #121212);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: rotateY(10deg);
+    animation: phoneAnimation 4s infinite alternate;
+}
+
+.screen {
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(34, 34, 34, 0.8), rgba(0, 0, 0, 1));
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 5% auto;
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    cursor: pointer;
+}
+
+.instagram { left: 10%; }
+.linkedin { left: 55%; }
+.email { left: 35%; top: 60%; }
+
+.app img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes phoneAnimation {
+    0% {
+        transform: rotateY(10deg);
+    }
+    100% {
+        transform: rotateY(-10deg);
+    }
+}
+
+.connect-text {
+    position: absolute;
+    top: 45%; 
+    left: 10%; 
+    width: 80%;
+    text-align: center;
+    z-index: 2;
+    color: #f5f7f6; 
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.email-text {
+    position: absolute;
+    top: 80%; 
+    left: 35%; 
+    width: 30%; 
+    text-align: center;
+    z-index: 2;
+    color: #f5f7f6; 
+    font-weight: bold;
+    font-size: 1.2rem;
+}
