@@ -150,10 +150,12 @@ video {
 
 /* Content Styling */
 .content-about {
-  height: 50%;
+  height: auto;
+  max-height: 50%;
   width: 50%;
   margin-left: 10%;
   background: transparent;
+  overflow-y: auto;
   overflow-x: hidden; 
   z-index: 100;
   position: relative;
