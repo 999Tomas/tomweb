@@ -954,25 +954,28 @@ function loadScrollbarStyles() {
 window.onload = loadScrollbarStyles;
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.querySelector("video");
-    // Check if the video is visible
-    if (window.innerWidth < 768 && !video) {
-        // If it's mobile and the video is not found
-        console.error("Video element not found on mobile version.");
-    } else {
-        video.style.display = "block"; // Ensuring it's visible
-    }
+window.onload = function() {
+    const videoElement = document.querySelector('.headline video');
 
-    // Optional: Handle resizing
-    window.addEventListener("resize", () => {
-        if (window.innerWidth < 768) {
-            video.style.display = "block"; // Show video on resize to mobile
-        } else {
-            video.style.display = "block"; // Show video for larger devices
+    // Check if the video element exists
+    if (videoElement) {
+        // Function to check visibility
+        function checkVisibility() {
+            const rect = videoElement.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                console.log("Video is visible");
+            } else {
+                console.log("Video is not visible");
+            }
         }
-    });
-});
+
+        // Check visibility on load and resize
+        checkVisibility();
+        window.addEventListener('resize', checkVisibility);
+    } else {
+        console.log("Video element not found");
+    }
+};
 
 
 // sidebar open close js code
