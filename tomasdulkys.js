@@ -977,6 +977,12 @@ window.onload = function() {
     }
 };
 
+document.querySelectorAll('.animation-element.slide-right.asset .content-item10').forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
+
 
 // sidebar open close js code
 let navLinks = document.querySelector(".nav-links");

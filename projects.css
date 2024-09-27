@@ -228,6 +228,17 @@ body{
   width: 1022px;
   overflow: hidden;
   position: relative;
+.content-item10.active .overlay 
+{
+    opacity: 1;
+    transition: opacity 0.5s ease;  
+}
+
+.content-item10.active .overlay-content 
+{
+    opacity: 1;
+    transform: translateX(0); 
+}
 .img-box
 {
   width: 1000px;
