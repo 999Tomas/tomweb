@@ -977,10 +977,15 @@ window.onload = function() {
     }
 };
 
-document.querySelectorAll('.animation-element.slide-right.asset .content-item10').forEach(item => {
+document.addEventListener('DOMContentLoaded', function () {
+  const contentItems = document.querySelectorAll('.animation-element.slide-right.asset .content-item10');
+
+  contentItems.forEach((item) => {
     item.addEventListener('click', function() {
-        this.classList.toggle('active');
+      const overlay = item.querySelector('.overlay');
+      overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
     });
+  });
 });
 
 
