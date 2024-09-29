@@ -34,8 +34,7 @@ $("dropdown").click(function(){
         </div>
     </div>
     <div class="headline">
-    <video src="videos3/WhoIam.webm" autoplay muted loop>
-    </video>
+    <video id="myVideo" src="videos3/WhoIam.webm" autoplay muted loop>
 </div>
 
     <div class="content-about">
@@ -94,6 +93,17 @@ $("dropdown").click(function(){
     <!--FOOTER-->
 <div id="footer-container"></div>
 </main>
+
+<script>
+        document.addEventListener('touchstart', function() {
+            const video = document.getElementById('myVideo');
+            if (video.paused) {
+                video.play();
+            }
+            // Remove the event listener to prevent future plays on touch
+            document.removeEventListener('touchstart', arguments.callee);
+        }, { once: true });
+    </script>
 
 <script src="tomasdulkys.js"></script> 
 </body>
