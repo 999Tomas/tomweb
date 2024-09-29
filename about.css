@@ -1,3 +1,16 @@
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #14151A;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #736B74;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9F94A1;
+}
 *{
     margin: 0;
     padding: 0;
