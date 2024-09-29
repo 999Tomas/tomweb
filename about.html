@@ -96,13 +96,12 @@ $("dropdown").click(function(){
 
 <script>
         document.addEventListener('touchstart', function() {
-            const video = document.getElementById('myVideo');
-            if (video.paused) {
-                video.play();
-            }
-            // Remove the event listener to prevent future plays on touch
-            document.removeEventListener('touchstart', arguments.callee);
-        }, { once: true });
+        var video = document.getElementById('myVideo');
+        video.style.display = 'block'; // Show the video
+        video.play().catch(function(error) {
+            console.log('Error attempting to play the video:', error);
+        });
+    }, { once: true });
     </script>
 
 <script src="tomasdulkys.js"></script> 
