@@ -22,6 +22,7 @@ h1{
   background: #9F94A1;
 }
 
+
 /* Page Transition */
 .cover {
   position: fixed;
@@ -129,10 +130,14 @@ h1{
     animation: btn 1.5s ease-in 1.5s forwards;
 }
 
+@media (max-width: 768px) {
+    #pg-contact .btn {
+        text-decoration-color: #14151E;
+    }
+}
+
 #pg-contact .btn p{
     color: rgba(20,21,26, 0.8);
-    font-family: 'Caligna DEMO', sans-serif;
-    letter-spacing: 2px;
     margin: 0;
 }
 
