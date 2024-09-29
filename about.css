@@ -144,13 +144,13 @@ video {
     max-width: 100%;
     height: auto;
     border: none;
-    background: transparent;
+    
 }
 
 @media screen and (max-width: 768px) {
 
     .headline {
-        background: transparent;
+    background: transparent;
     justify-content: center; 
     top: 40%; 
     left: 50%; 
@@ -161,6 +161,7 @@ video {
     video {
         max-width: 100%;
         height: auto;
+        background: transparent;
     }
 }
 
