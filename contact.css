@@ -131,7 +131,7 @@ h1{
 
 @media (max-width: 768px) {
     #pg-contact .btn {
-        text-decoration-color: #14151E;
+       color: rgba(20,21,26, 0.8);
     }
 }
 
