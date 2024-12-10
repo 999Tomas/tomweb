@@ -98,6 +98,12 @@ class MyHeader extends HTMLElement {
               <div class="dropdown">
                 <ul>
                     <li class="dropdown-link">
+                        <a href="virtualcities.html">Winchester Castle | A Virtual Revival</a>
+                    </li>
+                     <li class="dropdown-link">
+                        <a href="interactivemap.html">Urban Cool: Heat Mitigation | RSA</a>
+                    </li>
+                    <li class="dropdown-link">
                         <a href="clientproject2.html">Tomebound's Aztec Art</a>
                     </li>
                     <li class="dropdown-link">
@@ -393,6 +399,7 @@ header {
   padding: .5rem 1rem;
   font-size: .9rem;
   align-items: center;
+  text-align: left;
   justify-content: space-between;
   transition: .3s;
   background-color: #23272a;

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <title>Tomas Dulkys</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+       <link rel="stylesheet" href="interactivemap.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <script>
+        $(document).ready(function(){
+            $("dropdown").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+       </script>
+
+       <script src="jquery.js" charset="UTF-8"></script>
+   </head>
+
+   <!--Tomebound's Aztec Art | Client Project 2-->
+   <body>
+    <my-header></my-header>
+
+    <div class="container-p2">
+        <!-- Back to top button -->
+        <a id="button"></a>
+
+        <!--FACE SECTION item-1 till item-11-->
+        <div class="item item-1">
+            <div class="item item-title">
+                <h1>Urban Cool: Heat Mitigation Map</h1>
+            </div>
+        </div>
+
+        <div class="item item-2">
+            <img src="img5/imap.png"style="width:100%">
+        </div>
+
+        <div class="item item-3">
+            <div class="item item-brief">
+                <h1>Brief</h1>
+                <p>
+                   To develop an interactive urban cooling map that identifies cooling zones in densely populated neighbourhoods to address heat island effects.
+
+                </p>
+                <h1>Aim</h1>
+                <p>
+                   To empower communities by providing a user-friendly app that facilitates access to cooling zones and encourages proactive measures against urban heat.
+                </p>
+            </div>
+
+            <div class="item item-role">
+                <h1>Role in Project</h1>
+                <p>3D Artist</p>
+            </div> 
+
+            <div class="item item-software">
+                <h1>Software</h1>
+                <ul class="list-inline">
+                    <li class="list-inline-item">&bull;Blender 4.1</li>
+                    <li class="list-inline-item">&bull;3d Max</li>
+                    <li class="list-inline-item">&bull;GIS</li>
+                    <li class="list-inline-item">&bull;Figma</li>   
+                    <li class="list-inline-item">&bull;Photoshop</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item item-4">
+            <div class="item item-tablecontents">
+                <h1>Table of Contents</h1>
+            </div>
+            <div class="item item-tablecontents2">
+                <a href="#content-intro-p11"><h1>1. Introduction</h1></a>
+                <a href="#content-intro-p11"><p>1.1 Introduction to the Urban<br> Cooling Map</p></a>
+                <a href="#content-importance-p11"><p>1.2 Importance of Urban Cooling<br> in Dense Neighborhoods</p></a>
+                <a href="#content-scope-p11"><p>1.3 Project Scope</p></a>
+                 <a href="#content-audience-p11"><h1>2. Target Audience & User<br> Personas</h1></a>
+                <a href="#content-audience-p11"><p>2.1 Target Audience</p></a>
+                <a href="#content-personas-p11"><p>2.2 User Insights</p></a>
+                <a href="#item item-img"><h1>3. Research</h1></a>
+                <a href="#item item-text"><p>3.1 Primary Research Findings</p></a>
+                <a href="#content-secondary-p11"><p>3.2 Secondary Research<br> Findings</p></a>
+                <a href="#content-statistics-p11"><p>3.3 Relevant Statistics on Urban Heat Islands</p></a>
+                <a href="#content-tools-p11"><p>3.4 Exploration of Tools and<br> Technologies</p></a>
+                <a href="#content-hero-img-p11"><h1>4. Design Process</h1></a>
+                <a href="#content-lowprototype-p11"><p>4.1 Low-Fidelity Prototyping</p></a>
+                <a href="#content-highprototype-p11"><p>4.2 High-Fidelity Prototyping</p></a>
+                <a href="#content-storyboarding-p11"><p>4.3 Storyboarding</p></a>
+                <a href="#content-journeymapping-p11"><h1>5. User Experience Design</h1></a>
+                <a href="#content-3Dmodels-p11"><h1>6. 3d Visualisation Work</h1></a>
+                <a href="#content-3Dmodels-p11"><p>6.1 Creation of 3D Models of<br> Cooling Zones</p></a>
+                <a href="#content-temperatures-p11"><p>6.2 Visual Representations of<br> Temperature Variations</p></a>
+                <a href="#content-developmentoverview-p11"><h1>7. Development of Interactive Map<br> and Mobile App Prototype</h1></a>
+                <a href="#content-developmentoverview-p11"><p>7.1 Overview of Development<br> Tools</p></a>
+                <a href="#content-strategies-p11"><p>7.2 Development Process and Challenges</p></a>
+                <a href="#content-mobileappprototype-p11"><p>7.3  Interactive Map Prototype<br></p></a>
+                <a href="#content-sustainablegoals-p11"><h1>8. Sustainable Design<br>Considerations</h1></a>
+                <a href="#content-visualgallery-p11"><h1>9. Visual Gallery</h1></a>
+                <a href="#content-conclusions-p11"><h1>10. Conclusions and Reflections</h1></a>
+                <a href="#content-documentation-p11"><h1>11. References, Bybliography</h1></a>
+            </div>
+        </div>
+        <!--INTRODUCTION SECTION item-5-->
+
+        <!--Intro-->
+        <div class="item item-5">
+            <section id="content-intro-p11">
+                <div class="item item-img">
+                    <img src="img5/paris_heat.png" style="width:100%;">
+                </div>
+                <figcaption2 class="no-shadow"><em><strong>Source:</strong> ECMWF. Urban Heat Island effect observed in Paris. <a href="https://stories.ecmwf.int/urban-heat-islands-and-heat-mortality/index.html#:~:text=Such%20a%20high%20resolution%20enables,Credit:%20VITO." target="_blank">Available here</a></em>
+                </figcaption2>
+
+                <div class="item item-text">
+                    <h1>1. Introduction</h1>
+                    <h5>1.1 Introduction to the Urban Cooling Map</h5>
+                    <p>
+                        The Urban Cooling Map project aims to address the growing concern of urban heat islands in densely populated neighbourhoods. By leveraging real-time temperature data and advanced visualisation techniques, this interactive map provides valuable insights into the effectiveness of cooling strategies in urban areas.
+                    </p>
+                </div>
+            </section>
+
+            <!--Importance-->
+            <section id="content-importance-p11">
+                <div class="item item-content-p11">
+                    <img src="img5/UHeffect.png" style="width:100%; max-width: 600px;" alt="Urban Heat Island Effect">
+                    <figcaption><em><strong>Figure 1.1.1: Urban Heat Island Effect.</strong> Image Source: Iungman, T., et al.,<br> 2023. The Lancet.
+                        <a href="https://www.isglobal.org/en/-/4-of-summer-mortality-is-attributable-to-urban-heat-islands" target="_blank">Available here</a></em>
+                    </figcaption>
+                    <h5>1.2 Importance of Urban Cooling in Dense Neighborhoods</h5>
+                    <p>
+                        Urban heat islands significantly impact the health and well-being of residents, increasing the risk of heat-related illnesses and energy consumption (Iungman et al., 2023). Implementing effective cooling strategies is crucial to mitigate these effects and create more liveable urban environments. This project highlights the importance of urban cooling and its potential benefits for communities (see Figure 1.1.1).
+                    </p>
+                </div>
+            </section>
+
+            <section id="content-scope-p11">
+                <div class="item item-content2-p11">
+                    <img src="img5/statement.png" style="width:100%; max-width: 600px;">
+                    <h5>1.3 Project Scope</h5>
+                    <p>
+                       This project involves developing an interactive map prototype that displays real-time temperatures, creating a mobile app prototype, and integrating 3D models of trees within identified cooling zones. I also explored the potential for visually appealing graphics for the map interface, and developed animations to showcase temperature variations in these zones. The project also focuses on leveraging technologies to understand how they can be implemented in the future, evaluating the strengths and weaknesses of different software tools, and documenting the learning process through practical trials and visual examples.
+
+                    </p>
+                </div>
+            </section>
+        </div>
+
+<!--TARGET AUDIENCE AND USER PERSONAS-->
+<div class="item item-6">
+<!--Target Audience-->
+    <section id="content-audience-p11">
+        <div class="item item-img">
+            <img src="img5/target_audience.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+            <h1>2. Target Audience and User Personas</h1>
+            <h5>2.1 Target Audience</h5>
+            <p>
+               The Interactive Urban Cooling Map targets residents of densely populated neighbourhoods affected by urban heat islands. This audience includes young professionals seeking sustainable solutions, families aiming to protect children from heat, and seniors looking to maintain mobility in extreme temperatures. Each group has distinct needs, highlighting the importance of the map in offering tailored solutions that enhance access to cooling areas and foster community engagement in climate action.
+            </p>
+        </div>
+    </section> 
+
+    <section id="content-personas-p11">
+         <div class="item item-img">
+            <img src="img5/user_personas.png" style="width:100%">
+        </div>
+        
+
+
+        <div class="item item-text">
+            <h5>2.2 User Insights</h5>
+            <p>
+                Insights gathered from the user personas reveal distinct yet interconnected motivations that can enhance the effectiveness of the Interactive Urban Cooling Map. Emily values sustainable urban development and would appreciate features that highlight local events. John seeks practical information on accessible cooling spots due to concerns about rising costs and safety for his children. For Margaret, easy access to shaded areas and social activities creates a sense of belonging. Overall, these insights highlight the need for engaging content and a user-friendly design.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--RESEARCH item-7--> 
+        <div class="item item-7">
+            <!--Primary Research Findings-->
+            <section class="content-primary-p11">
+                <div id="item item-img">
+                    <img src="img5/heat_map.png" style="width:100%">
+                </div>
+                <figcaption2>
+                    <em><strong>Source:</strong>
+                     Murtinová et al., 2022. Graphical Abstract: Urban Green Spaces Mitigate Heat Islands
+                     <a href="https://www.mdpi.com/2072-4292/14/18/4492#" target="_blank">
+                        Available here
+                    </a>
+                    </em>
+                </figcaption2>
+                <div id="item item-text">
+                    <h1>3. Research</h1>
+                    <h5>3.1 Primary Research</h5>
+                    <p>
+                        To achieve my research objectives, I designed a seven-question survey using Google Forms to assess perceptions of urban heat impacts and gather feedback on my interactive cooling map idea. The survey was disseminated over four weeks through social media platforms, aiming to obtain at least 30 responses for statistically relevant data.
+                    </p>
+                </div>
+                <div class="item item-content-p11">
+                    <h2>Research Insights</h2>
+                    <img src="img5/figure1.png" style="width:100%; max-width: 600px;">
+                    <figcaption><em><strong>Figure 3.1.1</strong></em>
+                    </figcaption>
+                    <p>
+                        <strong>Impact of Urban Heat Island on Quality of Life:</strong>
+                        Insight:<br>
+                        53.6% of respondents recognize the negative effects of urban heat islands (see figure 3.1.1).<br> 
+                        Interpretation:<br>
+                        Highlights the community's awareness and need for solutions like the Interactive Urban Cooling Map.
+                    </p>
+                </div>
+
+                <div class="item item-content2-p11">
+                    <img src="img5/figure2.png" style="width:100%; max-width: 600px;">
+                    <figcaption><em><strong>Figure 3.1.2</strong></em>
+                    </figcaption>
+                    <p>
+                        <strong>Interest in Interactive Map:</strong><br>
+                        Insight:<br>
+                        93.1% believe an interactive map would encourage exploration of cooling zones (see figure 3.1.2).<br> 
+                        Interpretation:<br>
+                        Validates the core concept of my project and indicates strong potential user engagement.
+                    </p>
+                </div>
+
+                <div class="item item-content-p11">
+                    <img src="img5/figure3.png" style="width:100%; max-width: 600px;">
+                    <figcaption><em><strong>Figure 3.1.3</strong></em>
+                    </figcaption>
+                    <p>
+                        <strong>Desired Features in the Map:</strong><br>
+                        Insight:<br>
+                        Key features desired include real-time temperature data (72.4%), shaded areas and green spaces (75.9%), and interactive route planning (58.6%) (see figure 3.1.3).<br> 
+                        Interpretation:<br>
+                        Interpretation: These insights should guide the design and functionality of my map.
+                    </p>
+                </div>
+                <div class="item item-text">
+                    <p>
+                        The primary research findings highlight the community's awareness of urban heat islands and the strong interest in an interactive cooling map. Key desired features include real-time temperature data, shaded areas, and interactive route planning. These insights directly inform the design and functionality of the Interactive Urban Cooling Map, ensuring it meets user needs and enhances its effectiveness.
+                    </p>
+                </div>
+            </section>
+
+            <!--Secondary Research Findings-->
+            <section id="content-secondary-p11">
+                <div class="item item-img">
+                    <img src="img5/london_heat.png" style="width:100%">
+                </div>
+                 <figcaption2>
+                    <em><strong>Source:</strong>
+                     Sharma, A., 2022. Heat-Related Mortality in London
+                     <a href="https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8" target="_blank">
+                        Available here
+                    </a>
+                    </em>
+                </figcaption2>
+
+                <div class="item item-text">
+                    <h5>3.2 Secondary Research Findings</h5>
+                    <p>
+                       In my research on Urban Heat Islands (UHIs), I found that densely populated areas experience significantly higher temperatures than rural ones, primarily due to human activities. This exacerbates health risks, increases energy consumption, and elevates pollutant emissions. Addressing UHIs is essential for fostering healthier communities, especially as climate change worsens heat events <a href="https://www.bmj.com/content/375/bmj.n2467" target="_blank" class="no-style-link"> (Tong et al., 2021).</a>
+                        <br>
+                        <br>
+                       UHIs disproportionately affect vulnerable populations, such as the elderly, children, and those with pre-existing health conditions  <a href="https://www.rmets.org/metmatters/urban-heat-islands" target="_blank" class="no-style-link"> (Royal Meteorological Society, 2024)</a>. Addressing these disparities supports equitable health outcomes and aligns with sustainability goals. Raising awareness of cooling zones and less heated transit routes can mitigate heat exposure, promoting well-being and engagement with urban spaces  <a href="https://news.sky.com/story/heatmaps-reveal-the-warmest-and-coolest-areas-of-five-english-cities-and-the-impact-of-green-spaces-12923232" target="_blank" class="no-style-link"> (Seabrook, 2023)</a>. An interactive urban cooling map can provide residents with critical information to navigate their environments effectively.
+
+                    </p>
+                </div>
+            </section>
+            
+            <!--Relevant Statistics on Urban Heat Islands-->
+            <section id="content-statistics-p11">
+                <div class="item item-content-p11">
+                    <h5>3.3 Relevant Statistics on Urban Heat Islands</h5>
+                    <img src="img5/UHIE.png" style="width:100%; max-width: 600px;">
+                    <figcaption>
+                    <em><strong>Figure 3.2.1:</strong>
+                    Figure Title: Urban Heat Island Effect Visualization
+                     <a href="https://www.researchgate.net/publication/367000837_Environmental_Impact_and_Mitigation_Benefits_of_Urban_Heat_Island_Effect_A_Systematic_Review" target="_blank">
+                        <br>Available here
+                    </a>
+                    </em>
+                </figcaption>
+                    <p>
+                        Urban areas can be 10°C warmer than rural regions, raising cooling demand by 5-10% (see figure 3.2.1), worsening health risks, and reducing quality of life due to the urban heat island effect<a href="https://www.tandfonline.com/doi/epdf/10.1080/15693430412331291698?needAccess=true" target="_blank" class="no-style-link"> (Golden, 2004)</a>.
+                        <br><br>
+                        Research shows that urban heat islands in London increase heat-related mortality rates, particularly impacting vulnerable groups like the elderly and children (see source at the beginning of this section). Awareness of these disparities is crucial <a href="https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8" target="_blank" class="no-style-link"> (Mavrogianni et al., 2022)</a>.
+                    </p>
+                </div>
+                 <div class="item item-content2-p11">
+                    <img src="img5/graph.death_rate.png" style="width:100%; max-width: 600px;">
+                   <figcaption>
+                    <em><strong>Figure 3.2.2:</strong>
+                    Summer Deaths from Heat and Cardiovascular Disease (1999-2018). Source: U.S. Environmental Protection Agency (EPA), 2023.
+                     <a href="https://www.epa.gov/heatislands/climate-change-and-heat-islands" target="_blank">
+                        Available here
+                    </a>
+                    </em>
+                </figcaption>
+                    <p>
+                        The EPA reports an increase in summer deaths due to heat and cardiovascular diseases in the U.S. (see figure 3.2.2), underscoring the need for effective public health initiatives and urban design strategies to protect at-risk communities from heat impacts <a href="https://www.epa.gov/heatislands/climate-change-and-heat-islands" target="_blank" class="no-style-link"> (U.S. Environmental Protection Agency, 2024).</a>
+                        <br>
+                        <br>
+                        The statistics from my secondary research strongly underscore the necessity of my interactive cooling map. By highlighting the dangerous temperature disparities and their health consequences, I found that my project can serve as a vital resource. It can empower residents with essential cooling zone information, ultimately promoting well-being in urban settings.
+                    </p>
+                </div>
+            </section>
+
+             <!--Exploration of Tools and Technologies-->
+            <section id="content-tools-p11">
+                <div class="item item-img-p11">
+                    <iframe src="https://api.mapbox.com/styles/v1/tomasd/cm479oi2c012201si1soqamv8.html?title=false&access_token=pk.eyJ1IjoidG9tYXNkIiwiYSI6ImNtMzljaDFvYjBucjkybXF1YXFrMjBxdzAifQ.a3LdgMNsd2X0ToiQAthGTA&zoomwheel=false#17.66/51.059342/-1.311993/0/61" title="iMAP-copy" style="width:100%; height:700px; max-height:1080px; border:none;">
+                    </iframe>
+
+                   <h5>3.3 Exploration of Tools and Technologies</h5>
+                    <p>
+                        In my research on software tools for interactive maps, I found Mapbox particularly appealing due to its user-friendly interface and customizable visuals, especially when integrating with OpenStreetMap and GeoJSON. Mapbox offers numerous customisation options for developers to create tailored, visually stunning maps <a href="https://www.uptech.team/blog/mapbox-vs-google-maps-vs-openstreetmap" target="_blank" class="no-style-link"> (UpTech).</a> GIS software like QGIS and ArcGIS is essential for analysing and visualising spatial data for urban planning, environmental monitoring, and navigation. QGIS is beginner-friendly and free, while ArcGIS can overwhelm newcomers with its complexity and subscription model <a href="https://gisgeography.com/best-gis-software/" target="_blank" class="no-style-link">(GIS Geography).</a> QGIS also supports robust mapping and plugins, enhancing its functionality <a href="https://www.statsmapsnpix.com/2022/10/which-gis-software-is-best.html" target="_blank" class="no-style-link"> (Stats Maps N Pix).</a>
+                        <br>
+                        <br>
+                        In my exploration, I also discovered that the Level of Detail (LOD) system is vital for optimising map performance, allowing the display of varying levels of detail based on zoom and interaction, which significantly enhances the user experience  <a href="https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-023-01041-z" target="_blank" class="no-style-link"> (Heritage Science Journal).</a><br>
+                        Moreover, I examined Figma, which excels in high-fidelity app prototyping, offering intuitive design features that facilitate team collaboration and streamline the design workflow <a href="https://www.foonkiemonkey.co.uk/10-reasons-why-figma-is-the-best-ux-ui-design-tool-for-app-development/" target="_blank" class="no-style-link"> (Foonkiemonkey).</a>
+                        <br>
+                        <br>
+                        Each tool has unique strengths tailored to different user requirements. This exploration has provided valuable insights into the best software for developing interactive maps and creating prototypes, equipping me with the knowledge to choose the right tools and techniques for effectively designing and prototyping interactive maps. 
+
+                    </p>
+                </div>
+            </section>
+        </div>
+
+
+<!--DESIGN PROCESS-->
+<!--Low-Fidelity Prototyping-->
+<div class="item item-8">
+<section class="content-lowprototype-p11">
+    <div id="content-hero-img-p11">
+        <div class="item item-img">
+            <img src="img5/lowprototype2-p11.png" style="width:100%">
+        </div>
+        <div class="item item-text">
+            <h1> 4. Design Process</h1>
+        </div>
+    </div>
+
+    <div id="content-lowprototype-p11">
+        <div class="item item-content-p11">
+            <img src="img5/lowprototype3-p11.png" style="width:100%; max-width: 800px;">
+            <h5>4.1 Low-Fidelity Prototyping</h5>
+            <h6>Map</h6>
+            <p>
+                To create my low-fidelity prototype of the Interactive Urban Cooling Map, I sketched a base map of a summer urban environment. I used magazine cutouts for green areas (trees, water bodies, walking paths) and tape stickers for buildings to distinguish cooling areas from heated sections.<br>
+                <br>
+                In this scenario, the user (a red cone shape) aims to reach a friend’s house in a busy downtown area. He can choose between two routes: a longer, cooler path marked with red thread through green areas, or a faster, hotter route marked with orange thread through heated sections. This visual contrast helps the user decide between comfort and speed, emphasising the importance of choosing paths that prioritise comfort and safety.
+            </p>
+        </div>
+
+        <div class="item item-content2-p11">
+            <img src="img5/sketch-appwireframes.png" style="width:100%; max-width: 800px;">
+            <h6>App Wireframes</h6>
+            <p>
+                In my project, I've created rough sketch wire-frames for my main app, which will feature five essential pages: Home, Map, Favourites, Contributions, and Tips. These pages aim to provide an interactive experience that informs and empowers users to take proactive measures against urban heat, while fostering community cohesion. Each page will include a consistent bottom navigation with five icons, and a top navigation featuring a back button, app logo, user location, profile, settings, and notifications on the Home page.
+            </p>
+        </div>
+        <p class="item item-content-p11">
+                <img src="img5/sketch-appwireframes2.png" style="width:100%; max-width: 800px;">
+                In this second sketch, I clarified the purpose of each wire-frame and user interactions, including pop-up windows.<br>
+                <br>
+                 The Home page welcomes users with a brief description of the app’s purpose and features. Below this, a cityscape image filled with trees emphasises the importance of cooling areas. To encourage engagement, two prominent call-to-action buttons are included: one directs users to the interactive map to explore cooling zones, and the other guides them to the community contributions page, fostering collaboration and sharing of local knowledge.
+             </p>
+
+         <div class="item item-content2-p11">
+            <img src="img5/sketch-map.png" style="width:100%; max-width: 800px;">
+            <p>
+                The map page is the central feature of my project, allowing users to easily locate cooling zones in their area. The layout spans the entire page, with a search bar at the top where users can enter their address or nearby landmarks to find cooling zones quickly.<br>
+                A key component of the map is the real-time temperature display, which shows the current temperature of the user's location using a semi-transparent circle. The 3D map itself is colour-coded: green indicates cooling areas like parks and tree canopies, while orange highlights heat zones. Users can hover over cooling icons to see specific temperatures, and click on them to bring up a pop-up window with more details about that location. This pop-up includes essential information, such as environmental data and images, along with a "Pin This Location" button to enhance user experience.
+            </p>
+        </div>
+        <p class="item item-content-p11">
+                 <img src="img5/sketch-getdirection.png" style="width:100%; max-width: 800px;">
+                The “Get Direction” button, a circular icon on the right, opens a pop-up for entering destinations. The window includes a top bar with navigation icons, a mini interactive map with route markers, and a drop-down for selecting the coolest, fastest, or custom routes. Users can input starting and ending points. Below, buttons for “clear route,” “start navigation,” and “save route” enhance functionality. At the bottom, a comment box and star rating system allow feedback.<br>
+                This design ensures a user-friendly, interactive experience, making it easy for users to find and navigate to cooling zones while providing valuable environmental information.
+            </p>
+
+        <div class="item item-content2-p11">
+            <img src="img5/sketch-favourites.png" style="width:100%; max-width: 800px;">
+            <p>
+               Favourites Page: This page allows users to save their favourite cool spots. A toggle option switches between a list view and a map view. The list displays each spot with an image, details, and user reviews, while the map view visualises the spots with pins for quick information access. A prominent button invites users to "Add a New Cool Spot."<br>
+               <br>
+               Community Contributions Page: Featuring a location tool, this page encourages users to share their cool spot experiences through a text box and a central "Add Cool Spot" button. A discussion forum displays contributions, with a button to view all responses.<br>
+               <br>
+               Tips & Resources Page: This page includes a tips search bar and sections for educational articles, health and safety tips for heat waves, and links to local resources like community programs and emergency contacts.<br>
+               <br>
+               I think these wireframes will boost user engagement and provide useful info on urban heat. They visually guide users through the app, making everything smooth and informative.
+            </p>
+        </div>
+    </div>
+</section>       
+   
+
+    <!--High-Fidelity Prototyping-->
+    <section id="content-highprototype-p11">
+        <div class="content-hero-img-p11">
+            <div class="item item-img">
+                    <img src="img5/hf-prototype.png" style="width:100%">
+            </div>
+            <div class="item item-text">
+                <h5>4.2 High-Fidelity Prototyping</h5>
+                <p>
+                    Here is my high fidelity app prototype, which aligns closely with the initial sketch wire-frames. To enhance usability, I've implemented features like horizontal scrolling on specific pages to save space, and I’ve added an automatic slider for the articles section on the tips page, improving the user experience.<br>
+                    To achieve a modern look, I opted for rounded rectangles for buttons and content backgrounds. The primary colour palette revolves around blue, chosen to reflect a cooling theme and enhance usability. To create a dynamic feel, I incorporated gradients into the content background. For the call-to-action buttons, I selected a turquoise blue and a strong blue gradient to boost user engagement. I chose the Roboto font for its clean, modern appearance and excellent readability, which enhances the user experience.
+                </p>
+            </div>
+        </div>
+
+        <div class="item item-content2-p11">
+            <img src="img5/hf-prototype1.png" style="width:100%; max-width: 800px;">
+            <p>
+                Prior to designing the high-fidelity prototype, I carefully considered the app's colour palette to reflect a cooling theme. Initially, I experimented with coral shades for call-to-action buttons, but found them unsatisfactory. 
+                After generating a new palette featuring teal shades—a decision reinforced by feedback from colleagues — I decided this gemstone hue was much more suitable for the overall design.
+                
+
+                
+             </p>
+        </div>
+
+         <div class="item item-content-p11">
+            <img src="img5/hf-prototype2.png" style="width:100%; max-width: 800px;">
+            <p>
+                After generating a new palette featuring teal shades, a decision reinforced by feedback from colleagues — I decided this gemstone hue was much more suitable for the overall design.
+                <br>
+                <br>
+                For the navigation elements, I chose a classic white colour for the top and bottom buttons. Active page buttons feature a rich earthy tone and a pale cyan-lime green for the icon backgrounds to highlight the active page and make icons stand out subtly.
+            </p>
+        </div>
+
+        <div class="item item-content2-p11">
+            <img src="img5/hf-prototype3.png" style="width:100%; max-width: 600px; background: transparent;">
+            <p>
+                Additionally, I tested shapes for the map page’s ‘Get Directions’ button. Although I considered using a rounded rectangular shape for better visibility, I prioritised maximising the map view and chose a circular design as per my sketches.
+            </p>
+        </div>
+    </section>
+    
+    <!--Storyboarding-->
+    <section id="content-storyboarding-p11">
+        <div class="item item-img">
+                    <img src="img5/storyboard.png" style="width:100%">
+        </div>
+        <div class="item item-content2-p11">
+            <h5>4.3 Storyboarding</h5>
+            <p>
+                In my user storyboard, I focused on John, a busy father searching for cool spots for his kids on a hot summer day. I explored key features of the CoolScape app, detailing his journey from opening the map to pinning locations and accessing directions.
+            </p>
+            <img src="img5/prototype.png" style="width:100%; max-width: 600px; background: transparent;">
+            <p>
+                I identified gaps in the user experience, particularly in the horizontal scrolling for the discussion forum (figure 2.11), which made navigation challenging. I also discovered the pop-up window, the route details cluttered (figure 2.12) the map view, detracting from the overall design.
+                <br>
+                <br>
+                To enhance the user experience, I fixed my prototype. I improved the layout of pop-ups for a clearer map view, and eliminated horizontal scrolling by creating a vertical scroll for discussion section.
+                <br>
+                <br>
+                Overall, my goal was to visualise John’s user journey while pinpointing areas for enhancement to ensure a seamless experience.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--USER EXPERIENCE DESIGN-->
+<div class="item item-9">
+    <!--User Journey Mapping-->
+    <section id="content-journeymapping-p11">
+        <div class="item item-img">
+            <img src="img5/u_journey.map.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+             <h1>5. User Experience Design</h1>
+            <p>
+                The Interactive Urban Cooling Map begins with users launching the application to explore cooling zones like parks and water features. They can view real-time temperature data and receive tailored route suggestions, minimising heat exposure. Users contribute by adding new areas or sharing feedback, which is moderated to ensure accuracy. The map is regularly updated, promoting community engagement through local events. By leveraging this resource, users experience enhanced comfort and reduce their exposure to urban heat, fostering a collaborative environment that raises awareness and encourages collective action against rising temperatures. Ultimately, users benefit from a more comfortable and informed urban experience.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--3d VISUALISATION WORK-->
+<div class="item item-10">
+    <!--Creation of 3D Models of Cooling Zones-->
+    <section id="content-3Dmodels-p11">
+        <div class="item item-img">
+            <img src="img5/trees.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+             <h1>6. 3D Visualization Work</h1>
+             <h5>6.1 Creation of 3D Models of Cooling Zones</h5>
+          
+      
+
+        <div style="display: flex; align-items: center;">
+    <video width="600" controls>
+         <source src="videos3/modelling_lod2.tree.webm" type="video/webm">
+
+    </video>
+    <div style="margin-left: 20px;">
+        <p>
+            This is the first paragraph with the video on the left and text on the right. The video showcases an amazing scene that complements the text content. You can describe the content of the video here and provide any additional information that is relevant to the viewer. This layout is great for creating a balanced and visually appealing presentation.
+        </p>
+    </div>
+</div>
+
+<div style="display: flex; align-items: center;">
+    <div style="margin-right: 20px;">
+        <p>
+            This is the second paragraph with the video on the right and text on the left. The video provides a visual representation of the topic discussed in the text. This layout is ideal for emphasizing the textual content while still providing a visual element to engage the viewer. You can use this format to create a dynamic and interactive experience for your audience.
+        </p>
+    </div>
+    <video width="600" controls>
+          <source src="videos3/modelling_lod3.tree.webm" type="video/webm">
+
+    </video>
+</div>
+  </div>
+
+    </section>
+
+    <!--Visual Representations of Temperature Variationss-->
+    <section id="content-temperatures-p11">
+        <div class="item item-img">
+            <img src="img4/conclusion-p10.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+             <h5>6.2 Visual Representations of Temperature Variations</h5>
+            <p>
+                This project became a testament to the growth I experienced throughout the academic year, showcasing my evolution in both sculpting and texturing. The journey from initial concept to finalised models is a testament to the power of perseverance and joy of pushing creative boundaries – a journey that will undoubtedly shape my artistic journey for years to come.
+                <br>
+                <br>
+                Overall, this project was a valuable learning experience for me, as it taught me how to work within constraints and find creative solutions to complex design challenges. Despite the limitations and challenges I faced, I am proud of the final result and feel that I was able to create a visually cohesive and engaging game asset.
+            </p>
+        </div>
+    </section>
+
+     <!--Level of Detail (LOD) System for 3D Models-->
+    <section id="content-temperatures-p11">
+        <div class="item item-video">
+              <video src="videos3/LOD.webm" type="video/webm" autoplay muted>
+        </div>
+
+        <div class="item item-text">
+            <h5>6.3 Level of Detail (LOD) System for 3D Models</h5>
+            <p>
+               The Level of Detail (LOD) system is essential in 3D modelling for optimising performance without sacrificing visual quality. It involves creating multiple versions of a model with varying detail levels, and dynamically switching between them based on the viewer's distance. This technique is crucial for interactive maps, video games, and virtual reality (VR) projects, where high performance and visual fidelity are vital <a href="https://www.united-bim.com/bim-level-of-development-lod-100-200-300-350-400-500/" target="_blank" class="no-style-link">(United BIM, 2024</a>; <a href="https://en.wikipedia.org/wiki/Level_of_detail_(computer_graphics)" target="_blank" class="no-style-link">Wikipedia, 2024</a>).
+               <br>
+               <br>
+               In this project, I developed an LOD system for tree models using Blender. The animation render demonstrates the transition between low-detail and high-detail models. This approach enhances the efficiency of rendering complex scenes, making it indispensable for my 3D map project. If I develop this project further in the future, the LOD system will ensure that users can seamlessly explore the map, even on devices with limited processing power.
+
+            </p>
+        </div>
+</div>
+
+<!--DEVELOPMENT OF INTERACTIVE MAP AND MOBILE APP PROTOTYPE-->
+<div class="item item-11">
+    <!--Overview of Development Tools-->
+    <section id="content-developmentoverview-p11">
+        <div class="item item-img" style="display: flex; justify-content: center; align-items: center;">
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; max-width: 1000px; height: 700px;" src="https://embed.figma.com/proto/c5zKmxZPhAcp0DqJoXMkPt/Prototype-(CoolScape)?node-id=46-491&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=46%3A491&embed-host=share" allowfullscreen></iframe>
+</div>
+
+        <div class="item item-text">
+             <h1>7. Development of Interactive Map and Mobile App Prototype</h1>
+             <h5>7.1 Overview and Tools</h5>
+            <p>
+               In this section, I discuss the tools used for developing the interactive map and mobile app prototype. I utilised QGIS for its robust GIS capabilities, and Mapbox for its user-friendly interface and powerful mapping features. Figma was used for prototyping and integrating interactive elements.
+            </p>
+        </div>
+    </section>
+
+    <!--Visual Representations of Temperature Variationss-->
+    <section id="content-strategies-p11">
+        <div class="item item-img-p11">
+            <img src="img5/mapbox-tools.png" style="width:100%">
+            <h5>7.2 Development Process and Challengess</h5>
+            <p>
+               The figures presented in this overview provide a comprehensive look at the processes involved in utilising Mapbox and QGIS for the urban cooling project. This section highlights the development process, the challenges faced, and the solutions implemented to create an interactive and functional map prototype.
+               <br>
+               <br>
+               In Mapbox, the initial setup is established (Figure 7.2.1), forming a base for customisation and integration. For this project, I randomly chose Clerkenwell, London (Figure 7.2.2). Excessive street details are minimised for clarity (Figure 7.2.3). Building extrusions are highlighted, providing detailed urban representations (Figure 7.2.4)Real-time temperature data points are added (Figure 7.2.5), and temperature labels are styled to display values correctly (Figure 7.2.6). Tree points data sourced from OSM are added (Figure 7.2.7), and colour is applied to these points (Figure 7.2.8). Finally, 3D tree models are integrated on the point data (Figure 7.2.9). Despite efforts, the tree model did not display correctly, showing only a single original model. Error checks indicated the trees existed in the scene, but were not visible, and I couldn't find a solution despite seeking help.
+
+            </p>
+            <br>
+            <br>
+            <img src="img5/QGIS.png" style="width:100%">
+            <h5></h5>
+            <p>
+               In QGIS, OSM data is used to select a location, save, and upload to QGIS (Figure 7.3). A tree layer is chosen, and 3D tree models are integrated (Figure 7.3.1). Building extrusions are highlighted (Figure 7.3.2). The Qgis2threejs exporter is used to export the file to the web (Figure 7.3.3). Due to rendering issues with the DEM (raster layer), the file is exported using Qgis2threejs (Figure 7.3.4), showcasing the integration of geographic data and 3D models.
+           </p>
+        </div>
+    </section>
+
+     <!--Mobile App Prototype Details and Features-->
+    <section id="content-mobileappprototype-p11">
+        <div class="item item-content-p11">
+         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/c5zKmxZPhAcp0DqJoXMkPt/Prototype-(CoolScape)?node-id=565-8&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=565%3A2&starting-point-node-id=565%3A8&embed-host=share" allowfullscreen></iframe>
+            <h5>7.3 Interactive Map Prototype</h5>
+            <p>
+                The interactive map prototype showcases several features that facilitate user engagement. (see prototype at the beginning of this section). Users can seamlessly navigate through different sections. Clicking on amenities like parks opens a pop-up window with detailed information. The tips page is scrolled vertically, offering users educational articles that address urban heat problems.  including the coolest and fastest route features, temperature display when users hover.
+                <br>
+                While my first prototype offered static images of the map, I aimed to develop a more dynamic experience using Mapbox. This newer prototype incorporates a panning feature, allowing users to explore a 3D map interactively (See prototype above). 
+
+            </p>
+        </div>
+    </section>
+
+
+    <section id="content-preparation-p9">
+        <div class="item item-introduction-content">
+            <div class="box">
+                <a href="https://www.instagram.com/tomasdulkys/" target="_blank">
+                    <img src="img4/instgr.png" style="width:100%">
+                    <div class="content">
+                        <h1>Follow My Adventures</h1>
+                        <p>
+                            Your presence and engagement are invaluable, as they fuel my creative spirit and help me refine my content.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="box1">
+                <a href="https://www.linkedin.com/in/tomasdulkys/" target="_blank">
+                    <img src="img4/linkedIn.png" style="width:100%">
+                    <div class="content">
+                        <h1>Let's connect</h1>
+                        <p>
+                            Engage with me on LinkedIn to foster knowledge sharing and mutual support.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="item item-text">
+            <h5>7.4 Exploration and Learning</h5>
+            <p class="scroll-object">
+                In today's digital age, social media platforms have become an integral part of our lives, not only for personal use, but also for professional purposes. Among the many platforms available, I chose Instagram and LinkedIn as my primary channels for showcasing my work and connecting with potential employers.
+                <br>
+                <br>
+                Instagram, a social media behemoth with over a billion monthly active users, has emerged as a formidable platform for showcasing one's artistic prowess. Its visually captivating interface serves as an ideal canvas for creatives, like myself, a 3D visualiser, to exhibit our work and connect with a vast audience. By leveraging the platform's emphasis on visual content, we can effectively convey our skills, artistic style, and boundless imagination to our followers. Through the strategic sharing of high-quality images and captivating videos, we engage our audience, inviting them to immerse themselves in our creative journey. This exposure not only broadens our reach, but also fosters new opportunities for collaboration and growth. Instagram's vibrant community provides a unique platform for creatives to connect, inspire, and collaborate, propelling us forward in our artistic endeavours.
+                <br>
+                <br>
+                On the other hand, LinkedIn is another platform I chose to use for professional purposes. As the world's largest professional network, LinkedIn boasts over 740 million users worldwide, making it an essential tool for job seekers, freelancers, and business professionals. The platform's primary focus is on connecting individuals with potential employers, clients, and collaborators, making it an ideal place to showcase one's skills, experience, and accomplishments.
+            </p>
+        </div>
+    </section>
+</div> 
+
+<!--SUSTAINABLE DESIGN CONSIDERATIONS-->
+<div class="item item-12">
+    <section id="content-sustainablegoals-p11">
+        <div class="item item-img">
+            <img src="img4/conclusion-p10.png" style="width:100%">
+        </div>
+        <div class="item item-text" style="font-size: 16px; padding-left: 20px;">
+            <h1>8 Sustainable Design Considerations</h1>
+            <p>
+                The Interactive Urban Cooling Map supports Sustainable Development Goal 11 by making cities inclusive, safe, resilient, and sustainable. It helps reduce urban heat islands by highlighting cooling zones, promoting green spaces, and enhancing community resilience to climate change impacts.
+                <br><br>
+                The map addresses human needs by incorporating sustainability principles:
+            </p>
+            <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;">
+                <li><strong>User-Centered Design</strong>: Features real-time temperature data, accessible routes, and community event information.</li>
+                <li><strong>Community Engagement</strong>: Encourages users to contribute local knowledge about cooling zones, fostering a sense of ownership and collective action.</li>
+                <li><strong>Environmental Impact</strong>: Promotes the use of green spaces, reducing urban temperatures, and raising awareness about sustainable urban planning.</li>
+            </ul>
+            <p>
+                This approach ensures the map is functional, environmentally friendly, and beneficial for urban communities.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--VISUAL GALLERY-->
+<div class="item item-13">
+    <section id="content-visualgallery-p11">
+        <div class="item item-img">
+            <img src="img4/conclusion-p10.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+            <h1>9. Visual Gallery</h1>
+            <p>
+                This project became a testament to the growth I experienced throughout the academic year, showcasing my evolution in both sculpting and texturing. The journey from initial concept to finalised models is a testament to the power of perseverance and joy of pushing creative boundaries – a journey that will undoubtedly shape my artistic journey for years to come.
+                <br>
+                <br>
+                Overall, this project was a valuable learning experience for me, as it taught me how to work within constraints and find creative solutions to complex design challenges. Despite the limitations and challenges I faced, I am proud of the final result and feel that I was able to create a visually cohesive and engaging game asset.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--REFLECTIONS-->
+<div class="item item-14">
+    <section id="content-conclusions-p11">
+        <div class="item item-img">
+            <img src="img4/conclusion-p10.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+            <h1>10. Conclusions and Reflections</h1>
+            <p>
+                Throughout this project, I successfully integrated 3D models with geographic data, created an interactive map prototype, and used various development tools such as QGIS, Mapbox, and Figma.
+                <br>
+                <br> 
+                I faced several challenges, including issues with JavaScript errors and rendering in QGIS. However, I overcame these challenges by exploring alternative solutions and leveraging the strengths of each tool. This experience has enhanced my skills and knowledge in GIS, mapping, and prototyping.
+                <br>
+                <br>
+                In the future, I plan to refine the interactive elements, improve the visual quality of the map, and explore additional features and functionalities. This project has been a valuable learning experience, and I look forward to continuing my journey in mapping and prototyping.
+            </p>
+        </div>
+    </section>
+</div>
+
+<!--REFERENCES, BYBLIOGRAPHY-->
+<div class="item item-15">
+    <section id="content-documentation-p11">
+        <div class="item item-img">
+            <img src="img4/conclusion-p10.png" style="width:100%">
+        </div>
+
+        <div class="item item-text">
+    <h1>11. References, Bibliography</h1>
+    <h5>11.1 References</h5>
+    <p>
+        Ajuntament de Barcelona. (2020). Barcelona green infrastructure and biodiversity plan 2020.  Available at: <a href="https://ajuntament.barcelona.cat/ecologiaurbana/sites/default/files/Barcelona%20green%20infrastructure%20and%20biodiversity%20plan%202020.pdf " target="_blank">https://www.barcelona.cat</a> [Accessed 28 Nov. 2024].<br>
+        European Commission, 2022. Cities are often 10-15°C hotter than their rural surroundings. Available at: <a href="https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/cities-are-often-10-15-degc-hotter-their-rural-surroundings-2022-07-25_en" target="_blank">https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/cities-are-often-10-15-degc-hotter-their-rural-surroundings-2022-07-25_en</a> [Accessed 6 Dec. 2024].<br>
+        Foonkie Monkey, 2024. 10 Reasons Why Figma is the Best UX/UI Design Tool for App Development. Available at: <a href="https://www.foonkiemonkey.co.uk/10-reasons-why-figma-is-the-best-ux-ui-design-tool-for-app-development/" target="_blank">Foonkie Monkey</a> [Accessed 7 Dec. 2024].<br>
+        GIS Geography, 2024. Best GIS Software. Available at: <a href="https://gisgeography.com/best-gis-software/" target="_blank">https://gisgeography.com/best-gis-software/</a> [Accessed 7 Dec. 2024].<br>
+        Golden, J.S., 2004. The Built Environment Induced Urban Heat Island Effect in Rapidly Urbanizing Arid Regions – A Sustainable Urban Engineering Complexity. Environmental Sciences, 1(4), pp.321-349. Available at: <a href="https://www.tandfonline.com/doi/epdf/10.1080/15693430412331291698?needAccess=true" target="_blank">https://www.tandfonline.com/doi/epdf/10.1080/15693430412331291698?needAccess=true</a> [Accessed 6 Dec. 2024].<br>
+        Greater London Authority, 2023. Green Roofs and Urban Parks. [online] Available at: <a href="https://www.london.gov.uk/programmes-strategies/planning/implementing-london-plan/london-plan-guidance/urban-greening-factor-ugf-guidance" target="_blank">https://www.london.gov.uk</a> [Accessed 4 Dec. 2024].<br>
+        Iungman, T., et al., 2023. 4% of summer mortality is attributable to urban heat islands. The Lancet. Available at: <a href="https://www.isglobal.org/en/-/4-of-summer-mortality-is-attributable-to-urban-heat-islands" target="_blank">https://www.isglobal.org/en/-/4-of-summer-mortality-is-attributable-to-urban-heat-islands</a> [Accessed 5 Dec. 2024].<br>
+        Jain, R., Brar, T.S., & Kamal, M.A., 2023. Environmental Impact and Mitigation Benefits of Urban Heat Island Effect: A Systematic Review. Available at: <a href="https://www.researchgate.net/publication/367000837_Environmental_Impact_and_Mitigation_Benefits_of_Urban_Heat_Island_Effect_A_Systematic_Review" target="_blank">https://www.researchgate.net/publication/367000837_Environmental_Impact_and_Mitigation_Benefits_of_Urban_Heat_Island_Effect_A_Systematic_Review</a> [Accessed 6 Dec. 2024].<br>
+        Liritzis, I., & Laskaris, N., 2023. Environmental Impact and Mitigation Benefits of Urban Heat Island Effect: A Systematic Review. Heritage Science, 11(1), p.41. Available at: <a href="https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-023-01041-z" target="_blank">https://heritagesciencejournal.springeropen.com/articles/10.1186/s40494-023-01041-z</a> [Accessed 7 Dec. 2024].<br>
+        Mavrogianni, A., Taylor, J., Milojevic, A., Oikonomou, E., Heaviside, C., Tsoulou, I., Petrou, G., Symonds, P., Davies, M., & Wilkinson, P., 2022. Heat-Related Mortality in London: An Urban Heat Island Perspective. In: Urban Climate Resilience. Springer, Singapore. Available at: <a href="https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8" target="_blank">https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8</a> [Accessed 6 Dec. 2024].<br>
+        Murtinová, V., Gallay, I., and Olah, B., 2022. Mitigating Effect of Urban Green Spaces on Surface Urban Heat Island during Summer Period on an Example of a Medium Size Town of Zvolen, Slovakia. Remote Sensing, 14(18), 4492. Available at: <a href="https://www.mdpi.com/2072-4292/14/18/4492" target="_blank">MDPI</a> [Accessed 6 Dec. 2024].<br>
+        Royal Meteorological Society. (2024). Urban Heat Islands. Available at: <a href="https://www.rmets.org/metmatters/urban-heat-islands" target="_blank">https://www.rmets.org/metmatters/urban-heat-islands</a> [Accessed 28 Nov. 2024].<br>
+        Seabrook, V. (2023). Heatmaps reveal the warmest and coolest areas of five English cities - and the impact of green spaces. Sky News. Available at: <a href="https://news.sky.com/story/heatmaps-reveal-the-warmest-and-coolest-areas-of-five-english-cities-and-the-impact-of-green-spaces-12923232" target="_blank">https://news.sky.com/story/heatmaps-reveal-the-warmest-and-coolest-areas-of-five-english-cities-and-the-impact-of-green-spaces-12923232</a> [Accessed 28 Nov. 2024].<br>
+        Sharma, A., 2022. Heat-Related Mortality in London: An Urban Heat Island Perspective. In: Urban Climate Resilience. Springer, Singapore. Available at: <a href="https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8" target="_blank">https://link.springer.com/chapter/10.1007/978-981-19-4707-0_8Link</a> [Accessed 6 Dec. 2024].<br>
+        Stats Maps N Pix, 2022. Which GIS Software is Best? Available at: <a href="https://www.statsmapsnpix.com/2022/10/which-gis-software-is-best.html" target="_blank">https://www.statsmapsnpix.com/2022/10/which-gis-software-is-best.html</a> [Accessed 7 Dec. 2024].<br>
+        Tong, S., Prior, J., McGregor, G., Shi, X., & Kinney, P. (2021). Urban heat: an increasing threat to global health. BMJ, 375, n2467. Available at: <a href="https://www.bmj.com/content/375/bmj.n2467" target="_blank">https://www.bmj.com/content/375/bmj.n2467</a> [Accessed 28 Nov. 2024].<br>
+        United-BIM, 2024. BIM Level of Development (LOD) 100, 200, 300, 350, 400, 500. [online] Available at: <a href="https://www.united-bim.com/bim-level-of-development-lod-100-200-300-350-400-500/" target="_blank">https://www.united-bim.com/bim-level-of-development-lod-100-200-300-350-400-500/</a> [Accessed 8 Dec. 2024].<br>
+        Uptech, 2024. Mapbox vs Google Maps vs OpenStreetMap. Available at: <a href="https://www.uptech.team/blog/mapbox-vs-google-maps-vs-openstreetmap" target="_blank">https://www.uptech.team/blog/mapbox-vs-google-maps-vs-openstreetmap</a> [Accessed 7 Dec. 2024].<br>
+        U.S. Environmental Protection Agency, 2024. Climate Change and Heat Islands. Available at: <a href="https://www.epa.gov/heatislands/climate-change-and-heat-islands" target="_blank">https://www.epa.gov/heatislands/climate-change-and-heat-islands</a> [Accessed 6 Dec. 2024].
+    </p>
+    <br>
+    <h5>11.2 Bibliography</h5>
+    <p>
+        <strong>Books</strong><br>
+        Anthamatten, P. (2020) How to Make Maps: An Introduction to Theory and Practice of Cartography. London: Routledge.<br>
+        Birkeland, J. (2002) Design for Sustainability: A Sourcebook of Integrated Ecological Solutions. London: Earthscan.<br>
+        Cardoso, C. and Badke-Schaub, P. (2009) Fixation or Inspiration: Creative Problem Solving in Design. Delft University of Technology.<br>
+        Famulari, S. (2020) Green Up: Sustainable Design Solutions for Healthier Work and Living Environments. Milton: Routledge.<br>
+        Gartland, L.M. (2008) Heat Islands: Understanding and Mitigating Heat in Urban Areas. London: Routledge.<br>
+        Osborne, C. (2010) Climate Design: Design and Planning for the Age of Climate Change. Azure Publishing Inc.<br><br>
+
+        <strong>Articles</strong><br>
+        Aboulnaga, M., Trombadore, A., Mostafa, M., & Abouaiana, A. (2024) Livable Cities: Urban Heat Islands Mitigation for Climate Change Adaptation Through Urban Greening. Springer. Available at: <a href="https://ebookcentral.proquest.com/lib/winchester/reader.action?docID=4717024&ppg=1" target="_blank">https://ebookcentral.proquest.com/lib/winchester/detail.action?pq-origsite=primo&docID=4717024</a> (Accessed: 2 November 2024).    <br>
+        American Society of Landscape Architects, 2021. Urban Heat Islands: The Impact of Heat on City Life. American Society of Landscape Architects. Available at: <a href="https://dirt.asla.org/2021/05/11/urban-heat-islands-are-increasingly-dangerous-but-planners-and-designers-have-solutions/" target="_blank">https://dirt.asla.org/2021/05/11/urban-heat-islands-are-increasingly-dangerous-but-planners-and-designers-have-solutions/</a>     [Accessed 22 November 2024].<br>
+        Global Covenant of Mayors for Climate & Energy, 2020. Urban Heat Islands: Managing Extreme Heat to Keep Cities Cool. Available at: Global Covenant of Mayors [Accessed 22 Nov. 2024].<br>
+        Hayes, A.T., Jandaghian, Z., Lacasse, M.A., Gaur, A., Lu, H., Laouadi, A., Ge, H. & Wang, L., 2022. Nature-Based Solutions (NBSs) to Mitigate Urban Heat Island (UHI) Effects in Canadian Cities. Buildings, 12(7), p.925. Available at: <a href="https://www.mdpi.com/2075-5309/12/7/925" target="_blank">https://www.mdpi.com/2075-5309/12/7/925</a> [Accessed 22 Nov. 2024].<br>
+        Joint Research Centre (2024) 'Urban heat islands: managing extreme heat to keep cities cool', European Commission. Available at: <a href="https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/urban-heat-islands-managing-extreme-heat-keep-cities-cool-2024-07-22_en" target="_blank">https://joint-research-centre.ec.europa.eu/jrc-news-and-updates/urban-heat-islands-managing-extreme-heat-keep-cities-cool-2024-07-22_en</a> (    Accessed: 27 November 2024).<br>
+        Plotly Blog (2019) 'How to Create Interactive Climate Model Maps in Python', R-Craft. Available at: <a href="https://r-craft.org/how-to-create-interactive-climate-model-maps-in-python/" target="_blank">https://r-craft.org/how-to-create-interactive-climate-model-maps-in-python/</a> (Accessed: 25 November 2024).<br>
+    Ramakreshnan, L. & Aghamohammadi, N., 2024. The Application of Nature-Based Solutions for Urban Heat Island Mitigation in Asia: Progress, Challenges, and Recommendations. Current Environmental Health Reports, 11, pp.4-17. Available at: <a href="https://link.springer.com/article/10.1007/s40572-023-00427-2" target="_blank">https://link.springer.com/article/10.1007/s40572-023-00427-2</a> [Accessed 22 Nov. 2024].<br><br>
+    
+        <strong>Video Tutorials</strong><br>
+    CWU Geography (2022) Creating an inset map in QGIS. Available at: <a href="https://www.youtube.com/watch?v=cqM5feQyT2A" target="_blank">https://www.youtube.com/watch?v=cqM5feQyT2A</a> (Accessed: 29 November 2024).<br>
+        CWU Geography (2022) Downloading OpenStreetMap data using QGIS and QuickOSM. Available at: <a href="https://www.youtube.com/watch?v=X3crjuhOBro" target="_blank">https://www.youtube.com/watch?v=X3crjuhOBro</a> (Accessed: 29 November 2024).<br>
+        Design custom 3D maps using Figma and Mapbox studio (2023) <em>Design custom 3D maps using Figma and Mapbox studio</em>. Available at: <a href="https://www.youtube.com/watch?v=7Skwqiso22I&t=13s" target="_blank">    https://www.youtube.com/watch?v=7Skwqiso22I&t=13s</a> (Accessed: 3 November 2024).<br>
+        Download DEMs in QGIS for a Specified Extent with the OpenTopography DEM Downloader Plugin (2023) <em>Download DEMs in QGIS for a Specified Extent with the OpenTopography DEM Downloader Plugin</em>. Available at: <a href="https://www.youtube.com/watch?v=EMwPT7tABCg&t=15s" target="_blank">https://www.youtube.com/watch?v=EMwPT7tABCg&t=15s</a> (Accessed: 10 November 2024).<br>
+        Figma Map - Figma Interactive Map (2023) <em>Figma Map - Figma Interactive Map</em>. Available at: <a href="https://www.youtube.com/watch?v=i3vVCavfCC0" target="_blank">https://www.youtube.com/watch?v=i3vVCavfCC0</a> (Accessed: 3     November 2024).<br>
+        How to make trees in Blender (2023) <em>How to make trees in Blender</em>. Available at: <a href="https://www.youtube.com/watch?v=9NkMkYVz7bw&t=1930s" target="_blank">https://www.youtube.com/watch?v=9NkMkYVz7bw&t=1930s</a> (    Accessed: 19 November 2024).<br>
+        LOD system with Blender (2023) <em>LOD system with Blender</em>. Available at: <a href="https://www.youtube.com/watch?v=JdPAKLgdb7M&t=193s" target="_blank">https://www.youtube.com/watch?v=JdPAKLgdb7M&t=193s</a> (Accessed: 19 November 2024).<br>
+        Mapbox (2024) Getting started with Mapbox Standard in Studio. Available at: <a href="https://docs.mapbox.com/help/tutorials/aa-standard-in-studio/" target="_blank">https://docs.mapbox.com/help/tutorials/aa-standard-in-studio/</a> (    Accessed: 29 November 2024).<br>
+        Mapbox (2024) How-to Videos. Available at: <a href="https://docs.mapbox.com/help/how-to-videos/" target="_blank">https://docs.mapbox.com/help/how-to-videos/</a> (Accessed: 29 November 2024).<br>
+    Urban Heat Islands (2023) Urban Heat Islands. Available at: <a href="https://youtu.be/_APd2hgY4n4?si=Whje6jSTlAr4gTvl" target="_blank">https://youtu.be/_APd2hgY4n4?si=Whje6jSTlAr4gTvl</a> (Accessed: 29 November 2024).<br>
+    </p>
+
+    </section>
+</div>
+
+<!--FOOTER-->
+<div class="item item-28">
+    <footer>
+    <div class="copy">
+      <p>&copy; 2024 Tomas Dulkys, All Rights Reserved. Let's create something amazing together.</p>
+      <p>Winchester</p>
+      <p>tomasdulkys@gmail.com</p>
+    </div>
+  </footer>
+</div>
+
+</div>
+
+<script>
+ function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+   
+<script>
+    $('.video').parent().click(function () {
+  if($(this).children(".video").get(0).paused){        $(this).children(".video").get(0).play();   $(this).children(".playpause").fadeOut();
+    }else{       $(this).children(".video").get(0).pause();
+  $(this).children(".playpause").fadeIn();
+    }
+});
+</script>
+
+<script>
+let slideIndex1 = 1;
+let slideIndex2 = 1;
+let slideIndex3 = 1; 
+let slideIndex4 = 1;
+let slideIndex5 = 1; 
+let slideIndex6 = 1; 
+
+function showSlides(n, slideshow) {
+    let i;
+    const slides = document.querySelectorAll(`#${slideshow} .mySlides`);
+    
+    if (n > slides.length) { 
+        if (slideshow === 'slideshow1') { slideIndex1 = 1; }
+        else if (slideshow === 'slideshow2') { slideIndex2 = 1; }
+        else if (slideshow === 'slideshow3') { slideIndex3 = 1; }
+        else if (slideshow === 'slideshow4') { slideIndex4 = 1; } 
+        else if (slideshow === 'slideshow5') { slideIndex5 = 1; }
+        else if (slideshow === 'slideshow6') { slideIndex6 = 1; } 
+    }
+    
+    if (n < 1) { 
+        if (slideshow === 'slideshow1') { slideIndex1 = slides.length; }
+        else if (slideshow === 'slideshow2') { slideIndex2 = slides.length; }
+        else if (slideshow === 'slideshow3') { slideIndex3 = slides.length; } 
+        else if (slideshow === 'slideshow4') { slideIndex4 = slides.length; } 
+        else if (slideshow === 'slideshow5') { slideIndex5 = slides.length; } 
+        else if (slideshow === 'slideshow6') { slideIndex6 = slides.length; } 
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    if (slideshow === 'slideshow1') {
+        slides[slideIndex1 - 1].style.display = "block"; 
+    } else if (slideshow === 'slideshow2') {
+        slides[slideIndex2 - 1].style.display = "block"; 
+    } else if (slideshow === 'slideshow3') {
+        slides[slideIndex3 - 1].style.display = "block";
+    } else if (slideshow === 'slideshow4') {
+        slides[slideIndex4 - 1].style.display = "block";
+    } else if (slideshow === 'slideshow5') {
+        slides[slideIndex5 - 1].style.display = "block";
+    } else if (slideshow === 'slideshow6') {
+        slides[slideIndex6 - 1].style.display = "block";
+    }
+}
+
+function plusSlides(n, slideshow) {
+    if (slideshow === 'slideshow1') {
+        slideIndex1 += n;
+        if (slideIndex1 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex1 = 1; // Loop back to the first slide
+        }
+        showSlides(slideIndex1, 'slideshow1');
+    } else if (slideshow === 'slideshow2') {
+        slideIndex2 += n;
+        if (slideIndex2 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex2 = 1;
+        }
+        showSlides(slideIndex2, 'slideshow2');
+
+    } else if (slideshow === 'slideshow3') {
+        slideIndex3 += n;
+        if (slideIndex3 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex3 = 1; 
+        }
+        showSlides(slideIndex3, 'slideshow3');
+    } else if (slideshow === 'slideshow4') {
+        slideIndex4 += n;
+        if (slideIndex4 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex4 = 1; 
+        }
+        showSlides(slideIndex4, 'slideshow4');
+    } else if (slideshow === 'slideshow5') {
+        slideIndex5 += n;
+        if (slideIndex5 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex5 = 1; 
+        }
+        showSlides(slideIndex5, 'slideshow5');
+
+    } else if (slideshow === 'slideshow6') {
+        slideIndex6 += n;
+        if (slideIndex6 > document.querySelectorAll(`#${slideshow} .mySlides`).length) {
+            slideIndex6 = 1; 
+        }
+        showSlides(slideIndex6, 'slideshow6');
+    }
+}
+
+function currentSlide(n, slideshow) {
+    if (slideshow === 'slideshow1') {
+        slideIndex1 = n;
+        showSlides(slideIndex1, 'slideshow1');
+    } else if (slideshow === 'slideshow2') {
+        slideIndex2 = n;
+        showSlides(slideIndex2, 'slideshow2');
+    } else if (slideshow === 'slideshow3') {
+        slideIndex3 = n;
+        showSlides(slideIndex3, 'slideshow3');
+    } else if (slideshow === 'slideshow4') {
+        slideIndex4 = n;
+        showSlides(slideIndex4, 'slideshow4');
+    } else if (slideshow === 'slideshow5') {
+        slideIndex5 = n;
+        showSlides(slideIndex5, 'slideshow5');
+    } else if (slideshow === 'slideshow6') {
+        slideIndex6 = n;
+        showSlides(slideIndex6, 'slideshow6');
+    }
+}
+
+// Initialize the slides for all three slideshows
+showSlides(slideIndex1, 'slideshow1');
+showSlides(slideIndex2, 'slideshow2');
+showSlides(slideIndex3, 'slideshow3');
+showSlides(slideIndex4, 'slideshow4');
+showSlides(slideIndex5, 'slideshow5');
+showSlides(slideIndex6, 'slideshow6');
+</script>
+
+<script src="tomasdulkys.js"></script>  
+</body>   
+</html>
+
+
+
+
+
+
+
+
