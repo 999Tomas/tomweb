@@ -694,6 +694,14 @@ animation: fade-in 1s;
     background: #424242;
     float: left;
 }
+.item-content-p11 video{
+    width: 100%;
+    max-width: 800px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background: #424242;
+    float: left;
+}
 .item-content-p11 figcaption{
     width: 100%;
     max-width: 800px;
@@ -721,6 +729,14 @@ figcaption2{
     font-weight: 400;
 }
 .item-content2-p11 img {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    background: #424242;
+    float: right;
+}
+.item-content2-p11 video {
     width: 100%;
     max-width: 600px;
     margin-left: 20px;
