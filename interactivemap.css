@@ -134,18 +134,18 @@ img, video{
 .item-2{
     grid-column: 3 / 7;
     grid-row: 2 / 5;
-    background-color:  #A2DFF7;
+    background-color:  #b0c4de;
     padding: 0;
 }
 .item-3{
     grid-column: 3 / 7;
     grid-row: 5 / 7;
-    background-color:  #A2DFF7;
+    background-color:  #b0c4de;
 }
 .item-4{
     grid-column: 3 / 7 ;
     grid-row: 7 / 10;
-    background-color:  #76D7C4;
+    background-color:  #5A8FB0;
 }
 .item-5{
     grid-column: 3 / 7;
