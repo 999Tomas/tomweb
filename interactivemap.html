@@ -37,7 +37,7 @@
         </div>
 
         <div class="item item-2">
-            <img src="img5/map4.png"style="width:100%">
+            <img src="img5/app_prototype.png"style="width:100%">
         </div>
 
         <div class="item item-3">
@@ -86,7 +86,7 @@
                 <a href="#item item-text"><p>3.1 Primary Research Findings</p></a>
                 <a href="#content-secondary-p11"><p>3.2 Secondary Research<br> Findings</p></a>
                 <a href="#content-statistics-p11"><p>3.3 Relevant Statistics on Urban Heat Islands</p></a>
-                <a href="#content-tools-p11"><p>3.4 Exploration of Tools and<br> Technologies</p></a>
+                <a href="#content-tools-p11"><p>3.4 Exploration of Tools and<br> LOD System</p></a>
                 <a href="#content-hero-img-p11"><h1>4. Design Process</h1></a>
                 <a href="#content-lowprototype-p11"><p>4.1 Low-Fidelity Prototyping</p></a>
                 <a href="#content-highprototype-p11"><p>4.2 High-Fidelity Prototyping</p></a>
@@ -321,7 +321,7 @@
                     <iframe src="https://api.mapbox.com/styles/v1/tomasd/cm479oi2c012201si1soqamv8.html?title=false&access_token=pk.eyJ1IjoidG9tYXNkIiwiYSI6ImNtMzljaDFvYjBucjkybXF1YXFrMjBxdzAifQ.a3LdgMNsd2X0ToiQAthGTA&zoomwheel=false#17.66/51.059342/-1.311993/0/61" title="iMAP-copy" style="width:100%; height:700px; max-height:1080px; border:none;">
                     </iframe>
 
-                   <h5>3.3 Exploration of Tools and Technologies</h5>
+                   <h5>3.3 Exploration of Tools and LOD System</h5>
                     <p>
                         In my research on software tools for interactive maps, I found Mapbox particularly appealing due to its user-friendly interface and customizable visuals, especially when integrating with OpenStreetMap and GeoJSON. Mapbox offers numerous customisation options for developers to create tailored, visually stunning maps <a href="https://www.uptech.team/blog/mapbox-vs-google-maps-vs-openstreetmap" target="_blank" class="no-style-link"> (UpTech).</a> GIS software like QGIS and ArcGIS is essential for analysing and visualising spatial data for urban planning, environmental monitoring, and navigation. QGIS is beginner-friendly and free, while ArcGIS can overwhelm newcomers with its complexity and subscription model <a href="https://gisgeography.com/best-gis-software/" target="_blank" class="no-style-link">(GIS Geography).</a> QGIS also supports robust mapping and plugins, enhancing its functionality <a href="https://www.statsmapsnpix.com/2022/10/which-gis-software-is-best.html" target="_blank" class="no-style-link"> (Stats Maps N Pix).</a>
                         <br>
@@ -559,7 +559,7 @@
              <h1>7. Development of Interactive Map and Mobile App Prototype</h1>
              <h5>7.1 Overview and Tools</h5>
             <p>
-               In this section, I discuss the tools used for developing the interactive map and mobile app prototype. I utilised QGIS for its robust GIS capabilities, and Mapbox for its user-friendly interface and powerful mapping features. Figma was used for prototyping and integrating interactive elements.
+                In developing the interactive map and mobile app prototype, I utilised QGIS for its robust GIS capabilities, and Mapbox for its user-friendly interface and powerful mapping features. Figma was used for prototyping and integrating interactive elements.
             </p>
         </div>
     </section>
@@ -573,82 +573,40 @@
                The figures presented in this overview provide a comprehensive look at the processes involved in utilising Mapbox and QGIS for the urban cooling project. This section highlights the development process, the challenges faced, and the solutions implemented to create an interactive and functional map prototype.
                <br>
                <br>
-               In Mapbox, the initial setup is established (Figure 7.2.1), forming a base for customisation and integration. For this project, I randomly chose Clerkenwell, London (Figure 7.2.2). Excessive street details are minimised for clarity (Figure 7.2.3). Building extrusions are highlighted, providing detailed urban representations (Figure 7.2.4)Real-time temperature data points are added (Figure 7.2.5), and temperature labels are styled to display values correctly (Figure 7.2.6). Tree points data sourced from OSM are added (Figure 7.2.7), and colour is applied to these points (Figure 7.2.8). Finally, 3D tree models are integrated on the point data (Figure 7.2.9). Despite efforts, the tree model did not display correctly, showing only a single original model. Error checks indicated the trees existed in the scene, but were not visible, and I couldn't find a solution despite seeking help.
-
+               In Mapbox, the initial setup is established (Figure 7.2.1), forming a base for customisation and integration. For this project, I randomly chose Clerkenwell, London (Figure 7.2.2). Excessive street details are minimised for clarity (Figure 7.2.3). Building extrusions are highlighted, providing detailed urban representations (Figure 7.2.4). Real-time temperature data points are added (Figure 7.2.5), and temperature labels are styled to display values correctly (Figure 7.2.6). Tree points data sourced from OSM are added (Figure 7.2.7), and colour is applied to these points (Figure 7.2.8). Finally, 3D tree models are integrated on the point data using the JavaScript Mapbox Graphics Library (Figure 7.2.9). Despite my efforts, the tree models did not display correctly, showing only a single model. Error checks indicated the trees existed in the scene, but were not visible. Unfortunately, I couldn't find a solution despite seeking help from Gemini and Copilot.
             </p>
             <br>
             <br>
             <img src="img5/QGIS.png" style="width:100%">
             <h5></h5>
             <p>
-               In QGIS, OSM data is used to select a location, save, and upload to QGIS (Figure 7.3). A tree layer is chosen, and 3D tree models are integrated (Figure 7.3.1). Building extrusions are highlighted (Figure 7.3.2). The Qgis2threejs exporter is used to export the file to the web (Figure 7.3.3). Due to rendering issues with the DEM (raster layer), the file is exported using Qgis2threejs (Figure 7.3.4), showcasing the integration of geographic data and 3D models.
+               Following my work with Mapbox, I turned my attention to QGIS. I selected a location using OSM data, saved it, and uploaded it into QGIS (Figure 7.3). I then chose a tree layer and integrated my 3D tree models into that data (Figure 7.3.1). Building extrusions were emphasised to clearly depict the structures within the area (Figure 7.3.2). 
                <br>
                <br>
-               I was unhappy with the exported file quality of my map project, as even the screenshots appeared unappealing. Consequently, I used Photoshop to add tree models to a Mapbox screenshot, creating an interactive map in Figma.<br>
+               Next, I began the rendering process in the 3D window of QGIS. To obtain detailed elevation information, I selected the DEM type for a higher quality render. Unfortunately, the rendering process was extremely time-consuming, taking several hours. I eventually stopped the render, realising the file was large and contained many details, which required significant processing power. Consequently, I decided to export the file using the Qgis2threejs exporter to the web (Figure 7.3.3). Figure 7.3.4 shows the Qgis2threejs exported file in a web browser.
+               <br>
+
+               I was unhappy with the exported file quality of my map project, as the visuals appeared unappealing. Consequently, I used Photoshop to add tree models to a Mapbox screenshot, creating an interactive map in Figma.<br>
                <br> 
-               During the development of my interactive map prototype, I encountered several challenges with Figma. I initially overlooked its capabilities and missed plugins like Figmap and Map Maker, which could have simplified my process. Instead of using these tools, I relied on static images. I faced issues with auto layout, alignment, and layer organisation, which led to frustration. Additionally, I struggled with animation in the education articles section and faced navigation glitches. Despite these obstacles, I gained valuable insights about Figma and am motivated to improve my skills for future projects.
+               During development, I encountered several challenges with Figma. Initially, I overlooked its capabilities and missed plugins like Figmap and Map Maker, which could have simplified my workflow. Instead, I relied on static images. I faced issues with auto layout, alignment, and layer organisation, leading to frustration. Additionally, I struggled with creating smooth animations in the education articles section on the tips page due to the complexity of Figma's animation tools and my limited experience. Despite these obstacles, I gained valuable insights about Figma and am motivated to improve my skills for future projects.
+
            </p>
         </div>
     </section>
 
-     <!--Mobile App Prototype Details and Features-->
-    <section id="content-mobileappprototype-p11">
-        <div class="item item-image-p11">
-
-            <div class="item item-img" style="display: flex; justify-content: center; align-items: center;">
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; max-width: 1000px; height: 700px;" src="https://embed.figma.com/proto/c5zKmxZPhAcp0DqJoXMkPt/Prototype-(CoolScape)?node-id=565-8&node-type=frame&scaling=min-zoom&content-scaling=fixed&page-id=565%3A2&starting-point-node-id=565%3A8&embed-host=share" allowfullscreen>>
-                </iframe>
-            </div>
-            <h5>7.3 Interactive Map Prototype</h5>
+     <!--Mapping with Mapbox studio-->
+     <section id="content-mapping with mapbox-p11">
+        <div class="item item-img-p11">
+            <iframe width='100%' height='700px' max-height='1080px' src="https://api.mapbox.com/styles/v1/tomasd/cm438189v00ux01si9a0uecyj/draft.html?title=false&access_token=pk.eyJ1IjoidG9tYXNkIiwiYSI6ImNtMzljaDFvYjBucjkybXF1YXFrMjBxdzAifQ.a3LdgMNsd2X0ToiQAthGTA&zoomwheel=false#15.9/51.525927/-0.104652/37.6/44" title="iMAP" style="border:none;">
+            </iframe>
+            <h5>7.4 Mapping with Mapbox studio</h5>
             <p>
-                The interactive map prototype showcases several features that facilitate user engagement. (see prototype at the beginning of this section). Users can seamlessly navigate through different sections. Clicking on amenities like parks opens a pop-up window with detailed information. The tips page is scrolled vertically, offering users educational articles that address urban heat problems.  including the coolest and fastest route features, temperature display when users hover.
-                <br>
-                While my first prototype offered static images of the map, I aimed to develop a more dynamic experience using Mapbox. This newer prototype incorporates a panning feature, allowing users to explore a 3D map interactively (See prototype above).
-            </p>
+            I've made significant progress in styling maps using Mapbox, integrating data from OpenStreetMap (OSM) to display datasets with temperature readings and tree data points at specific locations. However, I've faced challenges with displaying my 3D tree models, primarily due to my limited JavaScript knowledge.<br> 
+            My plan was to use Mapbox to display these models with a Level of Detail (LOD) system. This enhanced the user experience in Figma prototypes by allowing users to see different levels of detail based on their perspective.<br><br> 
+            Currently, the temperature data does not interact as intended. It should work with JavaScript to display only when users touch a specific place. To address these challenges, I plan to enhance my JavaScript skills and explore advanced Mapbox features for creating more dynamic and interactive maps. Despite these setbacks, I'm excited about the progress and look forward to further improvements.</p>
             </div>
-    </section>
-
-
-    <!--<section id="content-preparation-p9">
-        <div class="item item-introduction-content">
-            <div class="box">
-                <a href="https://www.instagram.com/tomasdulkys/" target="_blank">
-                    <img src="img4/instgr.png" style="width:100%">
-                    <div class="content">
-                        <h1>Follow My Adventures</h1>
-                        <p>
-                            Your presence and engagement are invaluable, as they fuel my creative spirit and help me refine my content.
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="box1">
-                <a href="https://www.linkedin.com/in/tomasdulkys/" target="_blank">
-                    <img src="img4/linkedIn.png" style="width:100%">
-                    <div class="content">
-                        <h1>Let's connect</h1>
-                        <p>
-                            Engage with me on LinkedIn to foster knowledge sharing and mutual support.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="item item-text">
-            <h5>7.4 Exploration and Learning</h5>
-            <p class="scroll-object">
-                In today's digital age, social media platforms have become an integral part of our lives, not only for personal use, but also for professional purposes. Among the many platforms available, I chose Instagram and LinkedIn as my primary channels for showcasing my work and connecting with potential employers.
-                <br>
-                <br>
-                Instagram, a social media behemoth with over a billion monthly active users, has emerged as a formidable platform for showcasing one's artistic prowess. Its visually captivating interface serves as an ideal canvas for creatives, like myself, a 3D visualiser, to exhibit our work and connect with a vast audience. By leveraging the platform's emphasis on visual content, we can effectively convey our skills, artistic style, and boundless imagination to our followers. Through the strategic sharing of high-quality images and captivating videos, we engage our audience, inviting them to immerse themselves in our creative journey. This exposure not only broadens our reach, but also fosters new opportunities for collaboration and growth. Instagram's vibrant community provides a unique platform for creatives to connect, inspire, and collaborate, propelling us forward in our artistic endeavours.
-                <br>
-                <br>
-                On the other hand, LinkedIn is another platform I chose to use for professional purposes. As the world's largest professional network, LinkedIn boasts over 740 million users worldwide, making it an essential tool for job seekers, freelancers, and business professionals. The platform's primary focus is on connecting individuals with potential employers, clients, and collaborators, making it an ideal place to showcase one's skills, experience, and accomplishments.
-            </p>
-        </div>
-    </section>--> 
+       
+    </section> 
 </div>
 
 <!--SUSTAINABLE DESIGN CONSIDERATIONS-->
