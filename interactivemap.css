@@ -466,9 +466,7 @@ img, video{
 .scroll-object::-webkit-scrollbar{
    display:none;
 }
-
-/*Slideshow*/
-.slideshow-container{
+.slideshow-container {
     top: 10%;
     left: 0;
     right: 0;
@@ -476,16 +474,20 @@ img, video{
     max-width: 1400px;
     height: auto;
     position: relative;
-    margin: 0px 15px 20px 15px;
+    margin: 0px 15px 0px 15px;
     padding-top: 10px;
     display: block;
     overflow: hidden;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
+    background-color: #b0b0b0;
+    border: 5px solid #b0b0b0;
+    border-top-left-radius: 4px; 
+    border-top-right-radius: 4px;
 }
-@media screen and (max-width:950px){
-   .slideshow-container {
-    margin: 0px 10px 20px 10px;
-    height: auto;
+
+@media screen and (max-width:950px) {
+    .slideshow-container {
+        margin: 0px 10px 0px 10px;
+        height: auto;
     }
 }
 
@@ -498,110 +500,131 @@ img, video{
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    bottom: 100px;
+    width: 40px; 
+    height: 40px; 
+    margin: 0 10px;
+    padding: 12px;
     color: #B0B3B7;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 50%;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 45%;
+    transform: translateX(50%);
+}
+
+/* Position the "prev button" to the left */
+.prev {
+    left: 45%;
+    transform: translateX(-50%);
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgb(79, 80, 86);
-    scale: 1.5;
+    background-color: rgba(79, 80, 86, 0.8);
+    scale: 1.1; /* Slightly increase size on hover */
 }
-@media screen and (max-width: 600px){
-  .prev:hover, .next:hover {
-    background: transparent;
-    scale: 0.9;
+
+@media screen and (max-width: 600px) {
+    .prev:hover, .next:hover {
+        background: rgba(79, 80, 86, 0.8);
+        scale: 1.1; /* Slightly increase size on hover */
     }
 }
-.next:active{
+
+.next:active, .prev:active {
     color: #f5f7f6;
-    box-shadow:0px 1px 7px 0px #f5f7f6;
-    transform: translateX(40px);
-}
-.prev:active{
-    color: #f5f7f6;
-    box-shadow:0px 1px 7px 0px #f5f7f6;
-    transform: translateX(-40px);
+    box-shadow: 0px 1px 7px 0px #f5f7f6;
+    transform: translateY(2px); /* Slightly move down on click */
 }
 
 /* Caption text */
 .image-title {
-font-size: 2rem;
-font-weight: 100;
-color: #E0C497;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-position: absolute;
-bottom: 2rem;
-left: 0;
-right: 0;
-float: left;
-margin: 0 auto;
-padding-left: 40px;
-text-align: left;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #14151A;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0px; /* Position title below the slider */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .image-title {
--webkit-animation: fade-in 1s;
--moz-animation: fade-in 1s;
-animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
+    -moz-animation: fade-in 1s;
+    animation: fade-in 1s;
 }
 
 @-webkit-keyframes fade-in {
-0% { opacity: 0; transform: scale(0); }
-100% { opacity: 1; transform: scale(1); }
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
 }
+
 @-moz-keyframes fade-in {
-0% { opacity: 0; transform: scale(0); }
-100% { opacity: 1; transform: scale(1); }
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
 }
+
 @keyframes fade-in {
-0% { opacity: 0; transform: scale(0); }
-100% { opacity: 1; transform: scale(1); }
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
-
-@media screen and (max-width: 600px){
-  .image-title{
-     width: 100%;
-     font-size: .9rem;
-     bottom: 1rem;
-     justify-content: center;
-       text-align: left;
-     padding-left: 10px;
+@media screen and (max-width: 600px) {
+    .image-title {
+        width: 100%;
+        font-size: .9rem;
+        bottom: -10px; /* Adjust position for smaller screens */
+        text-align: center;
+        padding: 10px;
     }
 }
-.image-title p{
+
+.image-title p {
     font-size: 1.5rem;
 }
-@media screen and (max-width: 600px){
-  .image-title p{
-     font-size: 0.7rem;
+
+@media screen and (max-width: 600px) {
+    .image-title p {
+        font-size: 0.7rem;
     }
 }
 
+/* Vertical Thumbnails */
+.thumbnail-bar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
 
-/* Thumbnails */
 .thumbnail2 {
-    width: 120px;  /* Set appropriate width */
+    width: 40px;  /* Set appropriate width */
+    height: 40px; /* Set appropriate height */
     cursor: pointer;
     background-color: blue;
-    margin: 2px;
+    margin: 5px 0;
     opacity: 0.6; /* Slight opacity for non-active thumbnails */
     transition: opacity 0.3s, transform 0.3s; /* Include transform for scaling effect */
+    border-radius: 50%; /* Make thumbnails circular */
 }
 
 .thumbnail2:hover {
@@ -609,35 +632,58 @@ animation: fade-in 1s;
 }
 
 .thumbnail2.active {
+    width: 60px;  /* Larger size for active thumbnail */
+    height: 60px; /* Larger size for active thumbnail */
     outline: 0.2em solid var(--active-color);
     opacity: 1;
     transform: scale(1.1); /* Scale up the active thumbnail */
 }
+
+/* Dots for smaller devices */
+.dot-bar {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #333;
+}
+
 /* Responsive styles */
 @media (max-width: 1040px) {
-    .thumbnail2 {
-        width: 10px; /* Smaller size for smaller devices */
-        height: 10px; /* Maintains the aspect ratio */
-        opacity: 0.6; /* Slight opacity for non-active thumbnails */
-        border-radius: 50%; /* Make thumbnails circular */
-        display: inline-block; /* Display inline for a dot-like effect */
-        margin: 2px; /* Spacing between dots */
-        filter: none;
+    .thumbnail-bar {
+        display: none;
     }
     
-    .thumbnail2.active {
-        width: 12px; /* Slightly larger active dot */
-        height: 12px; /* Maintain circular shape */
-        border: none; /* Remove border for active dot */
-        background-color: #f00; /* Use background color for active state */
-    }
-
-    /* Hide images on smaller devices */
-    .thumbnail2 img {
-        display: none; /* Hide images to show only dots */
+    .dot-bar {
+        display: block;
     }
 }
-  
+
+@media (max-width: 600px) {
+    .dot-bar {
+        display: block;
+    }
+}
+
+/* Fading animation
 /* Fading animation */
 .fade {
     animation-name: fade;
@@ -645,8 +691,20 @@ animation: fade-in 1s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.slide-description {
+    text-align: left;
+    margin: 0px 15px 0px 15px; /* Remove bottom margin */
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #b0b0b0;
+    padding: 20px;
+    border-bottom-left-radius: 4px; /* Adjust the radius as needed */ 
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Social Media Inspo */
