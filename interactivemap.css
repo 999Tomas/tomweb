@@ -500,7 +500,7 @@ img, video{
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    bottom: 100px;
+    bottom: 110px;
     width: 40px; 
     height: 40px; 
     margin: 0 10px;
@@ -517,6 +517,19 @@ img, video{
     align-items: center;
 }
 
+/* Adjust for mobile devices */ 
+@media screen and (max-width: 600px) { 
+    .prev, .next {
+    bottom: 55px; /* Position at the bottom */
+    left: 50%; /* Center horizontally */ 
+    transform: translateX(-50%); /* Center horizontally */ 
+    margin: 0 10px;
+    width: 20px; 
+    height: 20px; 
+    font-size: 12px;
+    }
+}
+
 /* Position the "next button" to the right */
 .next {
     right: 45%;
@@ -529,7 +542,19 @@ img, video{
     transform: translateX(-50%);
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Adjust for mobile devices */ 
+@media screen and (max-width: 600px) { 
+    .prev {
+         left: 40%;
+         transform: translateX(-120%);
+     }
+     .next {
+        right: 40%;
+        transform: translateX(20%); 
+     }
+}
+
+/* On hover */
 .prev:hover, .next:hover {
     background-color: rgba(79, 80, 86, 0.8);
     scale: 1.1; /* Slightly increase size on hover */
@@ -538,7 +563,7 @@ img, video{
 @media screen and (max-width: 600px) {
     .prev:hover, .next:hover {
         background: rgba(79, 80, 86, 0.8);
-        scale: 1.1; /* Slightly increase size on hover */
+        scale: 1.1; /* size on hover */
     }
 }
 
@@ -705,6 +730,12 @@ img, video{
     border-bottom-left-radius: 4px; /* Adjust the radius as needed */ 
     border-bottom-right-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 600px) {
+    
+.slide-description {
+     margin: 0px 10px 0px 10px;    
+    }
 }
 
 /* Social Media Inspo */
