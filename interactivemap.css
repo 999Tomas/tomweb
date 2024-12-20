@@ -58,6 +58,8 @@ img, video{
     background: #9F94A1;
 }
 
+.responsive-video { width: 100%; height: auto; }
+
 .container-p3{
     background-color: transparent;
     display: grid;
