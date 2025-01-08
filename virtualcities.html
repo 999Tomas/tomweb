@@ -23,7 +23,7 @@
 
    <!--Tomebound's Aztec Art | Client Project 2-->
    <body>
-    <my-header></my-header>s
+    <my-header></my-header>
 
     <div class="container-p2">
         <!-- Back to top button -->
@@ -32,7 +32,7 @@
         <!--FACE SECTION item-1 till item-11-->
         <div class="item item-1">
             <div class="item item-title">
-                <h5>DM2130</h5>
+                <h5 style="color: #f5f5f5;">DM2130</h5>
                 <h1>Winchester Castle | A Virtual Revival </h1>
             </div>
         </div>
@@ -339,19 +339,136 @@
 
     <!--Final prototype and visualisations-->
     <section id="content-finalprototype-p12">
-        <div class="item item-img">
-            <img src="img4/conclusion-p1.png" style="width:100%">
+        <div class="slideshow-container" id="slideshow1">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img6/wc_render.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Perspective Reconstruction (South-West View)<p></p></div>
+                </div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <img src="img6/wcastle1.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">East Curtain Wall View<p></p></div>
+                </div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <img src="img6/wcastle2.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Western View<p></p></div>
+                </div>
+            </div>
+
+             <div class="mySlides fade">
+                <img src="img6/wcastle3.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Perspective View (West)<p></p></div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img6/wcastle4.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Great Gate - Western Angle<p></p></div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img6/ggate.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">The Great Gate: A Windsor Influence<p></p></div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img6/t5.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">North Apex Tower Views<p></p></div>
+                </div>
+            </div>
+
+             <div class="mySlides fade">
+                <img src="img6/t2motte.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Upper Ward Round Tower<p></p></div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img6/t3.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Eastern Side D-Shaped Tower<p></p></div>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img6/ts1.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Square West Side Tower of Upper Bailey<p></p></div>
+                </div>
+            </div>
+
+             <div class="mySlides fade">
+                <img src="img6/bgate.png" style="width:100%">
+                <div class="img-overlay">
+                    <div class="image-title">Upper Bailey Gatehouse<p></p></div>
+                </div>
+            </div>
+
+            <!-- Thumbnail bar -->
+            <div class="thumbnail-bar ">
+                <img class="thumbnail2" src="img6/wc_render.png" onclick="currentSlide(1, 'slideshow1')">
+                <img class="thumbnail2" src="img6/wcastle1.png" onclick="currentSlide(2, 'slideshow1')">
+                <img class="thumbnail2" src="img6/wcastle2.png" onclick="currentSlide(3, 'slideshow1')">
+                <img class="thumbnail2" src="img6/wcastle3.png" onclick="currentSlide(4, 'slideshow1')">
+                <img class="thumbnail2" src="img6/wcastle4.png" onclick="currentSlide(5, 'slideshow1')">
+                <img class="thumbnail2" src="img6/ggate.png" onclick="currentSlide(6, 'slideshow1')">
+                <img class="thumbnail2" src="img6/t5.png" onclick="currentSlide(7, 'slideshow1')">
+                <img class="thumbnail2" src="img6/t2motte.png" onclick="currentSlide(8, 'slideshow1')">
+                <img class="thumbnail2" src="img6/t3.png" onclick="currentSlide(9, 'slideshow1')">
+                <img class="thumbnail2" src="img6/ts1.png" onclick="currentSlide(10, 'slideshow1')">
+                <img class="thumbnail2" src="img6/bgate.png" onclick="currentSlide(11, 'slideshow1')">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+        </div>
+
+        <!-- Dot bar for smaller devices  
+        <div class="dot-bar"> 
+            <span class="dot" onclick="currentSlide(1, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(2, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(3, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(4, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(5, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(6, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(7, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(8, 'slideshow1')"></span>
+            <span class="dot" onclick="currentSlide(9, 'slideshow1')"></span>
+        </div>
+        -->
+
+        <!-- Description below the slideshow --> 
+        <div id="slide-description" class="slide-description"> 
+            <p>
+                This slide presents a comparison between the initial design of my map application and the refined prototype. It showcases the 'Get Directions' page, highlighting user options for selecting routes and the changes and improvements made throughout the project.
+            </p>
         </div>
 
         <div class="item item-text">
-            <h5>7.2 Final Prototype and Visualisations</h5>
+            <h1>7.2 Final Prototype and Visualisations</h1>
             <p>
-                This project became a testament to the growth I experienced throughout the academic year, showcasing my evolution in both sculpting and texturing. The journey from initial concept to finalised models is a testament to the power of perseverance and joy of pushing creative boundaries – a journey that will undoubtedly shape my artistic journey for years to come.
-                <br>
-                <br>
-                Overall, this project was a valuable learning experience for me, as it taught me how to work within constraints and find creative solutions to complex design challenges. Despite the limitations and challenges I faced, I am proud of the final result and feel that I was able to create a visually cohesive and engaging game asset.
-            </p>
+               This section showcases the final prototype of Winchester Castle through various visualisations. These include perspective reconstructions from the south-west and west, detailed views of the east curtain wall, and specific structures like the Great Gate, North Apex Tower, and Upper Ward towers. The designs blend historical insights with informed architectural choices.
+           </p>
         </div>
+
     </section>
 </div>
 
@@ -410,7 +527,9 @@
                 </li>
                 <li><a href="https://www.revisitinghistory.com/medieval/gothic-castles/" target="_blank">Revisiting History. (n.d.). Medieval Gothic Castles: What Are Their 7 Characteristics?</a> [Accessed 28 Dec. 2024].
                 </li>
-                <li><a href="https://en.wikipedia.org/wiki/Winchester_Castle" target="_blank">Wikipedia. (2025). Winchester Castle</a> [Accessed 28 Dec. 2024].
+                <li><a href="https://www.revisitinghistory.com/medieval/gothic-castles/" target="_blank">Revisiting History. (n.d.). Medieval Gothic Castles: What Are Their 7 Characteristics?</a> [Accessed 28 Dec. 2024].
+                </li>
+                <li><a href="https://en.wikipedia.org/wiki/Fortified_tower" target="_blank"> Wikipedia (2023) Fortified Tower.</a> [Accessed 2 January. 2025].
                 </li>
                 <li><a href="https://en.wikipedia.org/wiki/Defensive_wall" target="_blank">Wikipedia. (n.d.). Defensive Wall</a> [Accessed 28 Dec. 2024].
                 </li>
@@ -486,17 +605,44 @@
 </script>
 
 <script>
-let slideIndex1 = 1;
+   
+ let slideIndex1 = 1;
 let slideIndex2 = 1;
 let slideIndex3 = 1; 
 let slideIndex4 = 1;
 let slideIndex5 = 1; 
 let slideIndex6 = 1; 
 
+const descriptions = [
+     "This slide provides a perspective view of Winchester Castle from the south-west, showcasing the castle from the east side.",
+
+    "A view showing the North Apex Tower and all East Curtain structures, leading to the large round tower at the south end of the Upper Ward.",
+
+    "A view of Winchester Castle from the west, offering a detailed look at its western defences and structures.",
+
+    "A perspective view from the west, providing an expansive look at the castle’s layout and structure.",
+
+    "A view from the west, focusing on the Great Gate and Upper Ward.",
+
+    "Struggling with limited historical records, I designed this gate inspired by Windsor Castle's architecture, built in the same period, and sharing the influence of William the Conqueror. The renders showcase the Great Gate with HDRI lighting, providing comprehensive views.",
+
+    "Renders of the North Apex Tower from different perspectives, with HDRI day and night lighting. This tower is the only one with detailed excavation records, revealing its original structure and defensive features, which remain visible today (Castle Studies Group, 2019).",
+
+    "The Upper Ward's towers evolved from early 12th-century squares to round or oval forms (Castle Studies Group, 2019). While not definitively proven, I opted for round, inspired by Winchester Castle's Great Hall model.",
+
+    "These structures combine the defensive strength of round towers with the internal space of square towers, maximising defence and usability (Wikipedia, 2023).",
+
+    "A robust defensive structure, providing ample internal space and strategic advantage (Wikipedia, 2023).",
+
+    "The main entrance to the Upper Bailey, the most fortified part of the castle, controlling access to the inner sanctum."
+];
+
 function showSlides(n, slideshow) {
     let i;
     const slides = document.querySelectorAll(`#${slideshow} .mySlides`);
-    
+    const description = document.getElementById('slide-description');
+    const thumbnails = document.querySelectorAll(`#${slideshow} .thumbnail2`);
+
     if (n > slides.length) { 
         if (slideshow === 'slideshow1') { slideIndex1 = 1; }
         else if (slideshow === 'slideshow2') { slideIndex2 = 1; }
@@ -518,19 +664,30 @@ function showSlides(n, slideshow) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
+    for (i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove("active");
+    }
     
     if (slideshow === 'slideshow1') {
         slides[slideIndex1 - 1].style.display = "block"; 
+        description.innerHTML = `<p>${descriptions[slideIndex1 - 1]}</p>`;
+        thumbnails[slideIndex1 - 1].classList.add("active");
     } else if (slideshow === 'slideshow2') {
         slides[slideIndex2 - 1].style.display = "block"; 
+        thumbnails[slideIndex2 - 1].classList.add("active");
     } else if (slideshow === 'slideshow3') {
         slides[slideIndex3 - 1].style.display = "block";
+        thumbnails[slideIndex3 - 1].classList.add("active");
     } else if (slideshow === 'slideshow4') {
         slides[slideIndex4 - 1].style.display = "block";
+        thumbnails[slideIndex4 - 1].classList.add("active");
     } else if (slideshow === 'slideshow5') {
         slides[slideIndex5 - 1].style.display = "block";
+        thumbnails[slideIndex5 - 1].classList.add("active");
     } else if (slideshow === 'slideshow6') {
         slides[slideIndex6 - 1].style.display = "block";
+        thumbnails[slideIndex6 - 1].classList.add("active");
     }
 }
 
@@ -605,6 +762,7 @@ showSlides(slideIndex3, 'slideshow3');
 showSlides(slideIndex4, 'slideshow4');
 showSlides(slideIndex5, 'slideshow5');
 showSlides(slideIndex6, 'slideshow6');
+   
 </script>
 
 <script src="tomasdulkys.js"></script>  
