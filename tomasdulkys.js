@@ -1,7 +1,6 @@
 
 
 
-
 function changeClass(){
   
 }
@@ -1022,6 +1021,7 @@ let jsArrow = document.querySelector(".js-arrow");
 jsArrow.onclick = function() {
  navLinks.classList.toggle("show3");
 }
+
 
 
 // Lazy loading for videos
