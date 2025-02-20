@@ -140,7 +140,7 @@ class MyHeader extends HTMLElement {
               <a href="contact.html">Unleash Your Vision</a>
             </li>
             <li class="nav-link" style="--i: 1.60s">
-              <a href="livecv.html">Live CV</a>
+              <a href="livecv.html" target="_blank">Live CV</a>
             </li>
           </ul>
         </div>
