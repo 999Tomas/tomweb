@@ -23,7 +23,7 @@ body, html {
 /* Default PDF for larger screens */
 @media (min-width: 768px) {
     .pdf-container iframe {
-        content: url('Tomas_Dulkys_CV_2025.pdf');
+        content: url('Tomas_Dulkys_CV.pdf');
     }
 }
 
