@@ -3,23 +3,34 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: #f4f4f4;
-    overflow: hidden; /* Prevent scrolling on the main page */
 }
+
 .pdf-container {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    overflow: hidden; /* Prevent iframe content from overflowing */
 }
+
 .pdf-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+}
+
+/* Default PDF for larger screens */
+@media (min-width: 768px) {
+    .pdf-container iframe {
+        content: url('Tomas_Dulkys_CV_2025.pdf');
+    }
+}
+
+/* Mobile-optimized PDF for smaller screens */
+@media (max-width: 767px) {
+    .pdf-container iframe {
+        content: url('Tomas_Dulkys_CV_2025_mobile.pdf');
+    }
 }
 

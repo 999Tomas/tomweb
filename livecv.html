@@ -7,23 +7,9 @@
     <link rel="stylesheet" href="livecv.css">
 </head>
 <body>
-    <div class="pdf-container" id="pdfContainer">
-        <iframe id="cvIframe" src="" type="application/pdf" frameborder="0"></iframe>
+   <div class="pdf-container">
+        <iframe id="cvIframe" src="Tomas_Dulkys_CV_2025.pdf" type="application/pdf" frameborder="0"></iframe>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const iframe = document.getElementById('cvIframe');
-
-            function isMobileDevice() {
-                return /Mobi|Android/i.test(navigator.userAgent);
-            }
-
-            if (isMobileDevice()) {
-                iframe.src = "Tomas_Dulkys_CV_2025_mobile.pdf";
-            } else {
-                iframe.src = "Tomas_Dulkys_CV_2025.pdf";
-            }
-        });
-    </script> 
+   <script src="tomasdulkys.js"></script> 
 </body>
 </html>
