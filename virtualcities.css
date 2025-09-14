@@ -3,15 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 html, body{
-    background: #13151a;
+    background: #14151A;
+    font-family: Roboto, sans-serif;
     height: 100vh;
-    padding: 10px;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: ;
 }
 ul {
     list-style-type: disc;
@@ -44,19 +44,6 @@ img, video{
     text-decoration: none;
 }
 
-::-webkit-scrollbar {
-    width: 7px;
-    background-color: #14151A;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #736B74;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #9F94A1;
-}
 
 .container-p3{
     background-color: transparent;
@@ -68,48 +55,12 @@ img, video{
     scroll-snap-type: y mandatory;
     margin-left: 0;
 }
-#button {
-    display: inline-block;
-    background: linear-gradient(to right, #736B74 0%, #958B96 68%, #B2A7B3 100%);
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 90px;
-    transition: background-color .3s, opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-}
-#button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-  
-}
-#button:hover {
-    cursor: pointer;
-    box-shadow:0px 1px 7px 0px #f5f7f6;
-    color: #f5f7f6;
-}
-#button:active {
-    background: #736B74;
-}
-#button.show {
-    opacity: 1;
-    visibility: visible;
-}
+
  .item{
     background-color: transparent;
     display: block;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1250px;
     letter-spacing: 0.09rem;
     line-height: 1.5;
     scroll-snap-align: start;
@@ -130,6 +81,7 @@ img, video{
     grid-column: 3 / 7;
     grid-row: 1 / 2;
     padding: 0;
+    margin-top: 130px;
 }
 .item-2{
     grid-column: 3 / 7;
@@ -231,6 +183,7 @@ img, video{
 @media screen and (max-width: 1050px){
     .container-p3{
         display: block;
+        padding: 0 20px;
     }
     .item{
         height: auto;
@@ -239,11 +192,12 @@ img, video{
     } 
     .item-1{
     width: 100%;
-    height: 100px;
+    height: auto;
     justify-content: center;
     align-content: center;
     text-align: center;
     padding: 0;
+    margin-top: 130px;
     }
     .item-1 .item-title  h1{
     font-size: 2rem;
@@ -258,9 +212,8 @@ img, video{
 /* FACE SECTION item-1 till item-5*/
 .item-title{
     position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
-    max-height: 200px;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -271,7 +224,7 @@ img, video{
     }
 } 
 .item-title h1{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: left; 
     justify-content: left;
@@ -279,7 +232,7 @@ img, video{
     display: flex;
     letter-spacing: 0.001em;
     color: #8B0000;
-    height: 100%;
+    height: auto;
     width: 100%;
     z-index: 100;
 }  
@@ -839,7 +792,6 @@ img, video{
     }
 }
 
-/* Fading animation
 /* Fading animation */
 .fade {
     animation-name: fade;
@@ -868,7 +820,6 @@ img, video{
      margin: 0px 10px 0px 10px;    
     }
 }
-/* Social Media Inspo */
 .item-6 .item-text {
     list-style-type: none;
 }
@@ -938,41 +889,6 @@ img, video{
     width: 640px;
     transition: 1s;
 }
-
-/* FOOTER ITEM-28*/ 
-.item-28 .copy {
-    height: auto;
-    line-height: 100px;
-    color: #85818E;
-    text-align: center;
-    background-color:  #14151A;
-    border-block-start: 1px solid;
-    padding-block-end: 1px solid;
-    border-image-source: linear-gradient(90deg, transparent 20%, #85818E, transparent 80%);
-    border-image-slice: 1;
-}
-@media screen and (max-width: 48em) {
-    .item-28 .copy{
-        line-height: 15px;
-        background-color: #14151A;
-        border-image-source: linear-gradient(90deg, transparent 10%, #85818E, transparent 90%);
-        margin-bottom: 20px;
-    }
-}
-.item-28 .copy p {
-    display: inline-block;
-    padding: 0px 30px;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-}
-@media screen and (max-width: 48em) {
-    .item-28 .copy p{
-        display: block;
-        margin-top: 10px;
-    }
-}
-
 
 iframe {
       display: block;

@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomas Dulkys - CV</title>
-    <link rel="stylesheet" href="livecv.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tomas Dulkys - CV</title>
+  <link rel="stylesheet" href="livecv.css" />
 </head>
 <body>
-   <div class="pdf-container">
-        <iframe id="cvIframe" src="Tomas_Dulkys_CV.pdf" type="application/pdf" frameborder="0"></iframe>
-    </div>
-   <script src="tomasdulkys.js"></script> 
+  <!-- Overlay that will fade out to reveal the CV smoothly -->
+  <div id="cvOverlay" class="cv-overlay" aria-hidden="true"></div>
+
+  <div class="pdf-container">
+    <iframe id="cvFrame" src="Tomas_Dulkys_CV.pdf"></iframe>
+  </div>
+
+  <script>
+    (function() {
+      const overlay = document.getElementById('cvOverlay');
+      const iframe = document.getElementById('cvFrame');
+      let loaded = false;
+
+      if (window.innerWidth < 768) {
+        iframe.src = "Tomas_Dulkys_CV_2025_mobile.pdf";
+      }
+
+      // When iframe finishes loading (PDF viewer), hide overlay smoothly
+      iframe.addEventListener('load', () => {
+        loaded = true;
+        hideOverlay();
+      });
+
+      setTimeout(() => {
+        if (!loaded) hideOverlay();
+      }, 1200);
+
+      function hideOverlay() {
+        // fade overlay out (CSS transition)
+        overlay.classList.add('fade-out');
+
+        // after transition, remove overlay and allow page scrolling
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          document.documentElement.style.overflow = 'auto';
+        }, 1000); // should match CSS transition duration
+      }
+
+      // Prevent scrolling while overlay is visible
+      document.documentElement.style.overflow = 'hidden';
+    })();
+  </script>
+
+  <script src="navigation.js"></script>
 </body>
 </html>
+

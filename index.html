@@ -1,41 +1,147 @@
+<!-- index.html (Welcome Page) -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-       <title>Tomas Dulkys | Welcome</title>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-       <link href="http://fonts.cdnfonts.com/css/caligna-demo" rel="stylesheet">
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
-       <link rel="stylesheet" href="tomasdulkys.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       <link rel="preload" as="style" href="tomasdulkysstyles.css">
-       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-       <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
-       <script type="module" src="tomasdulkys.js"></script> 
-
-
-   <script> 
-$(document).ready(function(){
-$("dropdown").click(function(){
-    $("#panel").slideToggle("slow");
-});
-});
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomas Dulkys Visuals | Welcome</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
- <my-header></my-header>
-    <div class="transition">
-        <div class="cover cover1">
-            <h1>Welcome!</h1>
-            <p>My homepage is currently under construction. While it's in the works,<br> explore the other pages and discover what I have to share!</p>
-        </div>
+
+<!-- Background -->
+<body class="welcome-page">
+  <div class="video-overlay">
+    <video class="background-video" autoplay muted playsinline>
+      <source src="assets/videos/logo_edges6.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- INTRO VIDEO -->
+  <section class="intro">
+    <div class="intro-wrapper" id="intro-wrapper">
+      <!-- Mobile Video -->
+      <video muted loop playsinline id="mobile-video" class="mobile-only">
+        <source src="assets/videos/intro_mobile.webm" type="video/webm">
+      </video>
+
+      <!-- Desktop Video -->
+      <video muted loop playsinline id="desktop-video" class="desktop-only">
+        <source src="assets/videos/intro.webm" type="video/webm">
+      </video>
+
+      <!-- Scroll Arrow -->
+      <div class="scroll-arrow" id="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
-    <div class="container2"></div>
+  </section>
+
+  <!-- WHAT I DO SECTION -->
+  <div class="content fade-in" id="page-content">
+    <header id="navbar"></header>
+    <main>
+      <section class="what-i-do-section" id="what-i-do">
+        <div class="image-crop">
+          <img src="assets/projects/pc2.png" alt="About Visuals">
+        </div>
+        <div class="what-i-do-content">
+          <h2 class="fade-up title">Focus</h2>
+          <!-- Decorative line with diamond -->
+          <div class="decorative-line fade-up"></div>
+          <p class="fade-up description">Architectural and interior visualisation, historic reconstructions, and environmental design — crafted with precision and creativity to present ideas clearly and effectively.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <script src="navigation.js"></script>
+  <script src="tomasdulkys.js"></script>
+  <script>
+    const mobileVideo = document.getElementById("mobile-video");
+    const desktopVideo = document.getElementById("desktop-video");
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const introVideo = isMobile ? mobileVideo : desktopVideo;
     
-    
-    <script src="tomasdulkys.js"></script> 
+    const wrapper = document.getElementById("intro-wrapper");
+    const scrollArrow = document.getElementById("scroll-arrow");
+    const aboutSection = document.getElementById("what-i-do");
+
+    // Reset and play intro video
+    introVideo.pause();
+    introVideo.currentTime = 0;
+    setTimeout(() => introVideo.play(), 1000);
+
+    // Optional: Loop part of the video
+    introVideo.addEventListener("timeupdate", () => {
+      if (introVideo.currentTime >= introVideo.duration - 0.1) {
+        introVideo.currentTime = 3.5;
+        introVideo.play();
+      }
+    });
+
+    // Scroll resize logic
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const height = window.innerHeight;
+
+      if (scrollY > height * 0.25) {
+        wrapper.classList.remove("shrink");
+        wrapper.classList.add("shrink-more");
+      } else if (scrollY > height * 0.1) {
+        wrapper.classList.remove("shrink-more");
+        wrapper.classList.add("shrink");
+      } else {
+        wrapper.classList.remove("shrink", "shrink-more");
+      }
+    });
+
+    // Show scroll arrow
+    setTimeout(() => {
+      scrollArrow.classList.add("visible");
+    }, 5000);
+
+    if (scrollArrow && aboutSection) {
+      scrollArrow.addEventListener("click", () => {
+        const offset = window.innerHeight / 2 - aboutSection.offsetHeight / 2;
+        const y = aboutSection.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
+      });
+    }
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeUps = document.querySelectorAll(".fade-up");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    fadeUps.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+
+
 </body>
 </html>

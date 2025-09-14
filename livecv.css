@@ -1,35 +1,40 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #f4f4f4;
+/* base page */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fullscreen overlay (on top of iframe) */
+.cv-overlay {
+  position: fixed;
+  inset: 0;            
+  background: #f4f4f4;     
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: auto;    /* block interaction while visible */
+}
+
+/* add class to trigger fade-out */
+.cv-overlay.fade-out {
+  opacity: 0;
 }
 
 .pdf-container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .pdf-container iframe {
-    width: 100%;
-    height: 100%;
-}
-
-/* Default PDF for larger screens */
-@media (min-width: 768px) {
-    .pdf-container iframe {
-        content: url('Tomas_Dulkys_CV.pdf');
-    }
-}
-
-/* Mobile-optimized PDF for smaller screens */
-@media (max-width: 767px) {
-    .pdf-container iframe {
-        content: url('Tomas_Dulkys_CV_2025_mobile.pdf');
-    }
+  width: 100%;
+  height: 100%;
+  border: none;
 }

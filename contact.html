@@ -1,81 +1,91 @@
+<!-- contact.html ( Unleash Your Vision Page) -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-       <title>Tomas Dulkys | Contact</title>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-       <link href="http://fonts.cdnfonts.com/css/caligna-demo" rel="stylesheet">
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
-       <link rel="stylesheet" href="contact.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       <link rel="preload" as="style" href="contact.css">
-       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-       <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
-       <script type="module" src="tomasdulkys.js"></script> 
-
-
-   <script> 
-$(document).ready(function(){
-$("dropdown").click(function(){
-    $("#panel").slideToggle("slow");
-});
-});
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomas Dulkys Visuals | Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <my-header></my-header>
-<!-- Page Transition -->
-<div class="transition">
-  <div class="cover cover1"></div>
-</div>
-<section id="pg-contact">
-   <div class="wrapper">
+
+<body class="contact-page">
+  <div class="video-overlay">
+    <video class="background-video" autoplay muted playsinline>
+      <source src="assets/videos/logo_edges6.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div class="content fade-in" id="page-content">
+    <header id="navbar"></header>
+
+      <!-- First Section -->
+  <section id="section-one" class="section-one">
+    <div class="content-wrapper">
       <h1>Let's Bring Your Vision to Life</h1>
-      <p class="content">
-      </p>
-      <div class="btn"><a href="#pg-contact2"><p>Contact Me</p></a></div>
+      <button onclick="scrollToSection()">Get Started</button>
     </div>
+  </section>
+
+  <!-- Second Section -->
+  <section id="section-two" class="scrollable-section">
+    <div class="content-bar">
+       <!-- Background Image -->
+    <div class="background-image"></div>
+
+    <!-- Icons and Text -->
+    <div class="modern-icons">
+      <!-- Social Media Icons -->
+      <div class="social-media-icons">
+        <a href="https://www.instagram.com/tomasdulkys/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tomasdulkys/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <p>Let's Stay Connected</p>
+
+      <!-- Email Icon -->
+      <div class="email-icon" onclick="window.location.href='mailto:romasdulkys@gmail.com'">
+        <i class="fas fa-envelope"></i>
+        <p>Get in Touch</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="pg-contact2">
-  <div class="content"></div>
-<div class="phone-container">
-    <div class="phone">
-        <div class="screen">
-            <img src="img4/b12_w.png" alt="Phone Screen">
-            <div class="app instagram pulse">
-                <a href="https://www.instagram.com/tomasdulkys/" target="_blank">
-                    <img src="icons/instagram.png" alt="Instagram Icon">
-                </a>
 
-            </div>
-            <div class="app linkedin pulse">
-                <a href="https://www.linkedin.com/in/tomasdulkys/" target="_blank">
-                    <img src="icons/linkedin.png" alt="LinkedIn Icon">
-                </a>
-            </div>
-
-            <div class="app email pulse" onclick="window.location.href='mailto:tomasdulkys@gmail.com'">
-                <img src="icons/email.png" alt="Email Icon">
-            </div>
-
-             <div class="connect-text">
-                <p>Connect with Me</p>
-            </div>
-            <div class="email-text">
-                <p>Email Me</p>
-            </div>
-        </div>
-    </div>
+<!-- Footer -->
+<footer>
+    <div id="footer-container"></div>
+</footer>
 </div>
-</section>
 
- <!--FOOTER-->
-<div id="footer-container"></div>
+<script>
+   window.addEventListener("scroll", function () {
+  const sectionTwo = document.getElementById("section-two");
+  const sectionOneContent = document.querySelector(".content-wrapper");
+
+  const fadeThreshold = sectionTwo.offsetTop / 2; // Adjust fade trigger point
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > fadeThreshold) {
+    sectionOneContent.style.opacity = 0; // Completely invisible
+    sectionOneContent.style.pointerEvents = "none"; // Disable interactions
+  } else {
+    sectionOneContent.style.opacity = 1 - (currentScroll / fadeThreshold); // Gradual fade-out
+    sectionOneContent.style.pointerEvents = "auto"; // Enable interactions
+  }
+});
+
+    function scrollToSection() {
+      document.getElementById("section-two").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
 
 
-    <script src="tomasdulkys.js"></script> 
+  <script src="navigation.js"></script>
+  <script src="tomasdulkys.js"></script>
 </body>
 </html>
