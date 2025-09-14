@@ -91,6 +91,14 @@ window.addEventListener('DOMContentLoaded', () => {
       display: block;
     }
 
+    /* Hide logo video on mobile */
+@media screen and (max-width: 768px) {
+  .nav-logo video {
+    display: none;
+  }
+}
+
+
     .nav-links {
       display: flex;
       gap: 20px;
