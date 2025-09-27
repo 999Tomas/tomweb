@@ -20,32 +20,35 @@
       const iframe = document.getElementById('cvFrame');
       let loaded = false;
 
-      if (window.innerWidth < 768) {
-        iframe.src = "Tomas_Dulkys_CV_2025_mobile.pdf";
+      // Detect mobile
+      const isMobile = window.innerWidth < 768;
+
+      if (isMobile) {
+        // On mobile → open PDF directly (outside iframe)
+        window.location.href = "Tomas_Dulkys_CV_2025_mobile.pdf";
+      } else {
+        // On desktop → use iframe
+        iframe.src = "Tomas_Dulkys_CV.pdf";
+
+        iframe.addEventListener('load', () => {
+          loaded = true;
+          hideOverlay();
+        });
+
+        setTimeout(() => {
+          if (!loaded) hideOverlay();
+        }, 1200);
       }
 
-      // When iframe finishes loading (PDF viewer), hide overlay smoothly
-      iframe.addEventListener('load', () => {
-        loaded = true;
-        hideOverlay();
-      });
-
-      setTimeout(() => {
-        if (!loaded) hideOverlay();
-      }, 1200);
-
       function hideOverlay() {
-        // fade overlay out (CSS transition)
         overlay.classList.add('fade-out');
-
-        // after transition, remove overlay and allow page scrolling
         setTimeout(() => {
           overlay.style.display = 'none';
           document.documentElement.style.overflow = 'auto';
-        }, 1000); // should match CSS transition duration
+        }, 1000); // match transition
       }
 
-      // Prevent scrolling while overlay is visible
+      // Prevent scrolling while overlay visible
       document.documentElement.style.overflow = 'hidden';
     })();
   </script>
