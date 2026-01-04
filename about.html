@@ -29,63 +29,66 @@
     </video>
   </div>
 
-  <!-- ABOUT SECTION -->
-  <div class="content fade-in" id="page-content">
-    <header id="navbar"></header>
-    <main>
-  <section class="about-section" id="about">
-    <div class="about-content">
-      <h2 class="title">About</h2>
-      <div class="about-decorative-line"></div>
-      <p class="description">
-        Shaped by a passion for visual storytelling, my practice developed through hands-on experience across digital media, including architectural and interior visualisation, game assets, animation, and interactive projects. I’ve built skills in modelling, texturing, lighting, and design for diverse creative fields. Each project is approached with curiosity and precision, turning ideas into clear and compelling visuals.
+ <div class="content fade-in" id="page-content">
+  <header id="navbar"></header>
+  <main>
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="about-content">
+        <h2 class="title">About</h2>
+        <div class="about-decorative-line"></div>
+        <p class="description">
+          Shaped by a passion for visual storytelling, my practice developed through hands-on experience across digital media, including architectural and interior visualisation, game assets, animation, and interactive projects. I’ve built skills in modelling, texturing, lighting, and design for diverse creative fields. Each project is approached with curiosity and precision, turning ideas into clear and compelling visuals.
+        </p>
+      </div>
+    </section>
 
-      </p>
-    </div>
-  </section>
+    <!-- SKILLS SECTION (inside the same main/content, NOT outside) -->
+    <section class="skills" id="skills-section">
+      <div class="skills-content">
+        <div class="skills-heading-wrapper">
+          <h2 class="software-heading">Tools</h2>
+          <div class="skills-decorative-line"></div>
+        </div>
+
+        <ul id="skills-list">
+          <li>
+            <span><img src="assets/icons/blender2.png"></span>
+            <span><p>Blender 4.5</p></span>
+          </li>
+          <li>
+            <span><img src="assets/icons/max.png"></span>
+            <span><p>3D Max</p></span>
+          </li>
+          <li>
+            <span><img src="assets/icons/ps.png"></span>
+            <span><p>Photoshop</p></span>
+          </li>
+          <li>
+            <span><img src="assets/icons/xd.png"></span>
+            <span><p>Adobe XD</p></span>
+          </li>
+          <li>
+            <span><img src="assets/icons/autocad.png"></span>
+            <span><p>AutoCAD</p></span>
+          </li>
+          <li>
+            <span><img src="assets/icons/sketchup.png"></span>
+            <span><p>SketchUp</p></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-cta" id="about-cta">
+      <div class="section-inner">
+        <a class="cta-link" href="contact.html">Get in touch ›</a>
+      </div>
+    </section>
+
   </main>
-  </div>
-
-  <!-- SKILLS SECTION -->
-  <section class="skills" id="skills-section">
-    <div class="skills-content">
-      <div class="skills-heading-wrapper">
-  <h2 class="software-heading">Software Knowledge</h2>
-  <div class="skills-decorative-line"></div>
 </div>
-      <ul id="skills-list">
-                <li>
-                    <span><img src="assets/icons/blender2.png"></span>
-                    <span><p>Blender 4.3</p></span>
-                </li>
 
-                <li>
-                    <span><img src="assets/icons/max.png"></span>
-                    <span><p>3D Max</p></span>
-                </li>
-
-                <li>
-                    <span><img src="assets/icons/ps.png"></span>
-                    <span><p>Photoshop</p></span>
-                </li>
-
-                <li>
-                    <span><img src="assets/icons/xd.png"></span>
-                    <span><p>Adobe XD</p></span>
-                </li>
-
-                <li>
-                    <span><img src="assets/icons/autocad.png"></span>
-                    <span><p>AutoCAD</p></span>
-                </li>
-
-                <li>
-                    <span><img src="assets/icons/sketchup.png"></span>
-                    <span><p>SketchUp</p></span>
-                </li> 
-            </ul>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer>
@@ -94,220 +97,265 @@
 
   <script src="navigation.js"></script>
   <script src="tomasdulkys.js"></script>
- <script>
+  <script>
   gsap.registerPlugin(ScrollTrigger);
 
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  const aboutVideo = isMobile
-    ? document.getElementById("about-mobile-video")
-    : document.getElementById("about-desktop-video");
-
+  const aboutMobileVideo  = document.getElementById("about-mobile-video");
+  const aboutDesktopVideo = document.getElementById("about-desktop-video");
+  const aboutVideo = isMobile ? aboutMobileVideo : aboutDesktopVideo;
   const aboutWrapper = document.getElementById("about-intro-wrapper");
 
-  // ▶️ Play intro video on slight delay
-  aboutVideo.pause();
-  aboutVideo.currentTime = 0;
-  setTimeout(() => aboutVideo.play(), 800);
+  // ▶️ Play intro video on a slight delay
+  if (aboutVideo) {
+    aboutVideo.pause();
+    aboutVideo.currentTime = 0;
+    setTimeout(() => aboutVideo.play(), 800);
 
-  // 🔁 Loop video smoothly after intro
-  aboutVideo.addEventListener("timeupdate", () => {
-    if (aboutVideo.currentTime >= aboutVideo.duration - 0.1) {
-      aboutVideo.currentTime = 3.5;
-      aboutVideo.play();
-    }
-  });
-
-  // ✅ MOBILE BEHAVIOR (unchanged)
-  if (isMobile) {
-    const mobileTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 0.5
-      }
-    });
-
-    mobileTimeline
-      .to(aboutWrapper, {
-        width: "70vw",
-        height: "70vw",
-        x: "15vw",
-        y: "15vh",
-        borderRadius: "1rem",
-        transformOrigin: "center center",
-        ease: "power2.inOut"
-      }, 0)
-      .fromTo(".about-content", {
-        opacity: 0,
-        pointerEvents: "none"
-      }, {
-        opacity: 1,
-        pointerEvents: "auto",
-        ease: "power2.out"
-      }, "<")
-      .fromTo(".about-content .title", {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }, ">0.2")
-      .fromTo(".about-decorative-line", {
-        opacity: 0,
-        width: 0
-      }, {
-        opacity: 1,
-        width: "5%",
-        duration: 0.6,
-        ease: "power2.out"
-      }, "-=0.4")
-      .fromTo(".about-content .description", {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }, ">0.2");
-
-    // Fade out wrapper later
-    gsap.to("#about-intro-wrapper", {
-      opacity: 0,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top 70%",
-        end: "top 40%",
-        scrub: 0.5
-      }
-    });
-
-    // Skills fade-in (mobile)
-    gsap.fromTo(".skills-content", {
-      opacity: 0,
-      y: 100
-    }, {
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#skills-section",
-        start: "top 90%",
-        end: "top 40%",
-        scrub: 0.5
-      }
-    });
-
-  } else {
-    // ✅ DESKTOP BEHAVIOR — IMPROVED
-    const aboutInTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top 90%",
-        end: "top 20%",
-        scrub: 0.5
-      }
-    });
-
-    aboutInTimeline
-      .to(aboutWrapper, {
-        width: "45vw",
-        height: "80vh",
-        marginLeft: "5vw",
-        marginTop: "10vh",
-        marginBottom: "10vh",
-        borderRadius: "0.625rem",
-        transformOrigin: "right center",
-        ease: "power2.inOut"
-      }, 0)
-      .fromTo(".about-content", {
-        opacity: 0,
-        pointerEvents: "none"
-      }, {
-        opacity: 1,
-        pointerEvents: "auto",
-        ease: "power2.out"
-      }, "<")
-      .fromTo(".about-content .title", {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }, ">0.2")
-      .fromTo(".about-decorative-line", {
-        opacity: 0,
-        width: 0
-      }, {
-        opacity: 1,
-        width: "5%",
-        duration: 0.6,
-        ease: "power2.out"
-      }, "-=0.4")
-      .fromTo(".about-content .description", {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }, ">0.2");
-
-    // Slide video to the right on scroll to skills
-    gsap.to(aboutWrapper, {
-      x: "40vw",
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#skills-section",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 0.6
-      }
-    });
-
-    // Fade in skills content
-    gsap.fromTo(".skills-content", {
-      opacity: 0,
-      y: 50
-    }, {
-      opacity: 1,
-      y: 0,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#skills-section",
-        start: "top 50%",
-        end: "top 30%",
-        scrub: 0.4
-      }
-    });
-
-    // Fade out about section
-    gsap.to(".about-section", {
-      opacity: 0,
-      pointerEvents: "none",
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#skills-section",
-        start: "top 65%",
-        end: "top 40%",
-        scrub: 0.4
+    // Smooth loop after the intro
+    aboutVideo.addEventListener("timeupdate", () => {
+      if (aboutVideo.duration && aboutVideo.currentTime >= aboutVideo.duration - 0.1) {
+        aboutVideo.currentTime = 3.5;
+        aboutVideo.play();
       }
     });
   }
 
-  // Ensure ScrollTrigger recalculates layout correctly
+  /* ============================================================
+     📱 MOBILE BEHAVIOUR ONLY
+  ============================================================ */
+  if (isMobile) {
+
+  // 1) VIDEO: full-screen → shrink to SQUARE near the top, stays FIXED
+  gsap.to(aboutWrapper, {
+    width: "75vw",
+    height: "75vw",          // square
+    borderRadius: "12px",
+    marginTop: "3vh",
+    marginLeft: "11vw",
+    ease: "none",            // smoother scroll-linked motion
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 100%",
+      end: "top 40%",
+      scrub: 1               // slightly softer follow
+    }
+  });
+
+  // 2) ABOUT fade IN (unchanged)
+  gsap.fromTo(
+    ".about-content",
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  // 3) SKILLS fade IN (only in, never out)
+  gsap.fromTo(
+    ".skills-content",
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#skills-section",
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+  // 4) ABOUT fade OUT – AFTER it's fully visible and user scrolls more
+  gsap.to(".about-section", {
+    opacity: 0,
+    ease: "none",            // smoother scroll-based fade
+    scrollTrigger: {
+      trigger: ".about-section",
+      start: "top 20%",
+      end:   "top 10%",
+      scrub: 1
+    }
+  });
+
+  // 5) SKILLS PIN when close to the video – no fade out
+  ScrollTrigger.create({
+    trigger: ".skills",
+    start: "top 50%",
+    endTrigger: "footer",
+    end: "top bottom",
+    pin: true,
+    pinSpacing: false,
+    anticipatePin: 1        // small smoothing at pin moment
+  });
+
+}
+ else {
+  /* ============================================================
+     🖥 DESKTOP BEHAVIOUR (UNCHANGED – YOU LIKE THIS)
+  ============================================================ */
+
+    // 1️⃣ Video shrinks left & About fades IN
+    const aboutTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 90%",
+        end: "top 30%",
+        scrub: 0.5
+      }
+    });
+
+    aboutTL
+      .to(
+        aboutWrapper,
+        {
+          width: "45vw",
+          height: "80vh",
+          marginLeft: "5vw",
+          marginTop: "10vh",
+          marginBottom: "10vh",
+          borderRadius: "0.625rem",
+          ease: "power2.inOut"
+        },
+        0
+      )
+      .fromTo(
+        ".about-content",
+        { opacity: 0, y: 60 },
+        { opacity: 1, y: 0, ease: "power2.out" },
+        "<"
+      )
+      .fromTo(
+        ".about-content .title",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+        ">0.1"
+      )
+      .fromTo(
+        ".about-decorative-line",
+        { opacity: 0, width: 0 },
+        { opacity: 1, width: "30px", duration: 0.5, ease: "power2.out" },
+        "-=0.3"
+      )
+      .fromTo(
+        ".about-content .description",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+        ">0.1"
+      );
+
+    // 2️⃣ DESKTOP ABOUT fade out (good now – don't touch)
+    gsap.to(".about-section", {
+      opacity: 0,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top top",
+        end:   "top -25%",
+        scrub: 0.7
+      }
+    });
+
+    // 3️⃣ SKILLS fade IN on the right
+    gsap.fromTo(
+      ".skills-content",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#skills-section",
+          start: "top 75%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+
+    const skillsTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#skills-section",
+        start: "top 75%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    skillsTL
+      .fromTo(
+        ".software-heading",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+        0
+      )
+      .fromTo(
+        ".skills-decorative-line",
+        { opacity: 0, width: 0 },
+        { opacity: 1, width: "30px", duration: 0.5, ease: "power2.out" },
+        "-=0.3"
+      )
+      .fromTo(
+        "#skills-list li",
+        { opacity: 0, y: 15 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.08
+        },
+        ">0.1"
+      );
+
+    // 4️⃣ Video fades a bit while scrolling through SKILLS
+    gsap.to(aboutWrapper, {
+      opacity: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#skills-section",
+        start: "center center",
+        end:   "bottom top",
+        scrub: 0.5
+      }
+    });
+
+    // 5️⃣ Desktop: make video scroll together with SKILLS + FOOTER
+    function makeVideoScroll() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      aboutWrapper.style.position = "absolute";
+      aboutWrapper.style.top = scrollY + "px";
+    }
+
+    function makeVideoFixed() {
+      aboutWrapper.style.position = "fixed";
+      aboutWrapper.style.top = "0px";
+    }
+
+    ScrollTrigger.create({
+      trigger: "#skills-section",
+      start: "center center",
+      onEnter: makeVideoScroll,
+      onLeaveBack: makeVideoFixed
+    });
+  }
+
+  // Recalculate once layout is settled
   setTimeout(() => {
     ScrollTrigger.refresh();
-  }, 300);
+  }, 400);
 </script>
+
+
 
 
 </body>

@@ -1,56 +1,95 @@
 // Create a <style> element to insert global styles for back-to-top button
 const style = document.createElement("style");
 style.innerHTML = `
-  #button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(111, 107, 117, 0.2);
-      backdrop-filter: blur(10px);
-      box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      border-radius: 50px;
-      position: fixed;
-      bottom: 30px;
-      right: 120px;
-      transition: opacity .5s ease, transform .3s ease-in-out;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-      border: 1px solid rgba(194, 155, 136, 0.5);
-      cursor: pointer;
-      text-decoration: none;
-  }
+/* =========================
+   BACK TO TOP BUTTON
+   ========================= */
 
-  @media screen and (max-width: 768px){
-    #button {
-        right: 30px;
-    }
-  }
+#button{
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  box-shadow: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  color: #C29B88;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition:
+  opacity 0.4s ease,
+  visibility 0.4s ease,
+  transform 0.3s ease,
+  color 0.3s ease,
+  border-color 0.3s ease;
 
-  #button:active {
-      cursor: grabbing;
-  }
+  z-index: 1000;
 
-  #button::after {
-      content: "⬆ Back to Top";
-      font-family: "Roboto", sans-serif;
-      font-size: 14px;
-      font-weight: bold;
-      color: #C29B88;
-  }
+  border-radius: 50%;
+  border: 1px solid transparent; /* invisible by default */
+}
 
-  #button:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 4px 15px rgba(194, 155, 136, 0.4);
+/* Mobile position/size */
+@media screen and (max-width: 768px){
+  #button{
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
   }
+}
 
-  #button.show {
-      opacity: 1;
-      visibility: visible;
-  }
+/* Visible state */
+#button.show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover: circle appears */
+#button:hover{
+  border-color: rgba(194, 155, 136, 0.6);
+  color: rgba(194, 155, 136, 1);
+}
+
+/* Arrow glyph:*/
+#button::after{
+  content: "›";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  font-family: "Playfair Display", serif;
+  font-size: inherit;
+  line-height: 1;
+
+  transform-origin: center;
+  /* IMPORTANT: translateY happens BEFORE rotate → true up/down pulse */
+  transform: translate(-50%, -50%) translateY(0) rotate(-90deg);
+
+  animation: none;
+  pointer-events: none;
+}
+
+/* Smooth pulse (up/down), stays centered */
+@keyframes arrowPulse{
+  0%   { transform: translate(-50%, -50%) translateY(0) rotate(-90deg); }
+  50%  { transform: translate(-50%, -50%) translateY(-2px) rotate(-90deg); }
+  100% { transform: translate(-50%, -50%) translateY(0) rotate(-90deg); }
+}
+
+
 `;
 
 // Append the style to the document head

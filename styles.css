@@ -30,7 +30,7 @@ h2{
 
 /* Page-specific overlays */
 .about-page{
-  background-color: #2A2221;
+  background-color: #14151A;
 }
 
 .about-page h2{
@@ -211,15 +211,25 @@ video.mobile-only {
   pointer-events: none;
 }
 
+.cta-pulse .cta-arrow{
+  animation: subtlePulse 2.2s ease-in-out infinite;
+  opacity: 0.75;
+}
+
 .scroll-arrow.visible {
   opacity: 1;
   pointer-events: auto;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-10px); }
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-3px); /* was -10px */
+  }
 }
+
 
 /* === WHAT I DO SECTION === */
 .what-i-do-section {
@@ -317,26 +327,31 @@ video.mobile-only {
    ABOUT PAGE
 =========================== */
 
-/* Intro Video */
+/* Intro Video – left side */
 .about-intro-wrapper {
-  position: fixed;
+ position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vh;          
   display: flex;
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  z-index: 1;
-  transform-origin: right center;
+  z-index: 3;
   background-color: transparent;
-  will-change: width, transform;
-  transition: none;
-  opacity: 0.6;
   will-change: transform, width, height;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+}
+
+.about-intro-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;                         /* covers the whole video */
+  background: rgba(20, 21, 26, 0.4); /* adjust 0.4 to 0.3 / 0.5 for more/less dim */
+  pointer-events: none;             /* don’t block clicks */
+  z-index: 1;                       /* in front of video, behind everything else in wrapper */
 }
 
 .about-intro-wrapper video {
@@ -345,109 +360,96 @@ video.mobile-only {
   object-fit: cover;
   flex-shrink: 0;
   pointer-events: none !important;
+  position: relative;
+  z-index: 0;
 }
 
-/* About Section */
+/* ABOUT + SKILLS share one right column */
 .about-section {
   position: relative;
   z-index: 2;
   margin-top: 100vh;
-  transform: translateX(-30px);
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;     
+}
+
+/* About starts after the intro video height */
+.about-section {
+  maposition: relative;
+  z-index: 2;
+  margin-top: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;   
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
+
+.about-section::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
 }
 
 .about-content {
   opacity: 0;
   pointer-events: auto;
-  transition: opacity 0.8s ease;
   color: #f5f7f6;
-  width: 35vw;
-  margin-left: auto;
-  padding: 100px 80px;
+  max-width: 40vw;        /* similar width as skills */
+  width: 100%;
+  margin-left: auto;      /* right side */
+  margin-right: 6vw;      /* nice right padding */
+  padding: 100px 0 80px;  /* good gap above & below */
   z-index: 2;
   position: relative;
- 
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  overflow: visible;
 }
 
-/* Mobile Devices */
-@media screen and (max-width: 768px) {
-  .about-content {
-    width: auto;
-    margin-left: 0;
-    padding: 20px;
-    transform: translateY(0);
-    background-color: rgba(60, 50, 48, 0.4);
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    overflow-y: hidden;
-  }
-
-  .description {
-    margin: 0;
-    padding: 0;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
-}
-
-.about-content .title
-.about-content .description
-.about-decorative-line {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.about-content.visible {
-  opacity: 1;
-  pointer-events: auto;
+/* ABOUT heading + line */
+.about-content .title {
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .about-decorative-line {
-  width: 30px;
+   width: 30px;
   height: 2px;
   background-color: #A07065;
-  margin: 12px 0 24px;
-  opacity: 0.8;
+  margin: 10px 0 24px;   /* no negative margin */
+  opacity: 0.85;
   border-radius: 1px;
-  margin-top: -10px;
 }
 
 .about-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 2em;
+  letter-spacing: 0.04em;
+  line-height: 1.9;
 }
 
-/*====================
-=      DESKTOP      =
-====================*/
 .skills {
-  visibility: visible;
   position: relative;
   z-index: 2;
-  margin-top: -30px;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+  min-height: 70vh;       
+  padding: 80px 0 60px; /* gap above + before footer */
 }
 
 .skills-content {
   position: relative;
-  width: 30%;
-  margin-left: 50px;
-  padding: 100px 20px;
+  max-width: 40vw;        /* matches about-content width */
+  width: 100%;
+  margin-left: auto;
+  margin-right: 6vw;      /* aligned with about-content */
+  padding: 40px 0;
   background: transparent;
-  text-align: right;
-  opacity: 0;
+  color: #f5f7f6;
+  opacity: 0;             /* GSAP will fade this in */
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: left;
 }
 
 .skills-heading-wrapper {
@@ -458,31 +460,33 @@ video.mobile-only {
 .software-heading {
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .skills-decorative-line {
   width: 30px;
   height: 2px;
   background-color: #A07065;
-  opacity: 0.8;
+  opacity: 0.85;
   border-radius: 1px;
-  margin-top: 6px;
+  margin: 8px;
 }
 
+/* Skills list (desktop) */
 #skills-list {
   list-style: none;
   padding: 0;
-  margin-top: 40px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Right-align list items on desktop */
-  gap: 15px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 #skills-list li {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
 }
 
@@ -494,37 +498,87 @@ video.mobile-only {
 
 #skills-list p {
   margin: 0;
-  font-size: 1.2rem;
-  text-align: right;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+/* Give Skills section nice height so it can center */
+.skills {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 70vh;          /* good height without feeling "stuck" */
+  padding: 80px 0 140px;  
+}
+
+.about-cta{
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+.about-cta .section-inner{
+  display: flex;
+  justify-content: center;
+}
+
+.cta-link{
+  display: inline-block;
+  font-family: 'Playfair Display', serif; /* Titles / CTA */
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #F8F8F8;              /* your light text */
+  opacity: 0.9;
+  transition: color 0.22s ease-out, opacity 0.22s ease-out;
+}
+
+.cta-link:hover,
+.cta-link:focus-visible{
+  color: #C29B88;             
+  opacity: 1;
 }
 
 
-/*====================
-=      MOBILE        =
-====================*/
+/* ====================
+   MOBILE (ABOUT + SKILLS)
+==================== */
 @media screen and (max-width: 768px) {
-  .skills {
-    background-color: rgba(30, 25, 24, 0.5);
-    margin-top: -30px;
-    width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  .about-section {
+    margin-top: 100vh;
+    z-index: 1;
   }
 
+  .about-intro-wrapper {
+    z-index: 3;
+  }
+
+  .about-content,
   .skills-content {
+    max-width: 100%;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     padding: 40px 20px;
-    background: transparent;
+    background-color: transparent;
     color: #f5f7f6;
-    text-align: left;
-    opacity: 1;
-    transform: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     box-sizing: border-box;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+  }
+
+  .skills {
+    min-height: auto;
+    display: block;
+    background-color: transparent;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-top: 84px; 
+    padding-bottom: 60px;
+    z-index: 1;
   }
 
   .skills-heading-wrapper {
@@ -533,41 +587,25 @@ video.mobile-only {
   }
 
   #skills-list {
-    list-style: none;
-    padding: 0;
     margin: 20px 0 0 0;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
     width: 100%;
   }
 
   #skills-list li {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    gap: 10px;
     width: 100%;
   }
 
-  #skills-list li span {
-    display: flex;
-    align-items: center;
-  }
-
   #skills-list li span p {
-    margin: 0;
-    padding: 0;
     text-align: left;
   }
 
   #skills-list li span:first-child img {
     width: 36px;
-    height: auto;
-    display: block;
   }
 }
+
 
 /* === HERO / MAIN SECTION === */
 .main-hero {
@@ -949,6 +987,7 @@ video.mobile-only {
 .content-wrapper h1 {
       font-family: 'Playfair Display', serif; 
       font-size: 3.5rem;
+      font-weight: 400;
       margin: 0;
       color: rgba(20, 21, 26, 0.8);
       margin-bottom: 2rem;
@@ -957,34 +996,46 @@ video.mobile-only {
       animation: fadeSlideInH1 1.5s ease-out forwards; /* Smooth fade and slide */
 }
     
-.content-wrapper button {
-  height: auto;
-  width: 180px;
-  border-radius: 6px;
-  border: 1px solid rgba(245, 247, 246, 0.9);
-  background-color: transparent;
-  color: rgba(245, 247, 246, 0.95); 
-  font-size: 1.2rem;
-  text-transform: uppercase;
+.cta-link.cta-down {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
   font-weight: 500;
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-   align-items: center;
-  justify-content: center;
-  text-align: center;
+  text-decoration: none;
+  width: fit-content;            
+  max-width: fit-content;        
+  margin: 0 auto;     
+
+  color: rgba(245, 247, 246, 0.95);
+  opacity: 0.9;
+
   opacity: 0;
   transform: translateY(30px);
   animation: fadeSlideInButton 1.8s ease-out forwards;
   animation-delay: 0.3s;
-  transition: all 0.3s ease-in-out;
+
+  transition: color 0.22s ease-out, opacity 0.22s ease-out;
 }
 
-.content-wrapper button:hover {
-  background-color: #C29B88;
-  box-shadow: 0px 2px 4px rgba(194, 155, 136, 0.3);
+.cta-link.cta-down:hover {
+  color: #C29B88;
+  opacity: 1;
 }
- 
-/* Scrollable Section */
+
+/* rotate the SAME arrow down */
+.cta-link.cta-down .cta-arrow {
+  font-size: 2rem;
+  transform: rotate(90deg);
+  opacity: 0.8;
+}
+
+
+
+
+ /* Scrollable Section */
 .scrollable-section {
   height: 100vh;
   display: flex;
@@ -1073,9 +1124,9 @@ video.mobile-only {
 }
 
 /* Text Below Email & Social Media Icons */
-.modern-icons p {
-  font-size: 1.2rem;
-  text-transform: uppercase;
+.modern-icons h1 {
+  font-family: 'Playfair Display', serif; 
+ font-weight: 500;
   color: #F8F8F8;
   opacity: 0.9;
   margin-top: 5px;
