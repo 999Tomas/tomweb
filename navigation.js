@@ -28,8 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
       <div class="dropdown">
         <a class="dropdown-toggle" href="projects.html">Projects</a>
         <div class="dropdown-menu">
-          <li class="dropdown-link"><a href="brand.html">Tomas Dulkys Visuals — Business Plan Report</a></li>
-         
+          <li class="dropdown-link"><a href="business-plan-report.html">Tomas Dulkys Visuals — Business Plan Report</a></li>
+          <li class="dropdown-link"><a href="oiseth-hotel-renovation.html">Placement Project A — Øiseth Hotel Renovation</a></li>
           <li class="dropdown-link"><a href="virtualcities.html">Winchester Castle | A Virtual Revival</a></li>
           <li class="dropdown-link"><a href="interactivemap.html">Urban Cool: Heat Mitigation | RSA</a></li>
           <li class="dropdown-link"><a href="clientproject2.html">Tomebound's Aztec Art</a></li>
