@@ -57,11 +57,7 @@ style.innerHTML = `
   transform: translateY(0);
 }
 
-/* Hover: circle appears */
-#button:hover{
-  border-color: rgba(194, 155, 136, 0.6);
-  color: rgba(194, 155, 136, 1);
-}
+
 
 /* Arrow glyph:*/
 #button::after{
