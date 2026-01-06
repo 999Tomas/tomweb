@@ -407,7 +407,7 @@ body.hero-scrolled .hero-copy {
 }
 
 /* =========================
-   FULL-WIDTH VIDEO (NO PLUS / NO ZOOM)
+   FULL-WIDTH VIDEO 
 ========================= */
 
 .subsection.subsection-full{
@@ -417,7 +417,6 @@ body.hero-scrolled .hero-copy {
   gap: 1.2rem;
 }
 
-/* full width container, no forced square */
 .subsection.subsection-full .sub-image-wrapper{
   width: 100%;
   max-width: 100%;
@@ -426,7 +425,6 @@ body.hero-scrolled .hero-copy {
   box-shadow: var(--shadow-soft);
 }
 
-/* IMPORTANT: remove the square rule that makes video huge */
 .subsection.subsection-full .sub-image-wrapper:has(video){
   aspect-ratio: auto !important;
 }
@@ -435,18 +433,16 @@ body.hero-scrolled .hero-copy {
 .subsection.subsection-full .sub-video{
   width: 100%;
   height: auto !important;
-  aspect-ratio: auto !important;   /* let the file decide */
+  aspect-ratio: auto !important;
   object-fit: contain;
   display: block;
   background: #000;
 }
 
-/* NO PLUS for this block (desktop too) */
 .subsection.subsection-full .sub-image-wrapper::after{
   content: none !important;
 }
 
-/* NO scale on hover/touch for this block */
 .subsection.subsection-full .sub-image-wrapper:hover .sub-video,
 .subsection.subsection-full .sub-image-wrapper:focus-within .sub-video{
   transform: none !important;
@@ -457,7 +453,6 @@ body.hero-scrolled .hero-copy {
   transition: none !important;
   cursor: default !important;
 }
-
 
 /* Scroll container */
 .scroll-object{
@@ -496,8 +491,6 @@ body.hero-scrolled .hero-copy {
 .scroll-object:hover::-webkit-scrollbar-thumb:hover{
   background: #A07065;
 }
-
-
 
 .layout-image-left {
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
@@ -1160,24 +1153,40 @@ body.hero-scrolled .hero-copy {
   opacity: 1;
 }
 
+/* ============================
+   REFERENCES + BIBLIOGRAPHY
+   Clean unified styling
+============================ */
+
+/* Make sure URLs never overflow */
 .references-list a,
-.ref-list a,
-.no-style-link{
+.ref-list a{
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-.references-list li,
-.ref-list li{
-  overflow-wrap: anywhere;
-  word-break: break-word;
+/* ---------- References List ---------- */
+.references-list{
+  margin: 1rem 0 0;
+  padding-left: 1.2rem; /* nice indent like bibliography */
+  max-width: 100%;
 }
 
-/* Numbered reference lists */
+.references-list li{
+  margin: 0 0 1rem;
+  line-height: 1.65;
+  color: var(--text-main);
+}
+
+.references-list li:last-child{
+  margin-bottom: 0;
+}
+
+/* ---------- Bibliography Lists ---------- */
 .ref-list{
   margin: 1rem 0 0;
   padding-left: 1.2rem;
-  max-width: 75ch;
+  max-width: 100%;
 }
 
 .ref-list li{
@@ -1190,44 +1199,80 @@ body.hero-scrolled .hero-copy {
   margin-bottom: 0;
 }
 
-.ref-list a{
+/* ---------- LINKS: remove blue + match text style ---------- */
+/* Important: includes :visited, which is usually why links turn purple/blue */
+.references-list a,
+.references-listreferences-list a:visited,
+.ref-list a,
+.ref-list a:visited{
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
   opacity: 0.9;
 }
 
+.references-list a:hover,
+.references-list a:focus-visible,
 .ref-list a:hover,
 .ref-list a:focus-visible{
   color: var(--text-accent);
   opacity: 1;
 }
 
+/* Optional: remove default focus outline if you have your own system
+   (keep accessibility in mind) */
+.references-list a:focus-visible,
+.ref-list a:focus-visible{
+  outline: 2px solid rgba(0,0,0,0.25);
+  outline-offset: 3px;
+}
+
+/* ---------- The BIG FIX: Bibliography full width ---------- */
+/* Your .subsection is a 2-col grid globally.
+   Bibliography subsections only have .sub-text, so it sits in col 1 → looks half width.
+   This turns off that grid ONLY in bibliography. */
+#bibliography .subsection{
+  display: block;
+}
+
+/* Keep headings aligned and clean */
+#bibliography .sub-text h3{
+  margin: 0 0 0.6rem;
+  font-size: 1.25rem;
+}
+
+/* Mobile: keep everything comfortable */
+@media (max-width: 768px){
+  .references-list,
+  .ref-list{
+    padding-left: 1.1rem;
+  }
+}
+
+
 @media (max-width: 768px) {
 
-  /* ✅ Make gallery thumbnails big (like subsection media) */
   .gallery-item{
     flex: 0 0 92%;
     max-width: 92%;
   }
 
-  /* ✅ Keep square 1080x1080 feel (your images already aspect-ratio 1/1) */
   .gallery-image{
     aspect-ratio: 1 / 1;
     max-height: none;
   }
 
-  /* ✅ No plus on mobile (gallery plus) */
+  /* No plus on mobile (gallery plus) */
   .gallery-plus{
     display: none !important;
   }
 
-  /* ✅ No plus on mobile (subsection ::after overlay) */
+  /* No plus on mobile (subsection ::after overlay) */
   .sub-image-wrapper:not(:has(.gallery-image-wrapper))::after{
     content: none !important;
   }
 
-  /* ✅ Disable all hover/tap scaling on mobile */
+  /* Disable all hover/tap scaling on mobile */
   .gallery-image,
   .sub-image,
   .thumb{
@@ -1235,7 +1280,6 @@ body.hero-scrolled .hero-copy {
     transition: none !important;
   }
 
-  /* If you want to be extra safe: remove the hover rules effect on mobile */
   .gallery-image-wrapper:hover .gallery-image,
   .gallery-image-wrapper:focus-within .gallery-image,
   .sub-image-wrapper:hover .sub-image,
@@ -1245,23 +1289,19 @@ body.hero-scrolled .hero-copy {
     transform: none !important;
   }
 
-  /* ✅ Optional: since nothing is clickable on mobile, remove pointer cursor */
   .gallery-image,
   .sub-image,
   .thumb{
     cursor: default !important;
   }
 
-  /* ✅ Optional: hide desktop hover-only arrows on mobile (still scroll by swipe) */
   .gallery-arrow{
     display: none !important;
   }
 }
 
-
-
 /* ================================
-   SECTION 9 PDF CTA (FORCE VISIBLE)
+   SECTION 9 PDF CTA 
 ================================ */
  .pdf-subsection{
   width: 100%;
