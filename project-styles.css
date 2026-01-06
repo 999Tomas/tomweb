@@ -406,6 +406,59 @@ body.hero-scrolled .hero-copy {
   margin-bottom: 0;
 }
 
+/* =========================
+   FULL-WIDTH VIDEO (NO PLUS / NO ZOOM)
+========================= */
+
+.subsection.subsection-full{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.2rem;
+}
+
+/* full width container, no forced square */
+.subsection.subsection-full .sub-image-wrapper{
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+/* IMPORTANT: remove the square rule that makes video huge */
+.subsection.subsection-full .sub-image-wrapper:has(video){
+  aspect-ratio: auto !important;
+}
+
+/* Video = responsive natural height */
+.subsection.subsection-full .sub-video{
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: auto !important;   /* let the file decide */
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+
+/* NO PLUS for this block (desktop too) */
+.subsection.subsection-full .sub-image-wrapper::after{
+  content: none !important;
+}
+
+/* NO scale on hover/touch for this block */
+.subsection.subsection-full .sub-image-wrapper:hover .sub-video,
+.subsection.subsection-full .sub-image-wrapper:focus-within .sub-video{
+  transform: none !important;
+}
+
+.subsection.subsection-full .sub-video{
+  transform: none !important;
+  transition: none !important;
+  cursor: default !important;
+}
+
+
 /* Scroll container */
 .scroll-object{
   max-height: 430px;
