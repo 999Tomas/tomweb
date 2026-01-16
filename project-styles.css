@@ -52,7 +52,8 @@ h1 {
   opacity: 0.7;
 }
 
-.pr14-page section {
+.pr14-page section,
+.pr15-page section {
   padding-inline: 1.5rem;
 }
 
@@ -503,6 +504,9 @@ body.hero-scrolled .hero-copy {
 .layout-image-right .sub-image-wrapper {
   order: 2;
 }
+
+.layout-image-right .sub-figure { order: 2; }
+
 
 .layout-image-right .sub-text {
   order: 1;
@@ -1153,6 +1157,11 @@ body.hero-scrolled .hero-copy {
   opacity: 1;
 }
 
+.story-section ul li a.no-style-link{
+  text-decoration: none;
+}
+
+
 /* ============================
    REFERENCES + BIBLIOGRAPHY
    Clean unified styling
@@ -1365,9 +1374,167 @@ body.hero-scrolled .hero-copy {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(5px); /* very subtle */
+    transform: translateX(5px);
   }
 }
+
+.scope-list{
+  margin: 0 0 1.25rem;
+  padding-left: 1.4rem !important;
+  list-style: disc !important;
+}
+
+.scope-list li{
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.scope-list li:last-child{
+  margin-bottom: 0;
+}
+
+/* Empty left column placeholder (keeps text on right, but shows nothing) */
+.sub-image-wrapper.is-empty{
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.section-visual-link{
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.section-figure-caption{
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-main);
+  opacity: 0.6;
+  max-width: var(--container-width);
+  text-decoration: none !important;
+}
+
+
+/* =========================
+   SECTION 7: DELIVERABLES
+========================= */
+
+.deliverables-block{
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 2.5rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ✅ FORCE centered text (your parent styles may override otherwise) */
+.deliverables-text{
+  width: 100%;
+  max-width: 75ch;
+  margin: 0 auto;
+  text-align: left !important;
+}
+
+.deliverables-text p{
+  margin: 0.6rem auto 0;
+  text-align: left !important;
+}
+
+/* Thumbnails row */
+.deliverables-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.deliverable-card{
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.deliverable-thumb{
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--highlight-bg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  transition: transform 0.18s ease-out;
+}
+
+.deliverable-caption{
+  margin: 0.65rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--text-main);
+  opacity: 0.8;
+  text-align: left;
+
+}
+
+/* list = centered as a block, but readable */
+.deliverables-list{
+  display: inline-block;
+  text-align: left;
+  margin: 1.1rem auto 0;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.deliverables-list li{
+  margin-bottom: 0.8rem;
+}
+.deliverables-list li:last-child{
+  margin-bottom: 0;
+}
+
+/* hover (desktop only) */
+@media (hover: hover){
+  .deliverable-card:hover .deliverable-thumb{ transform: scale(1.02); }
+  .deliverable-card:hover .deliverable-caption{ opacity: 1; }
+}
+
+/* mobile */
+@media (max-width: 768px){
+  .deliverables-grid{
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .deliverable-card{
+    max-width: 520px;
+  }
+  .deliverable-thumb{
+    transition: none;
+  }
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+
+
 
 
 
