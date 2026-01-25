@@ -387,11 +387,8 @@ body.hero-scrolled .hero-copy {
 
 .sub-text h4 {
   margin: 0 0 0.4rem;
-  font-size: 0.95rem;   
-  font-weight: 500;
+  
   letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.65);
 }
 
 .sub-text p {
@@ -1532,6 +1529,41 @@ body.hero-scrolled .hero-copy {
   object-fit: cover;
   z-index: -2;
 }
+
+/* ===== Gallery end video (Section 7.7) ===== */
+.gallery-clip{
+  margin: 1.6rem auto 0;
+  max-width: var(--container-width);
+}
+
+.gallery-clip-media{
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: transparent;
+}
+
+/* IMPORTANT: do NOT force square aspect on this one */
+.gallery-clip-video{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: auto;
+  object-fit: contain;
+  transform: none !important;
+  transition: none !important;
+  cursor: default;
+}
+
+/* Caption matches your subsection caption style */
+.gallery-clip-caption{
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-main);
+  opacity: 0.6;
+}
+
 
 
 
