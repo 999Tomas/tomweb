@@ -348,10 +348,10 @@ video.mobile-only {
 .about-intro-wrapper::before {
   content: "";
   position: absolute;
-  inset: 0;                         /* covers the whole video */
-  background: rgba(20, 21, 26, 0.4); /* adjust 0.4 to 0.3 / 0.5 for more/less dim */
-  pointer-events: none;             /* don’t block clicks */
-  z-index: 1;                       /* in front of video, behind everything else in wrapper */
+  inset: 0;                         
+  background: rgba(20, 21, 26, 0.4);  
+  pointer-events: none;             
+  z-index: 1;                      
 }
 
 .about-intro-wrapper video {
@@ -416,7 +416,7 @@ video.mobile-only {
    width: 30px;
   height: 2px;
   background-color: #A07065;
-  margin: 10px 0 24px;   /* no negative margin */
+  margin: 10px 0 24px;   
   opacity: 0.85;
   border-radius: 1px;
 }
@@ -433,20 +433,20 @@ video.mobile-only {
   z-index: 2;
   width: 100%;
   box-sizing: border-box;
-  min-height: 70vh;       
-  padding: 80px 0 60px; /* gap above + before footer */
+  min-height: auto;
+  padding: 80px 0 400px;
 }
 
 .skills-content {
   position: relative;
-  max-width: 40vw;        /* matches about-content width */
+  max-width: 40vw;        
   width: 100%;
   margin-left: auto;
-  margin-right: 6vw;      /* aligned with about-content */
+  margin-right: 6vw;      
   padding: 40px 0;
   background: transparent;
   color: #f5f7f6;
-  opacity: 0;             /* GSAP will fade this in */
+  opacity: 0;            
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   text-align: left;
@@ -502,19 +502,9 @@ video.mobile-only {
   text-align: left;
 }
 
-/* Give Skills section nice height so it can center */
-.skills {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 70vh;          /* good height without feeling "stuck" */
-  padding: 80px 0 140px;  
-}
-
 .about-cta{
   padding: 3rem 0 1rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .about-cta .section-inner{
@@ -604,6 +594,9 @@ video.mobile-only {
   #skills-list li span:first-child img {
     width: 36px;
   }
+  .about-cta {
+    padding: 2rem 0 1.5rem;
+  }
 }
 
 
@@ -642,7 +635,7 @@ video.mobile-only {
 .slide-in-description {
   font-size: 1.25rem;
   color: #ddd;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   animation-delay: 0.15s;
 }
 
@@ -1031,8 +1024,6 @@ video.mobile-only {
   transform: rotate(90deg);
   opacity: 0.8;
 }
-
-
 
 
  /* Scrollable Section */

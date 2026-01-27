@@ -121,11 +121,11 @@ if (aboutVideo) {
 }
 
 /* ============================================================
-   📱 MOBILE BEHAVIOUR
+   📱 MOBILE BEHAVIOUR — FIXED (NO PINNING)
 ============================================================ */
 if (isMobile) {
 
-  /* 1️⃣ VIDEO SHRINK */
+  /* 1️⃣ VIDEO SHRINK (VISUAL ONLY) */
   gsap.to(aboutWrapper, {
     width: "75vw",
     height: "75vw",
@@ -148,7 +148,6 @@ if (isMobile) {
     {
       opacity: 1,
       y: 0,
-      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".about-section",
@@ -161,23 +160,21 @@ if (isMobile) {
   /* 3️⃣ ABOUT FADE OUT */
   gsap.to(".about-section", {
     opacity: 0,
-    ease: "none",
     scrollTrigger: {
       trigger: ".about-section",
-      start: "top 20%",
+      start: "top 25%",
       end: "top 10%",
       scrub: 1
     }
   });
 
-  /* 4️⃣ SKILLS FADE IN */
+  /* 4️⃣ SKILLS FADE IN (NORMAL SCROLL) */
   gsap.fromTo(
     ".skills-content",
     { opacity: 0, y: 40 },
     {
       opacity: 1,
       y: 0,
-      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#skills-section",
@@ -187,24 +184,24 @@ if (isMobile) {
     }
   );
 
-  /* 5️⃣ SKILLS PIN — FIXED (NO OVERLAP) */
-  ScrollTrigger.create({
-    trigger: ".skills",
-    start: "top 50%",
-    end: "bottom top",
-    pin: true,
-    pinSpacing: true,   // ✅ REQUIRED FIX
-    anticipatePin: 1
+  /* 5️⃣ SKILLS FADE OUT (OPTIONAL, MATCH ABOUT) */
+  gsap.to(".skills", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#skills-section",
+      start: "top 30%",
+      end: "top 10%",
+      scrub: 1
+    }
   });
 
-  /* 6️⃣ CTA — COMES AFTER SKILLS */
+  /* 6️⃣ CTA — NORMAL SCROLL */
   gsap.fromTo(
     "#about-cta",
     { opacity: 0, y: 60 },
     {
       opacity: 1,
       y: 0,
-      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#about-cta",
@@ -213,15 +210,13 @@ if (isMobile) {
       }
     }
   );
-
 }
 
 /* ============================================================
-   🖥 DESKTOP BEHAVIOUR (UNCHANGED)
+   🖥 DESKTOP BEHAVIOUR — UNCHANGED (YOUR ORIGINAL)
 ============================================================ */
 else {
 
-  /* 1️⃣ VIDEO SHRINK + ABOUT IN */
   const aboutTL = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-section",
@@ -246,7 +241,6 @@ else {
     .fromTo(".about-decorative-line", { opacity: 0, width: 0 }, { opacity: 1, width: "30px" }, "-=0.3")
     .fromTo(".about-content .description", { opacity: 0, y: 20 }, { opacity: 1, y: 0 }, ">0.1");
 
-  /* 2️⃣ ABOUT FADE OUT */
   gsap.to(".about-section", {
     opacity: 0,
     ease: "power2.out",
@@ -258,14 +252,12 @@ else {
     }
   });
 
-  /* 3️⃣ SKILLS IN */
   gsap.fromTo(
     ".skills-content",
     { opacity: 0, y: 50 },
     {
       opacity: 1,
       y: 0,
-      duration: 1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: "#skills-section",
@@ -275,7 +267,6 @@ else {
     }
   );
 
-  /* 4️⃣ VIDEO FADE DURING SKILLS */
   gsap.to(aboutWrapper, {
     opacity: 0.3,
     ease: "power2.out",
@@ -287,7 +278,6 @@ else {
     }
   });
 
-  /* 5️⃣ VIDEO POSITION CONTROL */
   function makeVideoScroll() {
     aboutWrapper.style.position = "absolute";
     aboutWrapper.style.top = window.scrollY + "px";
@@ -304,12 +294,11 @@ else {
     onEnter: makeVideoScroll,
     onLeaveBack: makeVideoFixed
   });
-
 }
 
-/* 🔄 REFRESH */
 setTimeout(() => ScrollTrigger.refresh(), 400);
 </script>
+
 
 </body>
 </html>
