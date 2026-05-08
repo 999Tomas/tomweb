@@ -33,16 +33,18 @@ window.addEventListener('DOMContentLoaded', () => {
       <div class="dropdown">
         <a class="dropdown-toggle" href="projects.html">Projects</a>
         <div class="dropdown-menu">
-          <li class="dropdown-link"><a href="business-plan-report.html">Tomas Dulkys Visuals — Business Plan Report</a></li>
+          <li class="dropdown-link"><a href="visual-awareness-lab.html">Major Research Project — Visual Awareness Lab</a></li>
+          <li class="dropdown-link"><a href="winchester-castle-great-kitchen.html">Winchester Castle — Great Kitchen</a></li>
           <li class="dropdown-link"><a href="oiseth-hotel-renovation.html">Placement Project A — Øiseth Hotel Renovation</a></li>
-          <li class="dropdown-link"><a href="virtualcities.html">Winchester Castle | A Virtual Revival</a></li>
+          <li class="dropdown-link"><a href="business-plan-report.html">Tomas Dulkys Visuals — Business Plan Report</a></li>
+          <li class="dropdown-link"><a href="virtualcities.html">Winchester Castle — Reconstruction</a></li>
           <li class="dropdown-link"><a href="interactivemap.html">Urban Cool: Heat Mitigation | RSA</a></li>
           <li class="dropdown-link"><a href="clientproject2.html">Tomebound's Aztec Art</a></li>
           <li class="dropdown-link"><a href="socialmedia.html">Social Media Campaign</a></li>
-          <li class="dropdown-link"><a href="newbeginning.html">New Beginning</a></li>
+          <li class="dropdown-link"><a href="newbeginning.html">New Beginning – Container Housing Concept</a></li>
           <li class="dropdown-link"><a href="lizarddruid.html">Lizard Druid</a></li>
-          <li class="dropdown-link"><a href="medievalenvironment.html">Medieval Environment</a></li>
-          <li class="dropdown-link"><a href="homedevice.html">Home Device</a></li>
+          <li class="dropdown-link"><a href="medievalenvironment.html">Medieval Game Environment – Split Senses</a></li>
+          <li class="dropdown-link"><a href="homedevice.html">Home Device – Kinetic Wireless Door Switch</a></li>
           <li class="dropdown-link"><a href="drpepi.html">Dr. Pepi</a></li>
           <li class="dropdown-link"><a href="lowpolyart.html">Chest of Souls</a></li>
           <li class="dropdown-link"><a href="webdevelop.html">Web Development</a></li>
@@ -535,8 +537,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   const isBrandPage =
-    window.location.pathname.includes("business-plan-report.html") ||
-    window.location.pathname.includes("oiseth-hotel-renovation.html");
+  window.location.pathname.includes("business-plan-report.html") ||
+  window.location.pathname.includes("oiseth-hotel-renovation.html") ||
+  window.location.pathname.includes("winchester-castle-great-kitchen.html") ||
+  window.location.pathname.includes("visual-awareness-lab.html");
 
   const themeSections = isBrandPage
     ? Array.from(document.querySelectorAll("[data-nav-theme]"))
