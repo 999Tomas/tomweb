@@ -1227,6 +1227,24 @@ body.hero-scrolled .hero-copy {
   order: 3;
 }
 
+.project-doc{
+  display: inline-block;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text-main);
+  opacity: 0.85;
+  line-height: 1.2;
+}
+
+.project-doc:hover,
+.project-dock:focus-visible{
+  opacity: 0.5;
+}
+
+.layout-image-right .project-doc{
+  order: 3;
+}
+
 /* FORCE Subsection video to behave like the square thumbnails */
 .sub-image-wrapper:has(video.thumb){
   aspect-ratio: 1 / 1;   
