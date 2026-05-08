@@ -69,10 +69,6 @@ h1 {
   border: 1px solid var(--border-subtle);
 }
 
-.sub-image-wrapper.is-empty::after {
-  display: none !important;
-}
-
 .sub-embed {
   width: 100%;
   height: 100%;
@@ -1703,10 +1699,13 @@ body.hero-scrolled .hero-copy {
 
 
 
+
 /* =========================
    SECTION 5.3 FINAL VISUALS GALLERY
+   Horizontal scroll gallery
    Scoped so it does not affect older gallery sections/pages
 ========================= */
+
 .final-visuals-gallery {
   display: block;
   width: 100%;
@@ -1719,21 +1718,36 @@ body.hero-scrolled .hero-copy {
 }
 
 .final-visuals-slider {
-  position: relative;
   width: 100%;
+  overflow: hidden;
   margin: 0 auto 2rem;
 }
 
 .final-visuals-track {
-  width: 100%;
+  display: flex;
+  gap: 1.4rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 0.4rem;
+  justify-content: center;
+}
+
+.final-visuals-track::-webkit-scrollbar {
+  height: 3px;
+}
+
+.final-visuals-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.final-visuals-track::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .final-visuals-slide {
-  display: none;
+  flex: 0 0 clamp(260px, 38vw, 420px);
+  max-width: clamp(260px, 38vw, 420px);
   margin: 0;
-}
-
-.final-visuals-slide.is-active {
   display: block;
 }
 
@@ -1746,60 +1760,25 @@ body.hero-scrolled .hero-copy {
 
 .final-visuals-image-wrapper .sub-image {
   width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
 }
 
 .final-visuals-text {
   max-width: 72ch;
-  margin: 0 auto;
+  margin: 2rem auto 0;
 }
 
+/* Hide old slider arrows if they still exist in HTML */
 .final-visuals-arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 3;
-  width: 52px;
-  height: 52px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  border: 1px solid transparent;
-  background: transparent;
-  color: #F8F7F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  outline: none !important;
-  box-shadow: none !important;
-  transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.final-visuals-slider:hover .final-visuals-arrow,
-.final-visuals-slider:focus-within .final-visuals-arrow {
-  opacity: 1;
-}
-
-.final-visuals-arrow:hover,
-.final-visuals-arrow:focus-visible {
-  color: var(--control-hover);
-  border-color: var(--control-hover);
-  transform: translateY(-50%) scale(1.08);
-}
-
-.final-visuals-arrow-prev {
-  left: 0.9rem;
-}
-
-.final-visuals-arrow-next {
-  right: 0.9rem;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
-  .final-visuals-arrow {
-    display: none;
+  .final-visuals-slide {
+    flex: 0 0 92%;
+    max-width: 92%;
   }
 }
