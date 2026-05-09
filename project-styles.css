@@ -446,6 +446,22 @@ body.hero-scrolled .hero-copy {
   width: min(520px, 100%);
 }
 
+.sub-image-wrapper.is-empty {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.sub-image-wrapper.is-empty::after {
+  content: none !important;
+  display: none !important;
+}
+
 .sub-image {
   width: 100%;
   height: 100%;
@@ -1774,6 +1790,7 @@ body.hero-scrolled .hero-copy {
   overflow: hidden;
   background: var(--highlight-bg);
   position: relative;
+  cursor: zoom-in;
 }
 
 .final-visuals-image-wrapper .sub-image {
@@ -1782,6 +1799,13 @@ body.hero-scrolled .hero-copy {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.final-visuals-image-wrapper:hover .sub-image,
+.final-visuals-image-wrapper:focus-within .sub-image {
+  transform: scale(1.04);
 }
 
 .final-visuals-text {
@@ -1789,7 +1813,7 @@ body.hero-scrolled .hero-copy {
   margin: 2rem auto 0;
 }
 
-/* Hide old slider arrows if they still exist in HTML */
+/* Hide old slider arrows */
 .final-visuals-arrow {
   display: none !important;
 }
@@ -1799,4 +1823,318 @@ body.hero-scrolled .hero-copy {
     flex: 0 0 92%;
     max-width: 92%;
   }
+}
+
+/* =========================
+   SECTION 3.6 REVIT FINAL MODEL
+========================= */
+
+.revit-final-model-section {
+  display: block;
+}
+
+.revit-final-model-inner {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.revit-final-model-inner h3 {
+  margin: 0 0 1.4rem;
+}
+
+.revit-final-model-figure {
+  margin: 0;
+}
+
+.revit-collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, clamp(230px, 22vw, 300px));
+  gap: 0.7rem;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.revit-collage-main {
+  grid-row: 1 / span 2;
+}
+
+.revit-collage-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  background: var(--highlight-bg);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+}
+
+.revit-collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-out;
+}
+
+.revit-collage-main img {
+  aspect-ratio: 1 / 1;
+}
+
+.revit-collage-item:not(.revit-collage-main) img {
+  aspect-ratio: 16 / 9;
+}
+
+.revit-collage-item:hover img,
+.revit-collage-item:focus-visible img {
+  transform: scale(1.04);
+}
+
+.revit-collage-label {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.75rem;
+  color: #F8F7F2;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  background: rgba(0, 0, 0, 0.34);
+  padding: 0.35rem 0.5rem;
+}
+
+.revit-final-model-text {
+  max-width: 72ch;
+  margin: 1.8rem auto 0;
+  text-align: left;
+}
+
+/* Expanded centered viewer for Section 3.6 only */
+.revit-expanded {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.revit-expanded.is-open {
+  display: flex;
+}
+
+.revit-expanded-image {
+  width: auto;
+  max-width: 88vw;
+  max-height: 82vh;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+.revit-expanded-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #F8F7F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.revit-expanded:hover .revit-expanded-arrow,
+.revit-expanded:focus-within .revit-expanded-arrow {
+  opacity: 1;
+}
+
+.revit-expanded-arrow:hover,
+.revit-expanded-arrow:focus-visible {
+  border-color: var(--control-hover);
+  color: var(--control-hover);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.revit-expanded-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+  border-color: var(--control-hover);
+  color: var(--control-hover);
+}
+
+.revit-expanded-prev {
+  left: 2rem;
+}
+
+.revit-expanded-next {
+  right: 2rem;
+}
+
+/* =========================================
+   SECTION 3.6 — MOBILE VERSION
+   Simple horizontal gallery
+   v01 default, v02 on touch
+   No expandable v03 on mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+  .revit-collage {
+    display: flex;
+    gap: 1.4rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 0.4rem;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .revit-collage-item,
+  .revit-collage-main {
+    flex: 0 0 92%;
+    min-width: 92%;
+    max-width: 92%;
+    grid-row: auto;
+    position: relative;
+    aspect-ratio: 1 / 1;
+  }
+
+  .revit-image-primary,
+  .revit-image-hover,
+  .revit-collage-main img,
+  .revit-collage-item:not(.revit-collage-main) img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100%;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.25s ease;
+  }
+
+  .revit-image-primary {
+    opacity: 1 !important;
+    z-index: 1;
+  }
+
+  .revit-image-hover {
+    opacity: 0 !important;
+    z-index: 2;
+  }
+
+  .revit-collage-item:active .revit-image-hover,
+  .revit-collage-item:focus .revit-image-hover {
+    opacity: 1 !important;
+  }
+
+  .revit-collage-item:active .revit-image-primary,
+  .revit-collage-item:focus .revit-image-primary {
+    opacity: 0 !important;
+  }
+
+  .revit-collage-item:hover img,
+  .revit-collage-item:focus-visible img {
+    transform: none !important;
+  }
+
+  .revit-collage-label {
+    position: absolute;
+    z-index: 5;
+    left: 0.85rem;
+    bottom: 0.75rem;
+    color: #F8F7F2;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    background: rgba(0,0,0,0.34);
+    padding: 0.35rem 0.5rem;
+  }
+
+  .revit-expanded {
+    display: none !important;
+  }
+
+  .revit-collage::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .revit-collage::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .revit-collage::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+}
+
+
+
+/* =========================================
+   REVIT IMAGE HOVER SWAP
+========================================= */
+
+.revit-collage-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.revit-image-primary,
+.revit-image-hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.revit-image-primary {
+  opacity: 1;
+  z-index: 1;
+}
+
+.revit-image-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.revit-collage-item:hover .revit-image-hover,
+.revit-collage-item:focus-visible .revit-image-hover {
+  opacity: 1;
+}
+
+.revit-collage-item:hover .revit-image-primary,
+.revit-collage-item:focus-visible .revit-image-primary {
+  opacity: 0;
+}
+
+.revit-collage-item:hover .revit-image-hover,
+.revit-collage-item:focus-visible .revit-image-hover {
+  transform: scale(1.04);
+}
+
+.revit-collage-label {
+  position: absolute;
+  z-index: 5;
 }
