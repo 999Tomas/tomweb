@@ -2161,3 +2161,84 @@ body.hero-scrolled .hero-copy {
   aspect-ratio: 1 / 1 !important;
   object-fit: cover;
 }
+
+/* SECTION 8 — FINAL OUTCOMES SLIDER */
+
+.final-outcomes-section .section-inner {
+  max-width: var(--container-width);
+}
+
+.final-outcomes-slider {
+  margin: 0;
+}
+
+.final-outcomes-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.final-outcomes-slide {
+  display: none;
+  width: 100%;
+}
+
+.final-outcomes-slide.is-active {
+  display: block;
+}
+
+.final-outcomes-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  cursor: default !important;
+}
+
+.final-outcomes-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #F8F7F2;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.final-outcomes-frame:hover .final-outcomes-arrow,
+.final-outcomes-frame:focus-within .final-outcomes-arrow {
+  opacity: 1;
+}
+
+.final-outcomes-arrow:hover,
+.final-outcomes-arrow:focus-visible {
+  border-color: var(--control-hover);
+  color: var(--control-hover);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.final-outcomes-prev {
+  left: 1rem;
+}
+
+.final-outcomes-next {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .final-outcomes-arrow {
+    display: none;
+  }
+
+  .final-outcomes-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
