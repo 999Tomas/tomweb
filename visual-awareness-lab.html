@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomas Dulkys Visuals | DM3107 — Visual Awareness Lab</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="project-styles.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .contents-section {
+      background: var(--section-bg);
+      padding-block: 4rem;
+    }
+
+    .contents-section::after {
+      display: none !important;
+    }
+
+    .contents-intro {
+      max-width: 62ch;
+      color: var(--text-main);
+      margin: 0;
+    }
+
+    .contents-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 2rem;
+      row-gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .contents-grid a,
+    .contents-grid a:visited {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      opacity: 0.88;
+      transition: opacity 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+
+    .contents-grid a:hover,
+    .contents-grid a:focus-visible {
+      color: var(--text-accent);
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    .section-header.is-centered-text {
+      max-width: 72ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-header.is-centered-text p {
+      color: var(--text-main);
+    }
+
+
+    /* 4.4 centered collage layout */
+    .interaction-flow-collage-section {
+      display: block;
+      width: 100%;
+    }
+
+    .interaction-flow-collage-inner {
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .interaction-flow-collage-text {
+      max-width: 72ch;
+      margin: 1.8rem auto 0;
+      text-align: left;
+    }
+
+    .interaction-flow-collage {
+      max-width: 1120px;
+    }
+
+    @media (max-width: 900px) {
+      .contents-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <main class="pr15-page">
+
+    <!-- HERO – full screen IMAGE, text on left -->
+    <section class="hero" data-nav-theme="light">
+      <img
+        src="assets/projects/pr17/images/Hero_Scene1_v01.png"
+        alt="Major Research Project — Visual Awareness Lab hero image"
+        class="hero-bg-image"
+      />
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">DM3107</p>
+          <h1 class="hero-title">Major Research Project — Visual Awareness Lab</h1>
+          <p class="hero-text">An interactive 3D experience for improving visual awareness and descriptive thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- META BAR – Aim / Role / Tools in cards -->
+    <section class="meta-bar">
+      <div class="meta-inner">
+        <article class="meta-card">
+          <h2>Aim</h2>
+          <p>To develop an interactive 3D-based visual tool that improves users’ ability to observe and describe spatial environments through guided observation and reflection.</p>
+        </article>
+
+        <article class="meta-card">
+          <h2>Role</h2>
+          <ul class="meta-lines">
+            <li>3D Visual Designer</li>
+            <li>Interaction Design</li>
+            <li>Prototype Development</li>
+          </ul>
+        </article>
+
+        <article class="meta-card">
+          <h2>Tools</h2>
+          <ul class="meta-list">
+            <li>Blender</li>
+            <li>V-Ray</li>
+            <li>Figma</li>
+            <li>Photoshop</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>CapCut</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== CONTENTS ========== -->
+    <section class="story-section contents-section" id="contents" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Contents</h2>
+        </header>
+
+        <nav class="contents-grid" aria-label="Report contents">
+          <div class="contents-group">
+            <a href="#section-1" class="contents-main">1. Introduction</a>
+            <a href="#section-2" class="contents-main">2. Research Context</a>
+            <a href="#section-3" class="contents-main">3. Methodology and Process</a>
+            <a href="#section-3-1">3.1 Design Process and Planning</a>
+            <a href="#section-3-2">3.2 Project Organisation and Time Management</a>
+          </div>
+
+          <div class="contents-group">
+            <a href="#section-4" class="contents-main">4. Practice Development and Iteration</a>
+            <a href="#section-4-1">4.1 Early Concept Development</a>
+            <a href="#section-4-2">4.2 Scene Research and Selection</a>
+            <a href="#section-4-3">4.3 Interface Direction and Visual System</a>
+            <a href="#section-4-4">4.4 Interaction Flow and Wireframing</a>
+            <a href="#section-4-5">4.5 3D Scene Development</a>
+          </div>
+
+          <div class="contents-group">
+            <a href="#section-5" class="contents-main">5. Findings and Evaluation</a>
+            <a href="#section-6" class="contents-main">6. Discussion</a>
+            <a href="#section-7" class="contents-main">7. Conclusion</a>
+            <a href="#section-8" class="contents-main">8. Statement on Generative AI Use</a>
+            <a href="#references" class="contents-main">9. References</a>
+          </div>
+
+          <div class="contents-group">
+             <a href="#bibliography" class="contents-main">10. Bibliography</a>
+             <a href="#appendices" class="contents-main">11. Appendices</a>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== 1. Introduction ========== -->
+    <section class="story-section" id="section-1" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header is-centered-text">
+          <h2>1. Introduction</h2>
+          <p>
+            This project explores how interactive 3D visual design can support descriptive thinking and visual awareness through guided observation and reflective interaction. The work develops from the research conducted during Term 1, which investigated how adults perceive and describe visual scenes, and how interactive visual systems could encourage deeper observation and articulation.
+          </p>
+          <p>
+            The project emerged from a personal difficulty in verbally describing visual environments in a detailed and structured way. Although atmosphere, lighting, and spatial qualities could often be recognised internally, translating these observations into language remained challenging. This became more noticeable during university studies, where reflective communication and visual explanation are important parts of the design process. This experience became the starting point for exploring whether descriptive thinking and visual awareness could be strengthened through guided interaction and intentional observation.
+          </p>
+          <p>
+            As a Digital Design 3D Visualisation student, the project also became an opportunity to explore how 3D visualisation can function beyond architectural presentation imagery. Rather than using 3D environments only for representation or aesthetics, the project investigates how spatial composition, lighting, and materiality can become part of an interactive experience that encourages users to observe visual information more carefully and reflect on what they notice.
+          </p>
+          <p>
+            The practical outcome of the project is a medium-fidelity interactive prototype titled Visual Awareness Trainer. The prototype combines architectural visual scenes, guided observation stages, and reflective interaction within a calm visual interface designed to support focus and descriptive engagement.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <!-- ========== 2. Research Context ========== -->
+    <section class="story-section" id="section-2" data-nav-theme="dark">
+      <div class="section-visual-frame">
+        <figure class="section-figure">
+          <div class="section-visual-inner">
+            <img
+              src="Winchester Kitchen (4).jpeg"
+              alt="2. Research Context"
+              class="section-visual"
+            />
+          </div>
+          <figcaption class="section-figure-caption">
+            Placeholder wide visual for this report section.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>2. Research Context</h2>
+        </header>
+
+        <div class="section-subsections">
+
+          <article class="subsection layout-image-right">
+
+            <div class="sub-text">
+              <h3 id="section-2-content">2. Research Context</h3>
+              <div class="scroll-object">
+                  <p>
+                    The research conducted during Term 1 identified a gap within cognitive training applications such as Lumosity and CogniFit, which commonly focus on memory, reaction speed, and attention-based exercises, while descriptive thinking and visual articulation appeared to be less explored areas of interaction design.
+                  </p>
+                  <p>
+                    Research into visual cognition and design thinking also suggested that observation and verbal articulation are closely connected. Arnheim (1969) explains that perception develops through active interpretation rather than passive viewing, while Lawson (2004) and Goldschmidt (2017) discuss how description supports reflective understanding and deeper cognitive processing. These ideas became central to the practical direction of the project, particularly in relation to how users engage with spatial environments and organise visual information through language.
+                  </p>
+                  <p>
+                    The survey findings from Term 1 further reinforced these ideas. Participants frequently focused on immediately noticeable elements such as colour and lighting, while spatial relationships and atmosphere were described less consistently. Structured scenes with clear visual hierarchy were generally easier to describe than visually complex environments. These findings suggested that guided interaction and controlled visual complexity may help users engage more deeply with visual scenes and improve descriptive awareness.
+                  </p>
+                  <p>
+                    The practical development stage therefore focused on how interactive 3D visual environments could encourage slower observation, structured attention, and reflective interaction rather than performance-based engagement.
+                  </p>
+              </div>
+            </div>
+              <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="Winchester Kitchen (4).jpeg"
+                  alt="2. Research Context"
+                  class="sub-image"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Placeholder visual for 2. research context. Replace this image and caption with your final project evidence.
+              </figcaption>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. Methodology and Process ========== -->
+    <section class="story-section" id="section-3" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>3. Methodology and Process</h2>
+        </header>
+
+        <div class="section-subsections">
+
+          <article class="subsection layout-image-left">
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/Milanote_WorkflowOverview_v02.jpg"
+                  data-full="assets/projects/pr17/images/Milanote_WorkflowOverview_v01.jpg"
+                  alt="3.1 Design Process and Planning"
+                  class="sub-image sub-image--border"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 3.1: Milanote workflow and project organisation board.
+              </figcaption>
+              <a class="figma-link"
+               href="https://app.milanote.com/1VLqvb1kJxTZ4N?p=kbYkpCZjnvv" 
+               target="_blank" rel="noopener">
+               View in Milanote ↗
+              </a>
+            </figure>
+
+            <div class="sub-text">
+              <h3 id="section-3-1">3.1 Design Process and Planning</h3>
+              <div class="scroll-object">
+                  <p>
+                    The project followed a reflective and iterative design process that combined research, visual experimentation, interaction planning, and practical development. The findings from Term 1 directly informed the practical design decisions developed during Term 2, particularly in relation to guided observation, interaction structure, and the use of controlled visual environments.
+                  </p>
+                  <p>
+                    Milanote became the primary organisational tool throughout the project and was used to support research organisation, workflow planning, visual development, and prototype progression (Fig. 3.1). The platform helped structure the iterative design process and maintain a clear connection between the research findings and the practical stages of development.
+                  </p>
+                  <p>
+                    Initially, the project proposal focused on developing a lower-fidelity prototype centred mainly around conceptual layouts and interaction planning. However, following tutor feedback encouraging a stronger practical outcome, the project direction evolved into a more developed medium-fidelity prototype supported by custom 3D visual scenes and interactive testing.
+                  </p>
+                  <p>
+                    This shift became an important part of the reflective development process, allowing the research question to be explored more actively through visual design, interaction structure, and user engagement.
+                  </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="subsection layout-image-right">
+            <div class="sub-text">
+              <h3 id="section-3-2">3.2 Project Organisation and Time Management</h3>
+              <div class="scroll-object">
+                  <p>
+                   A detailed workflow plan was created at the beginning of the project to organise the main production stages across the term. The timeline included scene research, concept development, wireframing, prototype creation, 3D scene production, testing, and report preparation. A Gantt chart was used throughout the project to monitor task progression and adjust priorities when required.
+                  </p>
+                  <p>
+                    Several stages progressed according to the original schedule, particularly wireframing and medium-fidelity prototype development. However, the scene selection and 3D production stages extended beyond the initial timeline. More time was required to finalise the visual direction of the scenes and resolve practical production tasks alongside other final-year submission work occurring during the same period.
+                  </p>
+                  <p>
+                    This later affected the planned testing schedule, as the prototype testing depended on the completion of the visual scenes before evaluation could begin. In response, priorities were reorganised in order to focus on completing the strongest practical outcomes within the remaining timeframe. Although parts of the workflow developed later than originally planned, the project remained structured throughout production and the final outcome was completed successfully.
+                  </p>
+              </div>
+            </div>
+
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/GanttChart_ProjectTimeline_v02.jpg"
+                  data-full="assets/projects/pr17/images/GanttChart_ProjectTimeline_v01.jpg"
+                  alt="3.2 Project Organisation and Time Management"
+                  class="sub-image sub-image--border"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 3.2: Project timeline and workflow plan used to organise development stages, scheduling, and task progression throughout the project.
+              </figcaption>
+              <a class="figma-link"
+               href="https://app.milanote.com/1W1RHG1e8ElD53?p=GALXiG7S2oi" 
+               target="_blank" rel="noopener">
+               View in Milanote ↗
+              </a>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. Practice Development and Iteration ========== -->
+    <section class="story-section" id="section-4" data-nav-theme="dark">
+      <div class="section-visual-frame">
+        <figure class="section-figure">
+          <div class="section-visual-inner">
+            <img
+              src="Winchester Kitchen (4).jpeg"
+              alt="4. Practice Development and Iteration"
+              class="section-visual"
+            />
+          </div>
+          <figcaption class="section-figure-caption">
+            Placeholder wide visual for this report section.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>4. Practice Development and Iteration</h2>
+        </header>
+
+        <div class="section-subsections">
+
+          <article class="subsection layout-image-left">
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/HandDrawn_WireframeSketches_v01.jpg"
+                  alt="4.1 Early Concept Development"
+                  class="sub-image sub-image--border"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 4.1: Early concept sketches and reflective interaction planning.
+              </figcaption>
+            </figure>
+
+            <div class="sub-text">
+              <h3 id="section-4-1">4.1 Early Concept Development</h3>
+              <div class="scroll-object">
+                  <p>
+                    The practical phase of the project began by translating the findings from Term 1 into a visual and interactive experience. Early ideas focused on how 3D visualisation could support reflective observation and descriptive engagement through guided interaction and controlled visual environments.
+                  </p>
+                  <p>
+                    Initial development explored how users could move through a guided process of observing, describing, reconsidering, and reflecting on visual environments. Hand-drawn wireframe sketches were used to explore interaction flow and pacing before moving into digital layouts.
+                  </p>
+                  <p>
+                    One of the most important early decisions was avoiding performance-based interaction systems commonly found within cognitive training applications. Timers, scoring systems, and competitive mechanics were intentionally avoided in favour of slower and more reflective interaction. This decision aligned more closely with the project’s focus on awareness, observation, and descriptive thinking.
+                  </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="subsection layout-image-right">
+            <div class="sub-text">
+              <h3 id="section-4-2">4.2: Scene Research and Selection</h3>
+              <div class="scroll-object">
+                  <p>
+                    Scene development became an important part of the project due to its connection with both 3D visualisation practice and visual observation. The scenes were researched and organised according to visual complexity, lighting, spatial hierarchy, and material contrast.
+                  </p>
+                  <p>
+                    References were grouped into three categories:
+                  </p>
+                  <p>
+                    minimal detail
+                  </p>
+                  <p>
+                    moderate detail
+                  </p>
+                  <p>
+                    high detail
+                  </p>
+                  <p>
+                    This process was informed by findings from the Term 1 survey and by Cognitive Load Theory, where more structured environments appeared to support clearer observation and descriptive organisation.
+                  </p>
+                  <p>
+                    The scenes gradually progressed from minimal to more visually complex environments. This progression became an important part of the interaction strategy, encouraging deeper observation and more reflective engagement with the visual environments.
+                  </p>
+              </div>
+            </div>
+
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/SceneResearch_Selection_v02.jpg"
+                  data-full="assets/projects/pr17/images/SceneResearch_Selection_v01.jpg"
+                  alt="4.2 Scene Research and Selection"
+                  class="sub-image sub-image--border"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 4.2: Scene research and visual concept exploration board.
+              </figcaption>
+               <a class="figma-link"
+               href="https://app.milanote.com/1VLqCy1nW1Nxc5?p=kbYkpCZjnvv" 
+               target="_blank" rel="noopener">
+               View in Milanote ↗
+              </a>
+            </figure>
+          </article>
+
+          <article class="subsection layout-image-left">
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/Interface_VisualSystem.png"
+                  alt="4.3 Interface Direction and Visual System"
+                  class="sub-image sub-image--border"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 4.3: Interface research and visual system analysis showing how interface clarity, restrained visual hierarchy, and minimal interaction principles informed the final prototype interface direction.
+              </figcaption>
+               <a class="figma-link"
+               href="https://app.milanote.com/1VSaMG1UQd3zai?p=kbYkpCZjnvv" 
+               target="_blank" rel="noopener">
+               View in Milanote ↗
+              </a>
+            </figure>
+
+            <div class="sub-text">
+              <h3 id="section-4-3">4.3 Interface Direction and Visual System</h3>
+              <div class="scroll-object">
+                  <p>
+                    The interface direction focused on creating a visually restrained and structured environment that would support concentration and observation throughout the prototype. Existing applications including Lumosity, CogniFit, and Headspace were analysed during the planning stage to investigate interface clarity, navigation structure, visual hierarchy, and interaction simplicity (see Fig. 4.3).
+                  </p>
+                  <p>
+                   Across all analysed applications, several consistent interface approaches became noticeable, including minimal visual noise, structured layouts, restrained colour systems, clear typography, and guided interaction flow. These observations informed the visual direction of the prototype and helped establish a calmer interface environment that would not visually compete with the observational scenes.
+                  </p>
+                  <p>
+                    Particular attention was given to interface hierarchy, content organisation, and controlled interaction flow. CogniFit and Lumosity demonstrated how simplified layouts and structured navigation could maintain user focus during cognitive tasks, while Headspace showed how restrained colour palettes and minimal interface styling could support a calmer and more reflective experience.
+                  </p>
+                  <p>
+                   These findings directly informed the final prototype visual system shown in the final column of Fig. 4.3. Neutral colours, restrained contrast, clear typography, and minimal interface styling were applied to create a calm and visually focused interface environment.
+                  </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="subsection interaction-flow-collage-section">
+            <div class="interaction-flow-collage-inner">
+
+              <figure class="interaction-flow-collage-figure">
+
+                <div class="revit-collage interaction-flow-collage" data-revit-collage>
+
+                  <!-- LEFT LARGE IMAGE -->
+                  <button
+                    class="revit-collage-item revit-collage-main no-lightbox"
+                    type="button"
+                    data-index="0"
+                  >
+                    <img
+                      src="assets/projects/pr17/images/UserFlowDiagram.jpg"
+                      data-full="assets/projects/pr17/images/UserFlowDiagram.jpg"
+                      alt="User flow diagram"
+                    />
+
+                    <span class="revit-collage-label">
+                      Interaction sequence and progression logic
+                    </span>
+                  </button>
+
+                  <!-- TOP RIGHT IMAGE -->
+                  <button
+                    class="revit-collage-item no-lightbox"
+                    type="button"
+                    data-index="1"
+                  >
+                    <img
+                      src="assets/projects/pr17/images/LowFidelity_Wireframes.png"
+                      data-full="assets/projects/pr17/images/LowFidelity_Wireframes.png"
+                      alt="Wireframe and interaction development"
+                    />
+
+                    <span class="revit-collage-label">
+                      Early layout structure and screen organisation
+                    </span>
+                  </button>
+
+                  <!-- BOTTOM RIGHT IMAGE -->
+                  <button
+                    class="revit-collage-item no-lightbox"
+                    type="button"
+                    data-index="2"
+                  >
+                    <img
+                      src="assets/projects/pr17/images/MidFidelity_Screens.png"
+                      data-full="assets/projects/pr17/images/MidFidelity_Screens.png"
+                      alt="Medium-fidelity prototype flow"
+                    />
+
+                    <span class="revit-collage-label">
+                      Refined interface hierarchy and visual application
+                    </span>
+                  </button>
+
+                </div>
+
+                <figcaption class="sub-caption">
+                  Fig. 4.4: Interaction flow development showing user journey structure, low-fidelity wireframes, and mid-fidelity prototype refinement.
+                </figcaption>
+                <a class="figma-link"
+                href="https://www.figma.com/design/4xWrw9QnMdsFHjXnQVXWPB/Initial-Concept-Sketch-%E2%80%93-3D-Visual-Awareness-Research?node-id=135-163&t=QPXp51jiMafMjJ1O-0" 
+                target="_blank" rel="noopener">
+                View in Figma ↗
+                </a>
+              </figure>
+
+              <div class="sub-text interaction-flow-collage-text">
+                <h3 id="section-4-4">4.4 Interaction Flow and Wireframing</h3>
+
+                <div class="scroll-object">
+                  <p>
+                    The interaction structure of the prototype was developed to support a gradual observational process through guided visual reflection and descriptive interaction. The user flow diagram in Fig. 4.4 illustrates the overall interaction sequence, beginning with introduction and instruction screens before progressing through increasingly complex visual scenes, reflective prompts, and completion stages.
+                  </p>
+                   <p>
+                    Early interface planning was explored through low-fidelity wireframes in Fig. 4.4, which focused primarily on screen structure, content placement, interaction sequence, and layout organisation. These wireframes helped establish how observational tasks, prompts, and reflection stages would be presented progressively throughout the experience. 
+                  </p>
+                   <p>
+                    The interaction structure was later refined through the development of mid-fidelity screens (Fig. 4.4, bottom right). This stage introduced colour, typography, scene integration, spacing refinement, and clearer interface hierarchy while maintaining the restrained visual style established during the interface research stage. The prototype screens helped evaluate how users would progress through observation, description, guided reflection, and repeated scene analysis within a structured visual flow.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <article class="subsection layout-image-left">
+            <figure class="sub-figure">
+              <div class="sub-image-wrapper">
+                <img
+                  src="assets/projects/pr17/images/SceneDevelopment_Process.jpg"
+                  alt="4.5 3D Scene Development"
+                  class="sub-image"
+                />
+              </div>
+              <figcaption class="sub-caption">
+                Fig. 4.5: 3D scene development process showing spatial planning, lighting exploration, material testing, and final scene outcomes.
+              </figcaption>
+            </figure>
+
+            <div class="sub-text">
+              <h3 id="section-4-5">4.5 3D Scene Development</h3>
+              <div class="scroll-object">
+                  <p>
+                    The 3D scenes were developed to investigate how spatial composition, lighting direction, and environmental complexity could influence observation and visual attention within the prototype. As shown in Fig. 4.5, the environments progressed from low-complexity to high-complexity scenes, allowing different levels of visual information and spatial depth to be explored throughout the project.
+                  </p>
+                  <p>
+                    The low-complexity environment (Scene 1) focused on controlled lighting, minimal spatial distraction, and clear visual hierarchy. Directional skylight beams and negative space were used to guide attention toward specific areas within the scene, supporting concentrated observation and reducing unnecessary visual noise.
+                  </p>
+                  <p>
+                    The medium-complexity environment (Scene 2) introduced greater material variation, atmospheric depth, and partial spatial visibility. Concrete remained the dominant material throughout the environment, combined with wood and fabric elements to soften the atmosphere while maintaining the brutalist direction. Rather than fully revealing the entire room, parts of the space remained partially obscured through shadow and framing, encouraging more active observation and interpretation.
+                  </p>
+                  <p>
+                     The high-complexity environment (Scene 3) expanded the investigation into larger architectural space and spatial organisation. Initial references provided strong atmospheric direction; however, during development greater focus was placed on creating a more logically structured environment with clearer circulation, openness, and spatial hierarchy. This resulted in a more realistic architectural composition that supported both environmental scale and observational depth.
+                  </p>
+                  <p>
+                     Across all scenes, lighting direction became one of the main visual tools used to control focus, depth, and visibility. Natural light, shadow contrast, and restrained material palettes were refined to support the project’s wider investigation into visual awareness and descriptive interpretation through 3D environments.
+                  </p>
+                </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. Findings and Evaluation ========== -->
+    <section class="story-section" id="section-5" data-nav-theme="dark">
+      <div class="section-inner">
+       
+
+        <div class="section-subsections">
+
+          <article class="subsection interaction-flow-collage-section">
+            <div class="interaction-flow-collage-inner">
+
+              <figure class="interaction-flow-collage-figure">
+
+                <div class="revit-collage findings-collage" data-revit-collage>
+
+                  <!-- LEFT LARGE IMAGE -->
+                  <button
+                    class="revit-collage-item revit-collage-main no-lightbox"
+                    type="button"
+                    data-index="0"
+                  >
+                    <img
+                      src="assets/projects/pr17/images/PrototypeTesting.jpg"
+                      data-full="assets/projects/pr17/images/PrototypeTesting.jpg"
+                      alt="User flow diagram"
+                    />
+
+                    <span class="revit-collage-label">
+                     Tested Prototype Interaction Stages
+                    </span>
+                  </button>
+
+                  <!-- RIGHT IMAGE -->
+                  <button
+                    class="revit-collage-item no-lightbox"
+                    type="button"
+                    data-index="1"
+                  >
+                    <img
+                      src="assets/projects/pr17/images/ParticipantFeedback.jpg"
+                      data-full="assets/projects/pr17/images/ParticipantFeedback.jpg"
+                      alt="Wireframe and interaction development"
+                    />
+
+                    <span class="revit-collage-label">
+                      Evaluation responses and reflective findings
+
+                    </span>
+                  </button>
+
+                </div>
+
+                <figcaption class="sub-caption">
+                  Fig. 5: Prototype testing screens and participant evaluation findings from the visual awareness experience.
+                </figcaption>
+                <a class="figma-link"
+                href="https://app.milanote.com/1WmdfX1C7dip1t?p=kbYkpCZjnvv" 
+                target="_blank" rel="noopener">
+                View in Milanote ↗
+                </a>
+              </figure>
+
+              <div class="sub-text interaction-flow-collage-text">
+          
+          <h2>5. Findings and Evaluation</h2>
+                <div class="scroll-object">
+                  <p>
+                    A small-scale online prototype test was conducted using a hosted medium-fidelity prototype and Google Form evaluation process. Four participants completed the experience and provided feedback relating to observation, visual engagement, interface clarity, and descriptive interaction.
+                  </p>
+                   <p>
+                    The responses suggested that the guided observation stages encouraged users to examine the scenes more carefully and notice additional visual details. All participants reported that the experience encouraged more careful observation, while most participants also stated that the guidance helped them notice additional details within the scenes.
+                  </p>
+                   <p>
+                    Participants generally described the prototype as clear and easy to follow. Feedback also suggested that the progression of scene complexity strengthened engagement throughout the experience. One participant specifically highlighted the impact of natural lighting, while another noted that reconsidering the scale of the environment changed their interpretation of the scene.
+                  </p>
+                  <p>
+                    Although the testing group was limited in scale and consisted primarily of familiar participants, the consistency across responses suggested that guided observation and structured visual environments supported reflective engagement and descriptive awareness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. Discussion ========== -->
+    <section class="story-section" id="section-6" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header is-centered-text">
+          <h2>6. Discussion</h2>
+           <div class="scroll-object">
+            <p>
+              The project explored how 3D-based interactive visual design may support descriptive thinking and visual awareness through guided observation and reflective interaction. Throughout development, the relationship between spatial composition, lighting, material atmosphere, and interaction flow became central to the practical direction of the project.
+            </p>
+            <p>
+              One of the most important reflections from the project was understanding how simplicity and controlled visual hierarchy influence observation. Reducing interface distraction and focusing attention on atmosphere, lighting, and spatial composition appeared to strengthen reflective engagement with the scenes. The project also demonstrated how 3D visualisation can function beyond architectural representation by becoming part of a cognitive and observational experience.
+            </p>
+            <p>
+              The project remained exploratory in scale and several areas could be developed further in future iterations. A larger and more varied testing group would provide broader feedback, while additional interaction features and scene variation could strengthen the depth of the experience.
+            </p>
+            <p>
+              Beyond the prototype itself, the project also reflects ideas related to informal and self-directed learning. By encouraging users to observe, reflect, and describe visual environments more carefully, the experience explores how interactive 3D visual design may support cognitive engagement and visual awareness outside traditional educational settings. Although exploratory in scale, the project loosely connects to Sustainable Development Goal 4 through its focus on reflective learning and personal skill development through digital interaction.
+            </p>
+          </div>
+        </header>
+      </div>
+    </section>
+
+    <!-- ========== 7. Conclusion ========== -->
+    <section class="story-section" id="section-7" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header is-centered-text">
+          <h2>7. Conclusion</h2>
+          <p>
+            This project explored how interactive 3D visual design may support descriptive thinking and visual awareness through guided observation and reflective interaction. By combining 3D visualisation practice with interaction design and observational structure, the project investigated how spatial environments can become part of a reflective cognitive experience rather than functioning only as presentation imagery.
+          </p>
+          <p>
+            The development process demonstrated the importance of controlled visual hierarchy, atmosphere, and interaction simplicity when designing for observation and descriptive engagement. The final medium-fidelity prototype provided a practical exploration of the research question while also allowing opportunities for small-scale user testing and reflective evaluation.
+          </p>
+          <p>
+            The project ultimately demonstrated how 3D visualisation can extend beyond representation and contribute to interactive visual learning and reflective engagement through digital design practice.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <!-- ========== 8. Statement on Generative AI Use ========== -->
+    <section class="story-section" id="section-8" data-nav-theme="dark">
+      <div class="section-inner">
+        <header class="section-header is-centered-text">
+          <h2>8. Statement on Generative AI Use</h2>
+          <p>
+            Generative AI tools were used selectively during parts of the ideation and development process, including early visual experimentation, reference exploration, and prototype support. However, all research direction, scene development, interaction planning, reflective analysis, and final design decisions were independently developed and evaluated by the author throughout the project.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <!-- ========== 9. References ========== -->
+    <section class="story-section" id="references" data-nav-theme="dark">
+      <div class="section-inner">
+        <h2>9. References</h2>
+        <ol class="references-list">
+          <li>Arnheim, R. (1969) Visual Thinking. Berkeley: University of California Press.</li>
+          <li>Goldschmidt, G. (2017) ‘Design thinking: A method or a gateway into design cognition?’, She Ji: The Journal of Design, Economics, and Innovation, 3(2), pp. 107–112. Available at: https://www.sciencedirect.com/science/article/pii/S2405872617301235?via%3Dihub#sec6 (10 December 2025).</li>
+          <li>Lawson, B. (2004) How Designers Think: The Design Process Demystified. 4th edn. Oxford: Architectural Press. Available at: https://www.academia.edu/29106712/Bryan_lawson_how_designers_think (Accessed: 12 December 2025).</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== 10. Bibliography ========== -->
+    <section class="story-section" id="bibliography" data-nav-theme="dark">
+      <div class="section-inner">
+        <h2>10. Bibliography</h2>
+
+        <article class="subsection">
+          <div class="sub-text">
+            <h3>Books, Journals and Online Sources</h3>
+            <ol class="ref-list">
+          <li>Interaction Design Foundation (n.d.) The Ultimate Guide to Visual Perception and Design*. Available at: https://www.interaction-design.org/courses/the-ultimate-guide-to-visual-perception-and-design (Accessed: 20 December 2025).</li>
+          <li>Kohler, T. (2023) Psychology for UX: Study Guide*. Nielsen Norman Group. Available at: https://www.nngroup.com/articles/psychology-study-guide/ (Accessed: 20 December 2025).</li>
+          <li>Sameer, S. (2025) Build a brain training app like Lumosity in 2026: a detailed guide. https://www.apptunix.com/blog/build-a-brain-training-app-like-lumosity/ (Accessed: 10 December 2025).</li>
+          <li>Su, S. (2024) ‘Research on visual design of smart phone app interface based on human–computer interaction behavior’, International Journal of e‑Collaboration, 20(1). Available at: https://www.researchgate.net/publication/382719084_Research_on_Visual_Design_of_Smart_Phone_APP_Interface_Based_on_Human-Computer_Interaction_Behavior (Accessed: 9 December 2025).</li>
+          <li>The Digital Bunch (n.d.) How to UX/UI design a 3D configurator that makes sense. Available at: https://www.thedigitalbunch.com/blog/how-to-uxui-design-a-3d-configurator-that-makes-sense (Accessed: 10 December 2025).</li>
+          <li>Villas Veaco (n.d.) The brain’s color perception and modern games. Available at: https://www.villasveaco.com/the-brain-s-color-perception-and-modern-games/ https://www.villasveaco.com/the-brain-s-color-perception-and-modern-games/ (Accessed: 10 December 2025).</li>
+          <li>Ware, C. (2013) Information Visualization: Perception for Design. 3rd edn. Waltham, MA: Morgan Kaufmann. Available at: https://ebookcentral.proquest.com/lib/winchester/reader.action?docID=892223&amp;c=RVBVQg&amp;ppg=1 (Accessed: 20 December 2025).</li>
+            </ol>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 11. Appendices ========== -->
+    <section class="story-section" id="appendices" data-nav-theme="dark">
+      <div class="section-inner">
+        <h2>11. Appendices</h2>
+
+        <article class="subsection">
+          <div class="sub-text">
+            <ul class="meta-lines">
+              <li>Gantt chart</li>
+              <li>workflow planning</li>
+              <li>Milanote boards</li>
+              <li>wireframe sketches</li>
+              <li>prototype evaluation form</li>
+              <li>additional prototype screens</li>
+              <li>testing screenshots</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIGHTBOX (optional, for enlarged gallery images) -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+      <img src="" alt="" class="lightbox-image" />
+      <p class="lightbox-caption"></p>
+      <div class="lightbox-arrows-wrapper">
+        <button class="lightbox-arrow lightbox-arrow-prev" type="button" aria-label="Previous image">&#10094;</button>
+        <button class="lightbox-arrow lightbox-arrow-next" type="button" aria-label="Next image">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY || window.pageYOffset;
+      if (y > 40) document.body.classList.add("hero-scrolled");
+      else document.body.classList.remove("hero-scrolled");
+    }, { passive: true });
+
+
+    const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox ? lightbox.querySelector(".lightbox-image") : null;
+    const lightboxCaption = lightbox ? lightbox.querySelector(".lightbox-caption") : null;
+    const lightboxClose = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+    const lightboxBackdrop = lightbox ? lightbox.querySelector(".lightbox-backdrop") : null;
+
+
+    function openLightbox(src, alt, caption) {
+      if (isMobile() || !lightbox || !lightboxImage || !lightboxCaption) return;
+
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "";
+      lightboxCaption.textContent = caption || alt || "";
+
+      lightbox.classList.add("is-open");
+    }
+
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove("is-open");
+    }
+
+
+    document.querySelectorAll(".sub-image, .section-visual").forEach((el) => {
+      if (el.closest(".no-lightbox")) return;
+
+      el.addEventListener("click", (e) => {
+        if (isMobile()) return;
+
+        e.stopPropagation();
+
+        const src = el.dataset.full || el.currentSrc || el.src;
+        const alt = el.alt || "";
+
+        const subsection = el.closest(".subsection");
+        const heading = subsection ? subsection.querySelector("h3, h4") : null;
+
+        openLightbox(
+          src,
+          alt,
+          heading ? heading.textContent.trim() : alt
+        );
+      });
+    });
+
+
+    /* =========================================================
+       CENTERED COLLAGE EXPANDABLE GALLERIES
+       Works for 4.4 and Section 5
+    ========================================================= */
+
+    document.querySelectorAll("[data-revit-collage]").forEach((collage) => {
+      if (isMobile()) return;
+
+      const items = Array.from(
+        collage.querySelectorAll(".revit-collage-item")
+      );
+
+      if (!items.length) return;
+
+      const images = items.map((item) => {
+        const img = item.querySelector("img[data-full], img");
+
+        return {
+          src: img.dataset.full || img.src,
+          alt: img.alt || ""
+        };
+      });
+
+      const expanded = document.createElement("div");
+      expanded.className = "revit-expanded";
+
+      expanded.innerHTML = `
+        <button class="revit-expanded-arrow revit-expanded-prev" type="button" aria-label="Previous image">
+          &#10094;
+        </button>
+
+        <img src="" alt="" class="revit-expanded-image">
+
+        <button class="revit-expanded-arrow revit-expanded-next" type="button" aria-label="Next image">
+          &#10095;
+        </button>
+      `;
+
+      document.body.appendChild(expanded);
+
+      const expandedImg = expanded.querySelector(".revit-expanded-image");
+      const prevBtn = expanded.querySelector(".revit-expanded-prev");
+      const nextBtn = expanded.querySelector(".revit-expanded-next");
+
+      let currentIndex = 0;
+
+      function showImage(index) {
+        currentIndex = (index + images.length) % images.length;
+
+        expandedImg.src = images[currentIndex].src;
+        expandedImg.alt = images[currentIndex].alt;
+
+        expanded.classList.add("is-open");
+      }
+
+      items.forEach((item, index) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          showImage(index);
+        });
+      });
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showImage(currentIndex - 1);
+      });
+
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showImage(currentIndex + 1);
+      });
+
+      expanded.addEventListener("click", (e) => {
+        if (e.target === expanded) {
+          expanded.classList.remove("is-open");
+        }
+
+        if (e.target.classList.contains("revit-expanded-image")) {
+          showImage(currentIndex + 1);
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!expanded.classList.contains("is-open")) return;
+
+        if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+        if (e.key === "ArrowRight") showImage(currentIndex + 1);
+        if (e.key === "Escape") expanded.classList.remove("is-open");
+      });
+    });
+
+
+    if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+    if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  });
+</script>
+
+  <script src="navigation.js"></script>
+  <script src="tomasdulkys.js"></script>
+
+</body>
+</html>
