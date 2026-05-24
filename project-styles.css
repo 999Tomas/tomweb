@@ -2242,3 +2242,31 @@ body.hero-scrolled .hero-copy {
     object-fit: cover;
   }
 }
+
+/* SECTION 12 — APPENDICES */
+
+
+.appendices-section {
+  display: block;
+}
+
+.appendix-row {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 32px;
+  clear: both;
+
+}
+
+.appendix-row img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(38, 39, 48, 0.08);
+}
+
+.appendix-row div {
+  flex: 1;
+}
