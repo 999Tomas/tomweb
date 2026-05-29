@@ -11,7 +11,7 @@
   <div id="cvOverlay" class="cv-overlay" aria-hidden="true"></div>
 
   <div class="pdf-container">
-    <iframe id="cvFrame" src="Tomas_Dulkys_CV.pdf"></iframe>
+    <iframe id="cvFrame" src=""></iframe>
   </div>
 
   <script>
@@ -25,10 +25,10 @@
 
       if (isMobile) {
         // On mobile → open PDF directly (outside iframe)
-        window.location.href = "Tomas_Dulkys_CV_2025_mobile.pdf";
+        window.location.href = "";
       } else {
         // On desktop → use iframe
-        iframe.src = "Tomas_Dulkys_CV.pdf";
+        iframe.src = "";
 
         iframe.addEventListener('load', () => {
           loaded = true;
