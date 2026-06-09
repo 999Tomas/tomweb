@@ -47,8 +47,8 @@ window.addEventListener('DOMContentLoaded', () => {
           <li class="dropdown-link"><a href="homedevice.html">Home Device – Kinetic Wireless Door Switch</a></li>
           <li class="dropdown-link"><a href="drpepi.html">Dr. Pepi</a></li>
           <li class="dropdown-link"><a href="lowpolyart.html">Chest of Souls</a></li>
-          <li class="dropdown-link"><a href="webdevelop.html">Web Development</a></li>
-          <li class="dropdown-link"><a href="bookpen.html">Book & Pen 3D Assets</a></li>
+          // <li class="dropdown-link"><a href="webdevelop.html">Web Development</a></li>
+          <li class="dropdown-link"><a href="bookpen.html">Book & Pen 3D Assets</a></li> //
         </div>
       </div>
       <a href="contact.html">Contact</a>
@@ -84,6 +84,18 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     document.body.prepend(nav);
   }
+
+  const hiddenProjects = [
+  'webdevelop.html',
+  'bookpen.html'
+];
+
+hiddenProjects.forEach(page => {
+  const link = nav.querySelector(`a[href="${page}"]`);
+  if (link) {
+    link.closest('.dropdown-link').remove();
+  }
+});
 
   /* =========================================================
      3) NAV CSS (YOUR ORIGINAL, UNCHANGED)
