@@ -47,8 +47,8 @@ window.addEventListener('DOMContentLoaded', () => {
           <li class="dropdown-link"><a href="homedevice.html">Home Device – Kinetic Wireless Door Switch</a></li>
           <li class="dropdown-link"><a href="drpepi.html">Dr. Pepi</a></li>
           <li class="dropdown-link"><a href="lowpolyart.html">Chest of Souls</a></li>
-          // <li class="dropdown-link"><a href="webdevelop.html">Web Development</a></li>
-          <li class="dropdown-link"><a href="bookpen.html">Book & Pen 3D Assets</a></li> //
+          <li class="dropdown-link"><a href="webdevelop.html">Web Development</a></li>
+          <li class="dropdown-link"><a href="bookpen.html">Book & Pen 3D Assets</a></li>
         </div>
       </div>
       <a href="contact.html">Contact</a>
